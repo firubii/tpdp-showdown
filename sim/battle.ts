@@ -512,7 +512,7 @@ export class Battle {
 			hasRelayVar = false;
 		}
 
-		if (effect.effectType === 'Status' && (target instanceof Pokemon) && target.status !== effect.id) {
+		if (effect.effectType === 'Status' && (target instanceof Pokemon) && !target.status[effect.id]) {
 			// it's changed; call it off
 			return relayVar;
 		}
@@ -742,7 +742,7 @@ export class Battle {
 			const effect = handler.effect;
 			const effectHolder = handler.effectHolder;
 			// this.debug('match ' + eventid + ': ' + status.id + ' ' + status.effectType);
-			if (effect.effectType === 'Status' && (effectHolder as Pokemon).status !== effect.id) {
+			if (effect.effectType === 'Status' && !(effectHolder as Pokemon).status[effect.id]) {
 				// it's changed; call it off
 				continue;
 			}
@@ -921,13 +921,17 @@ export class Battle {
 	findPokemonEventHandlers(pokemon: Pokemon, callbackName: string, getKey?: 'duration') {
 		const handlers: EventListener[] = [];
 
-		const status = pokemon.getStatus();
-		// @ts-ignore - dynamic lookup
-		let callback = status[callbackName];
-		if (callback !== undefined || (getKey && pokemon.statusState[getKey])) {
-			handlers.push(this.resolvePriority({
-				effect: status, callback, state: pokemon.statusState, end: pokemon.clearStatus, effectHolder: pokemon,
-			}, callbackName));
+		let callback;
+		for (const id in pokemon.status) {
+			const statusState = pokemon.status[id];
+			const status = this.dex.conditions.getByID(id as ID);
+			// @ts-ignore - dynamic lookup
+			callback = status[callbackName];
+			if (callback !== undefined || (getKey && statusState[getKey])) {
+				handlers.push(this.resolvePriority({
+					effect: status, callback, state: statusState, end: pokemon.clearStatus, effectHolder: pokemon,
+				}, callbackName));
+			}
 		}
 		for (const id in pokemon.volatiles) {
 			const volatileState = pokemon.volatiles[id];
@@ -1613,7 +1617,7 @@ export class Battle {
 				return side.pokemon.every(pokemon => (
 					pokemon.fainted ||
 					// frozen pokemon can't thaw in gen 1 without outside help
-					pokemon.status === 'frz' ||
+					pokemon.status['frz'] ||
 					// a pokemon can't lose PP if it Transforms into a pokemon with only Transform
 					(pokemon.moves.every(moveid => moveid === 'transform') && foeAllTransform) ||
 					// Struggle can't damage yourself if every foe is a Ghost
@@ -2132,11 +2136,12 @@ export class Battle {
 		let statName: keyof StatsTable;
 		for (statName in modStats) {
 			const stat = baseStats[statName];
-			modStats[statName] = tr(tr(2 * stat + set.ivs[statName] + tr(set.evs[statName] / 4)) * set.level / 100 + 5);
+			//modStats[statName] = tr(tr(2 * stat + set.ivs[statName] + tr(set.evs[statName] / 4)) * set.level / 100 + 5);
+			modStats[statName] = tr(tr(2 * (stat + set.ivs[statName]) + set.evs[statName]) / 100 * set.level + 5);
 		}
 		if ('hp' in baseStats) {
 			const stat = baseStats['hp'];
-			modStats['hp'] = tr(tr(2 * stat + set.ivs['hp'] + tr(set.evs['hp'] / 4) + 100) * set.level / 100 + 10);
+			modStats['hp'] = tr(tr(2 * (stat + set.ivs['hp']) + set.evs['hp']) / 100 * set.level + 10);
 		}
 		return this.natureModify(modStats as StatsTable, set);
 	}
@@ -2150,13 +2155,14 @@ export class Battle {
 		if (nature.plus) {
 			s = nature.plus;
 			const stat = this.ruleTable.has('overflowstatmod') ? Math.min(stats[s], 595) : stats[s];
-			stats[s] = tr(tr(stat * 110, 16) / 100);
+			//stats[s] = tr(tr(stat * 110, 16) / 100);
+			stats[s] = tr(stat * 1.1);
 		}
-		if (nature.minus) {
+		/*if (nature.minus) {
 			s = nature.minus;
 			const stat = this.ruleTable.has('overflowstatmod') ? Math.min(stats[s], 728) : stats[s];
 			stats[s] = tr(tr(stat * 90, 16) / 100);
-		}
+		}*/
 		return stats;
 	}
 
@@ -2302,7 +2308,7 @@ export class Battle {
 		for (const side of this.sides) {
 			for (const pokemon of side.active) {
 				if (pokemon.fainted) {
-					pokemon.status = 'fnt' as ID;
+					pokemon.status['fnt'] as ID;
 					pokemon.switchFlag = true;
 				}
 			}
@@ -2461,7 +2467,7 @@ export class Battle {
 				if (!species) continue;
 				pokemon.baseSpecies = rawSpecies;
 				pokemon.details = species.name + (pokemon.level === 100 ? '' : ', L' + pokemon.level) +
-					(pokemon.gender === '' ? '' : ', ' + pokemon.gender) + (pokemon.set.shiny ? ', shiny' : '');
+					(pokemon.gender === '' ? '' : ', ' + pokemon.gender) + (pokemon.set.costume ? ', C' + pokemon.set.costume : '');
 				pokemon.setAbility(species.abilities['0'], null, true);
 				pokemon.baseAbility = pokemon.ability;
 
@@ -2474,8 +2480,8 @@ export class Battle {
 					pokemon.baseMoveSlots[ironHead] = {
 						move: move.name,
 						id: move.id,
-						pp: (move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5,
-						maxpp: (move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5,
+						pp: move.pp, //(move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5,
+						maxpp: move.pp, //(move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5,
 						target: move.target,
 						disabled: false,
 						disabledSource: '',

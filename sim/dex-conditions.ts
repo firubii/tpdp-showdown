@@ -608,6 +608,8 @@ export class Condition extends BasicEffect implements
 	Readonly<BasicEffect & SideConditionData & FieldConditionData & PokemonConditionData> {
 	declare readonly effectType: 'Condition' | 'Weather' | 'Status' | 'Terastal';
 	declare readonly counterMax?: number;
+	declare readonly statusSlots?: number;
+	declare readonly stackCondition?: string;
 
 	declare readonly durationCallback?: (this: Battle, target: Pokemon, source: Pokemon, effect: Effect | null) => number;
 	declare readonly onCopy?: (this: Battle, pokemon: Pokemon) => void;

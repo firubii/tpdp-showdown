@@ -8,8 +8,11 @@ interface FlingData {
 	effect?: CommonHandlers['ResultMove'];
 }
 
+export type ItemSortCategory = 'great' | 'good' | 'poor' | 'specific' | 'bad';
+
 export interface ItemData extends Partial<Item>, PokemonEventMethods {
 	name: string;
+	category?: ItemSortCategory;
 }
 
 export type ModdedItemData = ItemData | Partial<Omit<ItemData, 'name'>> & {

@@ -48,6 +48,11 @@ interface MoveFlags {
 	snatch?: 1; // Can be stolen from the original user and instead used by another Pokemon using Snatch.
 	sound?: 1; // Has no effect on Pokemon with the Ability Soundproof.
 	wind?: 1; // Activates the Wind Power and Wind Rider Abilities.
+
+	//TOUHOU
+	sign?: 1; // Counts as a "Sign" move, only one per moveset
+	javelin?: 1; // Counts as a Javelin move, only used for the Javelin Arts item
+	counter?: 1;
 }
 
 export interface HitEffect {
@@ -55,7 +60,7 @@ export interface HitEffect {
 
 	// set pokemon conditions
 	boosts?: SparseBoostsTable | null;
-	status?: string;
+	status?: string | string[];
 	volatileStatus?: string;
 
 	// set side/slot conditions
@@ -490,7 +495,8 @@ export class DataMove extends BasicEffect implements Readonly<BasicEffect & Move
 		this.ignoreDefensive = !!data.ignoreDefensive;
 		this.ignoreImmunity = (data.ignoreImmunity !== undefined ? data.ignoreImmunity : this.category === 'Status');
 		this.pp = Number(data.pp);
-		this.noPPBoosts = !!data.noPPBoosts;
+		//this.noPPBoosts = !!data.noPPBoosts;
+		this.noPPBoosts = true;
 		this.isZ = data.isZ || false;
 		this.isMax = data.isMax || false;
 		this.flags = data.flags || {};

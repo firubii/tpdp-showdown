@@ -1,4 +1,758 @@
 export const ItemsText: {[k: string]: ItemText} = {
+	absorber: {
+		name: "Absorber",
+		desc: "A red device resembling a cross. If the holder resists a move, the holder recovers 18% of their max HP.",
+		shortDesc: "A red device resembling a cross. If the holder resists a move, the holder recovers 18% of their max HP.",
+	},
+	almightygodstone: {
+		name: "Almighty Godstone",
+		desc: "Lengthens duration of any Weather condition when used by the holder to 8 turns.",
+		shortDesc: "Lengthens duration of any Weather condition when used by the holder to 8 turns.",
+	},
+	amber: {
+		name: "Amber",
+		desc: "Orange jewelry. Raises the power of Fighting skills once by 40%.",
+		shortDesc: "Orange jewelry. Raises the power of Fighting skills once by 40%.",
+	},
+	amberhairpin: {
+		name: "Amber Hairpin",
+		desc: "When held, the power of Fighting skills is boosted by 20%.",
+		shortDesc: "When held, the power of Fighting skills is boosted by 20%.",
+	},
+	amethyst: {
+		name: "Amethyst",
+		desc: "Purple jewelry. Raises the power of Poison skills once by 40%.",
+		shortDesc: "Purple jewelry. Raises the power of Poison skills once by 40%.",
+	},
+	amethysthairpin: {
+		name: "Amethyst Hairpin",
+		desc: "When held, the power of Poison skills is boosted by 20%.",
+		shortDesc: "When held, the power of Poison skills is boosted by 20%.",
+	},
+	ancientcoin: {
+		name: "Ancient Coin",
+		desc: "You can't continue if you only have one! When held, the chances of successful Puppet sealing is increased.",
+		shortDesc: "You can't continue if you only have one! When held, the chances of successful Puppet sealing is increased.",
+	},
+	ancientlunarsake: {
+		name: "Ancient Lunar Sake",
+		desc: "Millennium brewed sake. When held by the first Puppet in your party, Puppet encounters will decrease.",
+		shortDesc: "Millennium brewed sake. When held by the first Puppet in your party, Puppet encounters will decrease.",
+	},
+	antiaquacharm: {
+		name: "Anti-Aqua Charm",
+		desc: "When held, damage dealt from Water-skills will be halved once.",
+		shortDesc: "When held, damage dealt from Water-skills will be halved once.",
+	},
+	antiboltcharm: {
+		name: "Anti-Bolt Charm",
+		desc: "When held, damage dealt from Electric-skills will be halved once.",
+		shortDesc: "When held, damage dealt from Electric-skills will be halved once.",
+	},
+	antidarkcharm: {
+		name: "Anti-Dark Charm",
+		desc: "When held, damage dealt from Dark-skills will be halved once.",
+		shortDesc: "When held, damage dealt from Dark-skills will be halved once.",
+	},
+	antidotecharm: {
+		name: "Antidote Charm",
+		desc: "When held, it can recover from Poison.",
+		shortDesc: "When held, it can recover from Poison.",
+	},
+	antiearthcharm: {
+		name: "Anti-Earth Charm",
+		desc: "When held, damage dealt from Earth-skills will be halved once.",
+		shortDesc: "When held, damage dealt from Earth-skills will be halved once.",
+	},
+	antifightcharm: {
+		name: "Anti-Fight Charm",
+		desc: "When held, damage dealt from Fighting-skills will be halved once.",
+		shortDesc: "When held, damage dealt from Fighting-skills will be halved once.",
+	},
+	antifirecharm: {
+		name: "Anti-Fire Charm",
+		desc: "When held, damage dealt from Fire-skills will be halved once.",
+		shortDesc: "When held, damage dealt from Fire-skills will be halved once.",
+	},
+	antifloracharm: {
+		name: "Anti-Flora Charm",
+		desc: "When held, damage dealt from Nature-skills will be halved once.",
+		shortDesc: "When held, damage dealt from Nature-skills will be halved once.",
+	},
+	antilightcharm: {
+		name: "Anti-Light Charm",
+		desc: "When held, damage dealt from Light-skills will be halved once.",
+		shortDesc: "When held, damage dealt from Light-skills will be halved once.",
+	},
+	antinecrocharm: {
+		name: "Anti-Necro Charm",
+		desc: "When held, damage dealt from Nether-skills will be halved once.",
+		shortDesc: "When held, damage dealt from Nether-skills will be halved once.",
+	},
+	antisoundcharm: {
+		name: "Anti-Sound Charm",
+		desc: "When held, damage dealt from Sound-skills will be halved once.",
+		shortDesc: "When held, damage dealt from Sound-skills will be halved once.",
+	},
+	antisteelcharm: {
+		name: "Anti-Steel Charm",
+		desc: "When held, damage dealt from Steel-skills will be halved once.",
+		shortDesc: "When held, damage dealt from Steel-skills will be halved once.",
+	},
+	antitoxincharm: {
+		name: "Anti-Toxin Charm",
+		desc: "When held, damage dealt from Poison-skills will be halved once.",
+		shortDesc: "When held, damage dealt from Poison-skills will be halved once.",
+	},
+	antiveilcharm: {
+		name: "Anti-Veil Charm",
+		desc: "When held, damage dealt from Illusion-skills will be halved once.",
+		shortDesc: "When held, damage dealt from Illusion-skills will be halved once.",
+	},
+	antiwarpcharm: {
+		name: "Anti-Warp Charm",
+		desc: "When held, damage dealt from Warped-skills will be halved once.",
+		shortDesc: "When held, damage dealt from Warped-skills will be halved once.",
+	},
+	antiwindcharm: {
+		name: "Anti-Wind Charm",
+		desc: "When held, damage dealt from Wind-skills will be halved once.",
+		shortDesc: "When held, damage dealt from Wind-skills will be halved once.",
+	},
+	awakeningcharm: {
+		name: "Awakening Charm",
+		desc: "When held, it can recover from Stop.",
+		shortDesc: "When held, it can recover from Stop.",
+	},
+	bandage: {
+		name: "Bandage",
+		desc: "If a Puppet holding this uses an absorption skill the recovered amount will be increased.",
+		shortDesc: "If a Puppet holding this uses an absorption skill the recovered amount will be increased.",
+	},
+	bellhairpin: {
+		name: "Bell Hairpin",
+		desc: "A small, bell-shaped hairpin. When held by the first Puppet in your party, Puppet encounters will increase.",
+		shortDesc: "A small, bell-shaped hairpin. When held by the first Puppet in your party, Puppet encounters will increase.",
+	},
+	binoculars: {
+		name: "Binoculars",
+		desc: "Increases the holder's accuracy by 10%.",
+		shortDesc: "Increases the holder's accuracy by 10%.",
+	},
+	blackchoker: {
+		name: "Black Choker",
+		desc: "When held, a Puppet can withstand one skill that would otherwise KO them.",
+		shortDesc: "When held, a Puppet can withstand one skill that would otherwise KO them.",
+
+		activate: "  [POKEMON] hung on with its Black Choker!",
+	},
+	blackring: {
+		name: "Black Ring",
+		desc: "A Puppet holding this has a 10% chance to survive a lethal attack that would otherwise KO it.",
+		shortDesc: "A Puppet holding this has a 10% chance to survive a lethal attack that would otherwise KO it.",
+
+		activate: "  [POKEMON] hung on with its Black Ring!",
+	},
+	blindingorb: {
+		name: "Blinding Orb",
+		desc: "A Puppet holding this item will always be able to escape from a wild battle.",
+		shortDesc: "A Puppet holding this item will always be able to escape from a wild battle.",
+	},
+	blitzcharm: {
+		name: "Blitz Charm",
+		desc: "In a pinch, this will raise the Puppet's Critical Hit rate.",
+		shortDesc: "In a pinch, this will raise the Puppet's Critical Hit rate.",
+	},
+	blueearrings: {
+		name: "Blue Earrings",
+		desc: "When held, the power of Sp.Atk skills is raised by 10%.",
+		shortDesc: "When held, the power of Sp.Atk skills is raised by 10%.",
+	},
+	boundarytrance: {
+		name: "Boundary Trance",
+		desc: "A stone with rainbow and transparent blue halves. Special Puppets holding this will have their stats doubled.",
+		shortDesc: "A stone with rainbow and transparent blue halves. Special Puppets holding this will have their stats doubled.",
+	},
+	bronzemirror: {
+		name: "Bronze Mirror",
+		desc: "When the opposing Puppet's stats are changed the Puppet holding this will reflect the same stat changes.",
+		shortDesc: "When the opposing Puppet's stats are changed the Puppet holding this will reflect the same stat changes.",
+	},
+	burningstone: {
+		name: "Burning Stone",
+		desc: "Stone that was set ablaze. Puppets holding this will be badly burned.",
+		shortDesc: "Stone that was set ablaze. Puppets holding this will be badly burned.",
+	},
+	capturerope: {
+		name: "Capture Rope",
+		desc: "Inescapable cursed rope. When held, switch out skills are disabled for the foe. Useless with trapping abilities.",
+		shortDesc: "Inescapable cursed rope. When held, switch out skills are disabled for the foe. Useless with trapping abilities.",
+	},
+	championsmedal: {
+		name: "Champion's Medal",
+		desc: "A dignified certificate. When held, skills that connect have a 10% chance to flinch the opponent.",
+		shortDesc: "A dignified certificate. When held, skills that connect have a 10% chance to flinch the opponent.",
+	},
+	choicebelt: {
+		name: "Choice Belt",
+		desc: "Boosts Speed by 50%, but you're locked into using the first skill used.",
+		shortDesc: "Boosts Speed by 50%, but you're locked into using the first skill used.",
+	},
+	choiceearrings: {
+		name: "Choice Earrings",
+		desc: "Boosts the power of Spread Attack skills by 50% but you're locked into using the first skill used.",
+		shortDesc: "Boosts the power of Spread Attack skills by 50% but you're locked into using the first skill used.",
+	},
+	choicering: {
+		name: "Choice Ring",
+		desc: "Boosts the power of Focus Attack skills by 50% but you're locked into using the first skill used.",
+		shortDesc: "Boosts the power of Focus Attack skills by 50% but you're locked into using the first skill used.",
+	},
+	circularamulet: {
+		name: "Circular Amulet",
+		desc: "A round amulet. A Puppet holding this will recover HP if it is attacked by its foe. Unimplemented.",
+		shortDesc: "A round amulet. A Puppet holding this will recover HP if it is attacked by its foe. Unimplemented.",
+	},
+	claritycharm: {
+		name: "Clarity Charm",
+		desc: "When held, it can recover from confusion.",
+		shortDesc: "When held, it can recover from confusion.",
+	},
+	clearhairpin: {
+		name: "Clear Hairpin",
+		desc: "When held, the power of Illusion skills is boosted by 20%.",
+		shortDesc: "When held, the power of Illusion skills is boosted by 20%.",
+	},
+	columncharm: {
+		name: "Column Charm",
+		desc: "In a pinch, this will raise the Puppet's FoDef stat.",
+		shortDesc: "In a pinch, this will raise the Puppet's FoDef stat.",
+	},
+	combathandbook: {
+		name: "Combat Handbook",
+		desc: "A fighting manual. When held, it increases EXP gained in battle by 50%.",
+		shortDesc: "A fighting manual. When held, it increases EXP gained in battle by 50%.",
+	},
+	counterbit: {
+		name: "Counter Bit",
+		desc: "When held, if you receive damage from a BU-skill, the attacker takes 1/8th of their max HP as damage.",
+		shortDesc: "When held, if you receive damage from a BU-skill, the attacker takes 1/8th of their max HP as damage.",
+	},
+	couragecharm: {
+		name: "Courage Charm",
+		desc: "When held, it can recover from Weakness.",
+		shortDesc: "When held, it can recover from Weakness.",
+	},
+	crystalmirror: {
+		name: "Crystal Mirror",
+		desc: "A mirror that exposes all past sins. During Byakko, moves your opponent would be immune against become neutral.",
+		shortDesc: "A mirror that exposes all past sins. During Byakko, moves your opponent would be immune against become neutral.",
+	},
+	curingcharm: {
+		name: "Curing Charm",
+		desc: "When held, it can recover from all ailments.",
+		shortDesc: "When held, it can recover from all ailments.",
+	},
+	curseddoll: {
+		name: "Cursed Doll",
+		desc: "When held skills that wouldn't hit due to type immunity will now work.",
+		shortDesc: "When held skills that wouldn't hit due to type immunity will now work.",
+	},
+	deadlysecrets: {
+		name: "Deadly Secrets",
+		desc: "A book detailing the tricks of battle. Skills will deal 20% more damage if it pierces the barrier.",
+		shortDesc: "A book detailing the tricks of battle. Skills will deal 20% more damage if it pierces the barrier.",
+	},
+	diamond: {
+		name: "Diamond",
+		desc: "Clear jewelry. Raises the power of Void skills once by 40%.",
+		shortDesc: "Clear jewelry. Raises the power of Void skills once by 40%.",
+	},
+	diamondhairpin: {
+		name: "Diamond Hairpin",
+		desc: "When held, the power of Void skills is boosted by 20%.",
+		shortDesc: "When held, the power of Void skills is boosted by 20%.",
+	},
+	dispelcharm: {
+		name: "Dispel Charm",
+		desc: "When held, if the user becomes unable to use skills, the status is healed once.",
+		shortDesc: "When held, if the user becomes unable to use skills, the status is healed once.",
+	},
+	dragonamulet: {
+		name: "Dragon Amulet",
+		desc: "A Puppet holding this item is no longer susceptible to critical hits.",
+		shortDesc: "A Puppet holding this item is no longer susceptible to critical hits.",
+	},
+	dreamshard: {
+		name: "Dream Shard",
+		desc: "Mysterious gem that constantly changes color. A special Puppet holding this will have 10% increased stats.",
+		shortDesc: "Mysterious gem that constantly changes color. A special Puppet holding this will have 10% increased stats.",
+	},
+	echeloncharm: {
+		name: "Echelon Charm",
+		desc: "In a pinch, this will raise the Puppet's Evasion stat.",
+		shortDesc: "In a pinch, this will raise the Puppet's Evasion stat.",
+	},
+	emerald: {
+		name: "Emerald",
+		desc: "Dark green jewelry. Raises the power of Nature skills once by 40%.",
+		shortDesc: "Dark green jewelry. Raises the power of Nature skills once by 40%.",
+	},
+	emeraldhairpin: {
+		name: "Emerald Hairpin",
+		desc: "When held, the power of Nature skills is boosted by 20%.",
+		shortDesc: "When held, the power of Nature skills is boosted by 20%.",
+	},
+	evictionnotice: {
+		name: "Eviction Notice",
+		desc: "The attacker will switch places with another Puppet in their party after the holder has been attacked.",
+		shortDesc: "The attacker will switch places with another Puppet in their party after the holder has been attacked.",
+	},
+	floatingstone: {
+		name: "Floating Stone",
+		desc: "Makes the holder immune to Earth skills but will crumble if hit by a non-Earth skill.",
+		shortDesc: "Makes the holder immune to Earth skills but will crumble if hit by a non-Earth skill.",
+		
+		start: "  [POKEMON] is floating with a Floating Stone!",
+		end: "  [POKEMON]'s Floating Stone shattered...",
+	},
+	fluorite: {
+		name: "Fluorite",
+		desc: "Protection moves used by the holder get their duration increased in battle to 8 turns.",
+		shortDesc: "Protection moves used by the holder get their duration increased in battle to 8 turns.",
+	},
+	foodrations: {
+		name: "Food Rations",
+		desc: "A stockpile of food. When held by a Puppet it'll recover 1/16th of its max HP every turn.",
+		shortDesc: "A stockpile of food. When held by a Puppet it'll recover 1/16th of its max HP every turn.",
+	},
+	giantbit: {
+		name: "Giant Bit",
+		desc: "If the holder is hit with a skill with 100 or more BP the opponent takes 1/8th of their max HP as damage.",
+		shortDesc: "If the holder is hit with a skill with 100 or more BP the opponent takes 1/8th of their max HP as damage.",
+	},
+	goldtalisman: {
+		name: "Gold Talisman",
+		desc: "When held, if the user receives a Fo.Atk, Fo.Def is raised.",
+		shortDesc: "When held, if the user receives a Fo.Atk, Fo.Def is raised.",
+	},
+	goldenhairpin: {
+		name: "Golden Hairpin",
+		desc: "The Puppet holding this will have 50% increased FoDef, but it will not be able to use support skills.",
+		shortDesc: "The Puppet holding this will have 50% increased FoDef, but it will not be able to use support skills.",
+	},
+	hakureiamulet: {
+		name: "Hakurei Amulet",
+		desc: "Amulet that holds the gracious power of the Hakurei. When held, EXP and PP gained will increase.",
+		shortDesc: "Amulet that holds the gracious power of the Hakurei. When held, EXP and PP gained will increase.",
+	},
+	halogodstone: {
+		name: "Halo Godstone",
+		desc: "Lengthens duration of the Aurora when used by the holder to 8 turns.",
+		shortDesc: "Lengthens duration of the Aurora when used by the holder to 8 turns.",
+	},
+	hastecharm: {
+		name: "Haste Charm",
+		desc: "When held, skills that take two turns to use only take one.",
+		shortDesc: "When held, skills that take two turns to use only take one.",
+	},
+	healingcharm: {
+		name: "Healing Charm",
+		desc: "When held, it can recover 20 HP.",
+		shortDesc: "When held, it can recover 20 HP.",
+	},
+	heavyarmor: {
+		name: "Heavy Armor",
+		desc: "A Puppet holding this will always move last.",
+		shortDesc: "A Puppet holding this will always move last.",
+	},
+	hematite: {
+		name: "Hematite",
+		desc: "Gray jewelry. Raises the power of Steel skills once by 40%.",
+		shortDesc: "Gray jewelry. Raises the power of Steel skills once by 40%.",
+	},
+	hematitehairpin: {
+		name: "Hematite Hairpin",
+		desc: "When held, the power of Steel skills is boosted by 20%.",
+		shortDesc: "When held, the power of Steel skills is boosted by 20%.",
+	},
+	hexagoncharm: {
+		name: "Hexagon Charm",
+		desc: "In a pinch, this will raise the Puppet's SpDef stat.",
+		shortDesc: "In a pinch, this will raise the Puppet's SpDef stat.",
+	},
+	hopemask: {
+		name: "Hope Mask",
+		desc: "A mask with a hopeful expression. Cannot be flinched while holding this item. This item cannot be disposed.",
+		shortDesc: "A mask with a hopeful expression. Cannot be flinched while holding this item. This item cannot be disposed.",
+	},
+	ironclogs: {
+		name: "Iron Clogs",
+		desc: "Heavy clogs made out of Iron. When held by a Puppet its speed will drop by 50%.",
+		shortDesc: "Heavy clogs made out of Iron. When held by a Puppet its speed will drop by 50%.",
+	},
+	ironwillribbon: {
+		name: "Iron Will Ribbon",
+		desc: "If the Puppet holding this only knows 3 skills, the damage received will be reduced by 10%.",
+		shortDesc: "If the Puppet holding this only knows 3 skills, the damage received will be reduced by 10%.",
+	},
+	izanagiobject: {
+		name: "Izanagi Object",
+		desc: "A gem inheriting the power of the gods. During Kohryu, speed is increased by 50%.",
+		shortDesc: "A gem inheriting the power of the gods. During Kohryu, speed is increased by 50%.",
+	},
+	jade: {
+		name: "Jade",
+		desc: "Jade jewelry. Raises the power of Wind skills once by 40%.",
+		shortDesc: "Jade jewelry. Raises the power of Wind skills once by 40%.",
+	},
+	jadehairpin: {
+		name: "Jade Hairpin",
+		desc: "When held, the power of Wind skills is boosted by 20%.",
+		shortDesc: "When held, the power of Wind skills is boosted by 20%.",
+	},
+	jarofpoison: {
+		name: "Jar of Poison",
+		desc: "Will heal 1/16th of the Puppet's HP every turn if it's the Poison type. Otherwise the Puppet takes damage.",
+		shortDesc: "Will heal 1/16th of the Puppet's HP every turn if it's the Poison type. Otherwise the Puppet takes damage.",
+	},
+	javelinarts: {
+		name: "Javelin Arts",
+		desc: "A book detailing the tricks of battle. When held, the power of Javelin-type skills will be increased by 20%.",
+		shortDesc: "A book detailing the tricks of battle. When held, the power of Javelin-type skills will be increased by 20%.",
+	},
+	lapishairpin: {
+		name: "Lapis Hairpin",
+		desc: "When held, the power of Warped skills is boosted by 20%.",
+		shortDesc: "When held, the power of Warped skills is boosted by 20%.",
+	},
+	lapislazuli: {
+		name: "Lapis Lazuli",
+		desc: "Ultramarine jewelry. Raises the power of Warped skills once by 40%.",
+		shortDesc: "Ultramarine jewelry. Raises the power of Warped skills once by 40%.",
+	},
+	largeshield: {
+		name: "Large Shield",
+		desc: "When held, resisted attacks will deal halved damage, and barrier piercing attacks will deal doubled damage.",
+		shortDesc: "When held, resisted attacks will deal halved damage, and barrier piercing attacks will deal doubled damage.",
+	},
+	laylasamulet: {
+		name: "Layla's Amulet",
+		desc: "Hidden under an old photograph. When held by a Puppet, the item drop rates from battle are doubled.",
+		shortDesc: "Hidden under an old photograph. When held by a Puppet, the item drop rates from battle are doubled.",
+	},
+	lifecharm: {
+		name: "Life Charm",
+		desc: "When held, the Puppet will restore 25% HP once its health drops below 50% HP.",
+		shortDesc: "When held, the Puppet will restore 25% HP once its health drops below 50% HP.",
+	},
+	lightcharm: {
+		name: "Light Charm",
+		desc: "When held, it can recover from Darkness.",
+		shortDesc: "When held, it can recover from Darkness.",
+	},
+	magicring: {
+		name: "Magic Ring",
+		desc: "A mysterious ring. When held critical hit rate is increased by one stage.",
+		shortDesc: "A mysterious ring. When held critical hit rate is increased by one stage.",
+	},
+	massagecharm: {
+		name: "Massage Charm",
+		desc: "When held, it can recover from Paralysis.",
+		shortDesc: "When held, it can recover from Paralysis.",
+	},
+	morganite: {
+		name: "Morganite",
+		desc: "Peony-colored jewelry. Raises the power of Illusion skills once by 40%.",
+		shortDesc: "Peony-colored jewelry. Raises the power of Illusion skills once by 40%.",
+	},
+	nativegrace: {
+		name: "Native Grace",
+		desc: "A charm given by Suwako. If held, EXP and PP gain in battle will be doubled.",
+		shortDesc: "A charm given by Suwako. If held, EXP and PP gain in battle will be doubled.",
+	},
+	obsidian: {
+		name: "Obsidian",
+		desc: "Black jewelry. Raises the power of Dark skills once by 40%.",
+		shortDesc: "Black jewelry. Raises the power of Dark skills once by 40%.",
+	},
+	obsidianhairpin: {
+		name: "Obsidian Hairpin",
+		desc: "When held, the power of Dark skills is boosted by 20%.",
+		shortDesc: "When held, the power of Dark skills is boosted by 20%.",
+	},
+	ointmentcharm: {
+		name: "Ointment Charm",
+		desc: "When held, it can recover from Burn.",
+		shortDesc: "When held, it can recover from Burn.",
+	},
+	onyx: {
+		name: "Onyx",
+		desc: "Striped jewelry. Raises the power of Sound skills once by 40%.",
+		shortDesc: "Striped jewelry. Raises the power of Sound skills once by 40%.",
+	},
+	onyxhairpin: {
+		name: "Onyx Hairpin",
+		desc: "When held, the power of Sound skills is boosted by 20%.",
+		shortDesc: "When held, the power of Sound skills is boosted by 20%.",
+	},
+	opal: {
+		name: "Opal",
+		desc: "Rainbow jewelry. Raises the power of Light skills once by 40%.",
+		shortDesc: "Rainbow jewelry. Raises the power of Light skills once by 40%.",
+	},
+	opalhairpin: {
+		name: "Opal Hairpin",
+		desc: "When held, the power of Light skills is boosted by 20%.",
+		shortDesc: "When held, the power of Light skills is boosted by 20%.",
+	},
+	outlookglasses: {
+		name: "Outlook Glasses",
+		desc: "When held, the foe's held item will be identified.",
+		shortDesc: "When held, the foe's held item will be identified.",
+	},
+	pinpointcharm: {
+		name: "Pinpoint Charm",
+		desc: "In a pinch, this will raise the Puppet's Accuracy stat.",
+		shortDesc: "In a pinch, this will raise the Puppet's Accuracy stat.",
+	},
+	puresand: {
+		name: "Pure Sand",
+		desc: "Pure sand of the moon. During Genbu, your accuracy is increased by 50%.",
+		shortDesc: "Pure sand of the moon. During Genbu, your accuracy is increased by 50%.",
+	},
+	purifycharm: {
+		name: "Purify Charm",
+		desc: "When held, if the holder's stats are lowered, the lowered stats will be reverted.",
+		shortDesc: "When held, if the holder's stats are lowered, the lowered stats will be reverted.",
+	},
+	quartzhairpin: {
+		name: "Quartz Hairpin",
+		desc: "When held, the power of Earth skills is boosted by 20%.",
+		shortDesc: "When held, the power of Earth skills is boosted by 20%.",
+	},
+	radianthairpin: {
+		name: "Radiant Hairpin",
+		desc: "A lost hairpin that reacts strongly to life. The holder's damage increases based on high their HP % is.",
+		shortDesc: "A lost hairpin that reacts strongly to life. The holder's damage increases based on high their HP % is.",
+	},
+	rebelliontome: {
+		name: "Rebellion Tome",
+		desc: "When held, if the user receives a barrier-piercing attack, FoAtk and SpAtk sharply raise.",
+		shortDesc: "When held, if the user receives a barrier-piercing attack, FoAtk and SpAtk sharply raise.",
+
+		activate: "  [POKEMON] followed the Rebellion Tome's instructions!",
+	},
+	redring: {
+		name: "Red Ring",
+		desc: "When held, the power of Fo.Atk skills is raised by 10%.",
+		shortDesc: "When held, the power of Fo.Atk skills is raised by 10%.",
+	},
+	reflectbit: {
+		name: "Reflect Bit",
+		desc: "When held, if you receive damage from a EN-skill, the attacker takes 1/8th of their max HP as damage.",
+		shortDesc: "When held, if you receive damage from a EN-skill, the attacker takes 1/8th of their max HP as damage.",
+	},
+	reliefcharm: {
+		name: "Relief Charm",
+		desc: "When held, it can recover from Fear.",
+		shortDesc: "When held, it can recover from Fear.",
+	},
+	repetitivearts: {
+		name: "Repetitive Arts",
+		desc: "A book detailing the tricks of battle. A skill will deal 20% more damage if it is used in repetition.",
+		shortDesc: "A book detailing the tricks of battle. A skill will deal 20% more damage if it is used in repetition.",
+	},
+	retreatmanual: {
+		name: "Retreat Manual",
+		desc: "The defender will switch places with another Puppet in their party after the holder has been attacked.",
+		shortDesc: "The defender will switch places with another Puppet in their party after the holder has been attacked.",
+	},
+	rosary: {
+		name: "Rosary",
+		desc: "When held by a Puppet, it will be 10% less likely to be hit by an opposing Puppet's skills.",
+		shortDesc: "When held by a Puppet, it will be 10% less likely to be hit by an opposing Puppet's skills.",
+	},
+	rotationcharm: {
+		name: "Rotation Charm",
+		desc: "In a pinch, this will sharply raise one random stat.",
+		shortDesc: "In a pinch, this will sharply raise one random stat.",
+	},
+	ruby: {
+		name: "Ruby",
+		desc: "Red jewelry. Raises the power of Fire skills once by 40%.",
+		shortDesc: "Red jewelry. Raises the power of Fire skills once by 40%.",
+	},
+	rubyhairpin: {
+		name: "Ruby Hairpin",
+		desc: "When held, the power of Fire skills is boosted by 20%.",
+		shortDesc: "When held, the power of Fire skills is boosted by 20%.",
+	},
+	sandgodstone: {
+		name: "Sand Godstone",
+		desc: "Lengthens duration of the Dust Storm when used by the holder to 8 turns.",
+		shortDesc: "Lengthens duration of the Dust Storm when used by the holder to 8 turns.",
+	},
+	sapphire: {
+		name: "Sapphire",
+		desc: "Light blue jewelry. Raises the power of Water skills once by 40%.",
+		shortDesc: "Light blue jewelry. Raises the power of Water skills once by 40%.",
+	},
+	sapphirehairpin: {
+		name: "Sapphire Hairpin",
+		desc: "When held, the power of Water skills is boosted by 20%.",
+		shortDesc: "When held, the power of Water skills is boosted by 20%.",
+	},
+	sereingodstone: {
+		name: "Serein Godstone",
+		desc: "Lengthens duration of Sunshower when used by the holder to 8 turns.",
+		shortDesc: "Lengthens duration of Sunshower when used by the holder to 8 turns.",
+	},
+	silentgodstone: {
+		name: "Silent Godstone",
+		desc: "Lengthens duration of the Calm when used by the holder to 8 turns.",
+		shortDesc: "Lengthens duration of the Calm when used by the holder to 8 turns.",
+	},
+	silverhairpin: {
+		name: "Silver Hairpin",
+		desc: "The Puppet holding this will have 50% increased SpDef, but it will not be able to use support skills.",
+		shortDesc: "The Puppet holding this will have 50% increased SpDef, but it will not be able to use support skills.",
+	},
+	silvertalisman: {
+		name: "Silver Talisman",
+		desc: "When held, if the user receives a Sp.Atk, Sp.Def is raised.",
+		shortDesc: "When held, if the user receives a Sp.Atk, Sp.Def is raised.",
+	},
+	skirmishercharm: {
+		name: "Skirmisher Charm",
+		desc: "In a pinch, this will raise the Puppet's Speed stat.",
+		shortDesc: "In a pinch, this will raise the Puppet's Speed stat.",
+	},
+	smallbit: {
+		name: "Small Bit",
+		desc: "If the holder is hit by a skill with 70 or less BP the attacker takes 1/8th of their max HP as damage.",
+		shortDesc: "If the holder is hit by a skill with 70 or less BP the attacker takes 1/8th of their max HP as damage.",
+	},
+	spirittorch: {
+		name: "Spirit Torch",
+		desc: "A torch that burns both body and soul. During Suzaku, the opponent loses 1/8th of their HP every turn.",
+		shortDesc: "A torch that burns both body and soul. During Suzaku, the opponent loses 1/8th of their HP every turn.",
+	},
+	strawdoll: {
+		name: "Straw Doll",
+		desc: "Straw doll that is used for magic. When held a Puppet's skills become 30% stronger but receive 10% recoil.",
+		shortDesc: "Straw doll that is used for magic. When held a Puppet's skills become 30% stronger but receive 10% recoil.",
+
+		damage: "  [POKEMON] gave some of its life to the Straw Doll...",
+	},
+	sturdyrope: {
+		name: "Sturdy Rope",
+		desc: "A sturdy rope that increases the power of binding moves when held.",
+		shortDesc: "A sturdy rope that increases the power of binding moves when held.",
+	},
+	substitutetag: {
+		name: "Substitute Tag",
+		desc: "An amulet with a human carved into it. Allows the holder to switch out even if it would normally be trapped.",
+		shortDesc: "An amulet with a human carved into it. Allows the holder to switch out even if it would normally be trapped.",
+	},
+	sugilite: {
+		name: "Sugilite",
+		desc: "Dark purple jewelry. Raises the power of Nether skills once by 40%.",
+		shortDesc: "Dark purple jewelry. Raises the power of Nether skills once by 40%.",
+	},
+	sugilitehairpin: {
+		name: "Sugilite Hairpin",
+		desc: "When held, the power of Nether skills is boosted by 20%.",
+		shortDesc: "When held, the power of Nether skills is boosted by 20%.",
+	},
+	telescope: {
+		name: "Telescope",
+		desc: "Increases the holder's accuracy by 20% if it moves after the foe.",
+		shortDesc: "Increases the holder's accuracy by 20% if it moves after the foe.",
+	},
+	tengugeta: {
+		name: "Tengu Geta",
+		desc: "Shoes used by the Tengu. A puppet holding this is immune against traps.",
+		shortDesc: "Shoes used by the Tengu. A puppet holding this is immune against traps.",
+	},
+	thorncharm: {
+		name: "Thorn Charm",
+		desc: "When held, if attacked by a foe with a FoAtk, 1/8th of the foe's max HP will be dealt back as damage.",
+		shortDesc: "When held, if attacked by a foe with a FoAtk, 1/8th of the foe's max HP will be dealt back as damage.",
+
+		damage: "  [TARGET] took damage from the Thorn Charm!",
+	},
+	tigereye: {
+		name: "Tiger Eye",
+		desc: "Brown jewelry. Raises the power of Earth skills once by 40%.",
+		shortDesc: "Brown jewelry. Raises the power of Earth skills once by 40%.",
+	},
+	topaz: {
+		name: "Topaz",
+		desc: "Yellow jewelry. Raises the power of Electric skills once by 40%.",
+		shortDesc: "Yellow jewelry. Raises the power of Electric skills once by 40%.",
+	},
+	topazhairpin: {
+		name: "Topaz Hairpin",
+		desc: "When held, the power of Electric skills is boosted by 20%.",
+		shortDesc: "When held, the power of Electric skills is boosted by 20%.",
+	},
+	tsuzumidrum: {
+		name: "Tsuzumi Drum",
+		desc: "An everlasting drum. When held, the holder's damage increases by 30% if they know no moves of their own type.",
+		shortDesc: "An everlasting drum. When held, the holder's damage increases by 30% if they know no moves of their own type.",
+	},
+	twilightgodstone: {
+		name: "Twilight Godstone",
+		desc: "Lengthens duration of the Heavy Fog when used by the holder to 8 turns.",
+		shortDesc: "Lengthens duration of the Heavy Fog when used by the holder to 8 turns.",
+	},
+	veecharm: {
+		name: "Vee Charm",
+		desc: "In a pinch, this will raise the Puppet's SpAtk stat.",
+		shortDesc: "In a pinch, this will raise the Puppet's SpAtk stat.",
+	},
+	wedgecharm: {
+		name: "Wedge Charm",
+		desc: "In a pinch, this will raise the Puppet's FoAtk stat.",
+		shortDesc: "In a pinch, this will raise the Puppet's FoAtk stat.",
+	},
+	wolfsbaneroot: {
+		name: "Wolfsbane Root",
+		desc: "A deadly poisonous root. Puppets holding this will be badly poisoned.",
+		shortDesc: "A deadly poisonous root. Puppets holding this will be badly poisoned.",
+	},
+	woodensword: {
+		name: "Wooden Sword",
+		desc: "A wooden sword designed for training. A Puppet holding this will increase the amount of PP it earns from battle.",
+		shortDesc: "A wooden sword designed for training. A Puppet holding this will increase the amount of PP it earns from battle.",
+	},
+	yggdrasilseed: {
+		name: "Yggdrasil Seed",
+		desc: "A shining seed. During Seiryuu, damage is increased by 50% for both sides.",
+		shortDesc: "A shining seed. During Seiryuu, damage is increased by 50% for both sides.",
+	},
+	youmascrollblack: {
+		name: "Youma Scroll: Black",
+		desc: "If held by Extra Kosuzu, gain the Unbound Ability and 2x Spread Attack.",
+		shortDesc: "If held by Extra Kosuzu, gain the Unbound Ability and 2x SpAtk.",
+	},
+	youmascrollblue: {
+		name: "Youma Scroll: Blue",
+		desc: "If held by Extra Kosuzu, gain the Known Limits Ability and 2x Focus Defense.",
+		shortDesc: "If held by Extra Kosuzu, gain the Known Limits Ability and 2x FoDef.",
+	},
+	youmascrollred: {
+		name: "Youma Scroll: Red",
+		desc: "If held by Extra Kosuzu, gain the Imposing Stance Ability and 2x Focus Attack.",
+		shortDesc: "If held by Extra Kosuzu, gain the Imposing Stance Ability and 2x FoAtk.",
+	},
+	youmascrollwhite: {
+		name: "Youma Scroll: White",
+		desc: "If held by Extra Kosuzu, gain the Wariness Ability and 2x Spread Defense.",
+		shortDesc: "If held by Extra Kosuzu, gain the Wariness Ability and 2x Spread Defense.",
+	},
+
 	abilityshield: {
 		name: "Ability Shield",
 		desc: "Holder's Ability cannot be changed by any effect.",

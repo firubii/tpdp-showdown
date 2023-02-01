@@ -1,3767 +1,1814 @@
 export const PokedexText: {[k: string]: PokedexText} = {
-	bulbasaur: {
-		name: "Bulbasaur",
+	normalakyuu: {
+		name: "Normal Akyuu",
 	},
-	ivysaur: {
-		name: "Ivysaur",
+	defenseakyuu: {
+		name: "Defense Akyuu",
 	},
-	venusaur: {
-		name: "Venusaur",
+	assistakyuu: {
+		name: "Assist Akyuu",
 	},
-	venusaurmega: {
-		name: "Venusaur-Mega",
+	extraakyuu: {
+		name: "Extra Akyuu",
 	},
-	venusaurgmax: {
-		name: "Venusaur-Gmax",
+	normalalice: {
+		name: "Normal Alice",
 	},
-	charmander: {
-		name: "Charmander",
+	poweralice: {
+		name: "Power Alice",
 	},
-	charmeleon: {
-		name: "Charmeleon",
+	defensealice: {
+		name: "Defense Alice",
 	},
-	charizard: {
-		name: "Charizard",
+	extraalice: {
+		name: "Extra Alice",
 	},
-	charizardmegax: {
-		name: "Charizard-Mega-X",
+	normalaunn: {
+		name: "Normal Aunn",
 	},
-	charizardmegay: {
-		name: "Charizard-Mega-Y",
+	defenseaunn: {
+		name: "Defense Aunn",
 	},
-	charizardgmax: {
-		name: "Charizard-Gmax",
+	poweraunn: {
+		name: "Power Aunn",
 	},
-	squirtle: {
-		name: "Squirtle",
+	extraaunn: {
+		name: "Extra Aunn",
 	},
-	wartortle: {
-		name: "Wartortle",
+	normalaya: {
+		name: "Normal Aya",
 	},
-	blastoise: {
-		name: "Blastoise",
+	speedaya: {
+		name: "Speed Aya",
 	},
-	blastoisemega: {
-		name: "Blastoise-Mega",
+	poweraya: {
+		name: "Power Aya",
 	},
-	blastoisegmax: {
-		name: "Blastoise-Gmax",
+	extraaya: {
+		name: "Extra Aya",
 	},
-	caterpie: {
-		name: "Caterpie",
+	normalbenben: {
+		name: "Normal Benben",
 	},
-	metapod: {
-		name: "Metapod",
+	powerbenben: {
+		name: "Power Benben",
 	},
-	butterfree: {
-		name: "Butterfree",
+	defensebenben: {
+		name: "Defense Benben",
 	},
-	butterfreegmax: {
-		name: "Butterfree-Gmax",
+	extrabenben: {
+		name: "Extra Benben",
 	},
-	weedle: {
-		name: "Weedle",
+	normalchen: {
+		name: "Normal Chen",
 	},
-	kakuna: {
-		name: "Kakuna",
+	speedchen: {
+		name: "Speed Chen",
 	},
-	beedrill: {
-		name: "Beedrill",
+	assistchen: {
+		name: "Assist Chen",
 	},
-	beedrillmega: {
-		name: "Beedrill-Mega",
+	extrachen: {
+		name: "Extra Chen",
 	},
-	pidgey: {
-		name: "Pidgey",
+	normalchimata: {
+		name: "Normal Chimata",
 	},
-	pidgeotto: {
-		name: "Pidgeotto",
+	defensechimata: {
+		name: "Defense Chimata",
 	},
-	pidgeot: {
-		name: "Pidgeot",
+	powerchimata: {
+		name: "Power Chimata",
 	},
-	pidgeotmega: {
-		name: "Pidgeot-Mega",
+	extrachimata: {
+		name: "Extra Chimata",
 	},
-	rattata: {
-		name: "Rattata",
+	normalchiyuri: {
+		name: "Normal Chiyuri",
 	},
-	rattataalola: {
-		name: "Rattata-Alola",
+	defensechiyuri: {
+		name: "Defense Chiyuri",
 	},
-	raticate: {
-		name: "Raticate",
+	speedchiyuri: {
+		name: "Speed Chiyuri",
 	},
-	raticatealola: {
-		name: "Raticate-Alola",
+	extrachiyuri: {
+		name: "Extra Chiyuri",
 	},
-	raticatealolatotem: {
-		name: "Raticate-Alola-Totem",
+	normalcirno: {
+		name: "Normal Cirno",
 	},
-	spearow: {
-		name: "Spearow",
+	assistcirno: {
+		name: "Assist Cirno",
 	},
-	fearow: {
-		name: "Fearow",
+	powercirno: {
+		name: "Power Cirno",
 	},
-	ekans: {
-		name: "Ekans",
+	extracirno: {
+		name: "Extra Cirno",
 	},
-	arbok: {
-		name: "Arbok",
+	normalclownpiece: {
+		name: "Normal Clownpiece",
 	},
-	pikachu: {
-		name: "Pikachu",
+	defenseclownpiece: {
+		name: "Defense Clownpiece",
 	},
-	pikachucosplay: {
-		name: "Pikachu-Cosplay",
+	speedclownpiece: {
+		name: "Speed Clownpiece",
 	},
-	pikachurockstar: {
-		name: "Pikachu-Rock-Star",
+	extraclownpiece: {
+		name: "Extra Clownpiece",
 	},
-	pikachubelle: {
-		name: "Pikachu-Belle",
+	normaldaiyousei: {
+		name: "Normal Daiyousei",
 	},
-	pikachupopstar: {
-		name: "Pikachu-Pop-Star",
+	defensedaiyousei: {
+		name: "Defense Daiyousei",
 	},
-	pikachuphd: {
-		name: "Pikachu-PhD",
+	speeddaiyousei: {
+		name: "Speed Daiyousei",
 	},
-	pikachulibre: {
-		name: "Pikachu-Libre",
+	extradaiyousei: {
+		name: "Extra Daiyousei",
 	},
-	pikachuoriginal: {
-		name: "Pikachu-Original",
+	normaldoremy: {
+		name: "Normal Doremy",
 	},
-	pikachuhoenn: {
-		name: "Pikachu-Hoenn",
+	powerdoremy: {
+		name: "Power Doremy",
 	},
-	pikachusinnoh: {
-		name: "Pikachu-Sinnoh",
+	defensedoremy: {
+		name: "Defense Doremy",
 	},
-	pikachuunova: {
-		name: "Pikachu-Unova",
+	extradoremy: {
+		name: "Extra Doremy",
 	},
-	pikachukalos: {
-		name: "Pikachu-Kalos",
+	normaleika: {
+		name: "Normal Eika",
 	},
-	pikachualola: {
-		name: "Pikachu-Alola",
+	defenseeika: {
+		name: "Defense Eika",
 	},
-	pikachupartner: {
-		name: "Pikachu-Partner",
+	assisteika: {
+		name: "Assist Eika",
 	},
-	pikachustarter: {
-		name: "Pikachu-Starter",
+	extraeika: {
+		name: "Extra Eika",
 	},
-	pikachugmax: {
-		name: "Pikachu-Gmax",
+	normaleiki: {
+		name: "Normal Eiki",
 	},
-	pikachuworld: {
-		name: "Pikachu-World",
+	powereiki: {
+		name: "Power Eiki",
 	},
-	raichu: {
-		name: "Raichu",
+	defenseeiki: {
+		name: "Defense Eiki",
 	},
-	raichualola: {
-		name: "Raichu-Alola",
+	extraeiki: {
+		name: "Extra Eiki",
 	},
-	sandshrew: {
-		name: "Sandshrew",
+	normaleirin: {
+		name: "Normal Eirin",
 	},
-	sandshrewalola: {
-		name: "Sandshrew-Alola",
+	assisteirin: {
+		name: "Assist Eirin",
 	},
-	sandslash: {
-		name: "Sandslash",
+	powereirin: {
+		name: "Power Eirin",
 	},
-	sandslashalola: {
-		name: "Sandslash-Alola",
+	extraeirin: {
+		name: "Extra Eirin",
 	},
-	nidoranf: {
-		name: "Nidoran-F",
+	normalelis: {
+		name: "Normal Elis",
 	},
-	nidorina: {
-		name: "Nidorina",
+	speedelis: {
+		name: "Speed Elis",
 	},
-	nidoqueen: {
-		name: "Nidoqueen",
+	powerelis: {
+		name: "Power Elis",
 	},
-	nidoranm: {
-		name: "Nidoran-M",
+	extraelis: {
+		name: "Extra Elis",
 	},
-	nidorino: {
-		name: "Nidorino",
+	normalellen: {
+		name: "Normal Ellen",
 	},
-	nidoking: {
-		name: "Nidoking",
+	powerellen: {
+		name: "Power Ellen",
 	},
-	clefairy: {
-		name: "Clefairy",
+	speedellen: {
+		name: "Speed Ellen",
 	},
-	clefable: {
-		name: "Clefable",
+	extraellen: {
+		name: "Extra Ellen",
 	},
-	vulpix: {
-		name: "Vulpix",
+	normalelly: {
+		name: "Normal Elly",
 	},
-	vulpixalola: {
-		name: "Vulpix-Alola",
+	powerelly: {
+		name: "Power Elly",
 	},
-	ninetales: {
-		name: "Ninetales",
+	defenseelly: {
+		name: "Defense Elly",
 	},
-	ninetalesalola: {
-		name: "Ninetales-Alola",
+	extraelly: {
+		name: "Extra Elly",
 	},
-	jigglypuff: {
-		name: "Jigglypuff",
+	normaleternity: {
+		name: "Normal Eternity",
 	},
-	wigglytuff: {
-		name: "Wigglytuff",
+	speedeternity: {
+		name: "Speed Eternity",
 	},
-	zubat: {
-		name: "Zubat",
+	assisteternity: {
+		name: "Assist Eternity",
 	},
-	golbat: {
-		name: "Golbat",
+	extraeternity: {
+		name: "Extra Eternity",
 	},
-	oddish: {
-		name: "Oddish",
+	normalflandre: {
+		name: "Normal Flandre",
 	},
-	gloom: {
-		name: "Gloom",
+	speedflandre: {
+		name: "Speed Flandre",
 	},
-	vileplume: {
-		name: "Vileplume",
+	powerflandre: {
+		name: "Power Flandre",
 	},
-	paras: {
-		name: "Paras",
+	extraflandre: {
+		name: "Extra Flandre",
 	},
-	parasect: {
-		name: "Parasect",
+	normalfuto: {
+		name: "Normal Futo",
 	},
-	venonat: {
-		name: "Venonat",
+	speedfuto: {
+		name: "Speed Futo",
 	},
-	venomoth: {
-		name: "Venomoth",
+	powerfuto: {
+		name: "Power Futo",
 	},
-	diglett: {
-		name: "Diglett",
+	extrafuto: {
+		name: "Extra Futo",
 	},
-	diglettalola: {
-		name: "Diglett-Alola",
+	normalgengetsu: {
+		name: "Normal Gengetsu",
 	},
-	dugtrio: {
-		name: "Dugtrio",
+	powergengetsu: {
+		name: "Power Gengetsu",
 	},
-	dugtrioalola: {
-		name: "Dugtrio-Alola",
+	speedgengetsu: {
+		name: "Speed Gengetsu",
 	},
-	meowth: {
-		name: "Meowth",
+	extragengetsu: {
+		name: "Extra Gengetsu",
 	},
-	meowthalola: {
-		name: "Meowth-Alola",
+	normalhatate: {
+		name: "Normal Hatate",
 	},
-	meowthgalar: {
-		name: "Meowth-Galar",
+	powerhatate: {
+		name: "Power Hatate",
 	},
-	meowthgmax: {
-		name: "Meowth-Gmax",
+	assisthatate: {
+		name: "Assist Hatate",
 	},
-	persian: {
-		name: "Persian",
+	extrahatate: {
+		name: "Extra Hatate",
 	},
-	persianalola: {
-		name: "Persian-Alola",
+	normalhecatia: {
+		name: "Normal Hecatia",
 	},
-	psyduck: {
-		name: "Psyduck",
+	powerhecatia: {
+		name: "Power Hecatia",
 	},
-	golduck: {
-		name: "Golduck",
+	defensehecatia: {
+		name: "Defense Hecatia",
 	},
-	mankey: {
-		name: "Mankey",
+	extrahecatia: {
+		name: "Extra Hecatia",
 	},
-	primeape: {
-		name: "Primeape",
+	normalhijiri: {
+		name: "Normal Hijiri",
 	},
-	growlithe: {
-		name: "Growlithe",
+	defensehijiri: {
+		name: "Defense Hijiri",
 	},
-	growlithehisui: {
-		name: "Growlithe-Hisui",
+	speedhijiri: {
+		name: "Speed Hijiri",
 	},
-	arcanine: {
-		name: "Arcanine",
+	extrahijiri: {
+		name: "Extra Hijiri",
 	},
-	arcaninehisui: {
-		name: "Arcanine-Hisui",
+	normalhina: {
+		name: "Normal Hina",
 	},
-	poliwag: {
-		name: "Poliwag",
+	defensehina: {
+		name: "Defense Hina",
 	},
-	poliwhirl: {
-		name: "Poliwhirl",
+	assisthina: {
+		name: "Assist Hina",
 	},
-	poliwrath: {
-		name: "Poliwrath",
+	extrahina: {
+		name: "Extra Hina",
 	},
-	abra: {
-		name: "Abra",
+	normalichirin: {
+		name: "Normal Ichirin",
 	},
-	kadabra: {
-		name: "Kadabra",
+	powerichirin: {
+		name: "Power Ichirin",
 	},
-	alakazam: {
-		name: "Alakazam",
+	defenseichirin: {
+		name: "Defense Ichirin",
 	},
-	alakazammega: {
-		name: "Alakazam-Mega",
+	extraichirin: {
+		name: "Extra Ichirin",
 	},
-	machop: {
-		name: "Machop",
+	normaliku: {
+		name: "Normal Iku",
 	},
-	machoke: {
-		name: "Machoke",
+	poweriku: {
+		name: "Power Iku",
 	},
-	machamp: {
-		name: "Machamp",
+	speediku: {
+		name: "Speed Iku",
 	},
-	machampgmax: {
-		name: "Machamp-Gmax",
+	extraiku: {
+		name: "Extra Iku",
 	},
-	bellsprout: {
-		name: "Bellsprout",
+	normaljunko: {
+		name: "Normal Junko",
 	},
-	weepinbell: {
-		name: "Weepinbell",
+	powerjunko: {
+		name: "Power Junko",
 	},
-	victreebel: {
-		name: "Victreebel",
+	speedjunko: {
+		name: "Speed Junko",
 	},
-	tentacool: {
-		name: "Tentacool",
+	extrajunko: {
+		name: "Extra Junko",
 	},
-	tentacruel: {
-		name: "Tentacruel",
+	normalkagerou: {
+		name: "Normal Kagerou",
 	},
-	geodude: {
-		name: "Geodude",
+	speedkagerou: {
+		name: "Speed Kagerou",
 	},
-	geodudealola: {
-		name: "Geodude-Alola",
+	powerkagerou: {
+		name: "Power Kagerou",
 	},
-	graveler: {
-		name: "Graveler",
+	extrakagerou: {
+		name: "Extra Kagerou",
 	},
-	graveleralola: {
-		name: "Graveler-Alola",
+	normalkaguya: {
+		name: "Normal Kaguya",
 	},
-	golem: {
-		name: "Golem",
+	defensekaguya: {
+		name: "Defense Kaguya",
 	},
-	golemalola: {
-		name: "Golem-Alola",
+	powerkaguya: {
+		name: "Power Kaguya",
 	},
-	ponyta: {
-		name: "Ponyta",
+	extrakaguya: {
+		name: "Extra Kaguya",
 	},
-	ponytagalar: {
-		name: "Ponyta-Galar",
+	normalkana: {
+		name: "Normal Kana",
 	},
-	rapidash: {
-		name: "Rapidash",
+	assistkana: {
+		name: "Assist Kana",
 	},
-	rapidashgalar: {
-		name: "Rapidash-Galar",
+	powerkana: {
+		name: "Power Kana",
 	},
-	slowpoke: {
-		name: "Slowpoke",
+	extrakana: {
+		name: "Extra Kana",
 	},
-	slowpokegalar: {
-		name: "Slowpoke-Galar",
+	normalkanako: {
+		name: "Normal Kanako",
 	},
-	slowbro: {
-		name: "Slowbro",
+	defensekanako: {
+		name: "Defense Kanako",
 	},
-	slowbromega: {
-		name: "Slowbro-Mega",
+	powerkanako: {
+		name: "Power Kanako",
 	},
-	slowbrogalar: {
-		name: "Slowbro-Galar",
+	extrakanako: {
+		name: "Extra Kanako",
 	},
-	magnemite: {
-		name: "Magnemite",
+	normalkasen: {
+		name: "Normal Kasen",
 	},
-	magneton: {
-		name: "Magneton",
+	powerkasen: {
+		name: "Power Kasen",
 	},
-	farfetchd: {
-		name: "Farfetch\u2019d",
+	assistkasen: {
+		name: "Assist Kasen",
 	},
-	farfetchdgalar: {
-		name: "Farfetch\u2019d-Galar",
+	extrakasen: {
+		name: "Extra Kasen",
 	},
-	doduo: {
-		name: "Doduo",
+	normalkeiki: {
+		name: "Normal Keiki",
 	},
-	dodrio: {
-		name: "Dodrio",
+	powerkeiki: {
+		name: "Power Keiki",
 	},
-	seel: {
-		name: "Seel",
+	assistkeiki: {
+		name: "Assist Keiki",
 	},
-	dewgong: {
-		name: "Dewgong",
+	extrakeiki: {
+		name: "Extra Keiki",
 	},
-	grimer: {
-		name: "Grimer",
+	normalkeine: {
+		name: "Normal Keine",
 	},
-	grimeralola: {
-		name: "Grimer-Alola",
+	defensekeine: {
+		name: "Defense Keine",
 	},
-	muk: {
-		name: "Muk",
+	powerkeine: {
+		name: "Power Keine",
 	},
-	mukalola: {
-		name: "Muk-Alola",
+	extrakeine: {
+		name: "Extra Keine",
 	},
-	shellder: {
-		name: "Shellder",
+	normalkikuri: {
+		name: "Normal Kikuri",
 	},
-	cloyster: {
-		name: "Cloyster",
+	defensekikuri: {
+		name: "Defense Kikuri",
 	},
-	gastly: {
-		name: "Gastly",
+	powerkikuri: {
+		name: "Power Kikuri",
 	},
-	haunter: {
-		name: "Haunter",
+	extrakikuri: {
+		name: "Extra Kikuri",
 	},
-	gengar: {
-		name: "Gengar",
+	normalkisume: {
+		name: "Normal Kisume",
 	},
-	gengarmega: {
-		name: "Gengar-Mega",
+	assistkisume: {
+		name: "Assist Kisume",
 	},
-	gengargmax: {
-		name: "Gengar-Gmax",
+	defensekisume: {
+		name: "Defense Kisume",
 	},
-	onix: {
-		name: "Onix",
+	extrakisume: {
+		name: "Extra Kisume",
 	},
-	drowzee: {
-		name: "Drowzee",
+	normalkoakuma: {
+		name: "Normal Koakuma",
 	},
-	hypno: {
-		name: "Hypno",
+	defensekoakuma: {
+		name: "Defense Koakuma",
 	},
-	krabby: {
-		name: "Krabby",
+	assistkoakuma: {
+		name: "Assist Koakuma",
 	},
-	kingler: {
-		name: "Kingler",
+	extrakoakuma: {
+		name: "Extra Koakuma",
 	},
-	kinglergmax: {
-		name: "Kingler-Gmax",
+	normalkogasa: {
+		name: "Normal Kogasa",
 	},
-	voltorb: {
-		name: "Voltorb",
+	assistkogasa: {
+		name: "Assist Kogasa",
 	},
-	voltorbhisui: {
-		name: "Voltorb-Hisui",
+	speedkogasa: {
+		name: "Speed Kogasa",
 	},
-	electrode: {
-		name: "Electrode",
+	extrakogasa: {
+		name: "Extra Kogasa",
 	},
-	electrodehisui: {
-		name: "Electrode-Hisui",
+	normalkoishi: {
+		name: "Normal Koishi",
 	},
-	exeggcute: {
-		name: "Exeggcute",
+	powerkoishi: {
+		name: "Power Koishi",
 	},
-	exeggutor: {
-		name: "Exeggutor",
+	assistkoishi: {
+		name: "Assist Koishi",
 	},
-	exeggutoralola: {
-		name: "Exeggutor-Alola",
+	extrakoishi: {
+		name: "Extra Koishi",
 	},
-	cubone: {
-		name: "Cubone",
+	normalkokoro: {
+		name: "Normal Kokoro",
 	},
-	marowak: {
-		name: "Marowak",
+	defensekokoro: {
+		name: "Defense Kokoro",
 	},
-	marowakalola: {
-		name: "Marowak-Alola",
+	powerkokoro: {
+		name: "Power Kokoro",
 	},
-	marowakalolatotem: {
-		name: "Marowak-Alola-Totem",
+	extrakokoro: {
+		name: "Extra Kokoro",
 	},
-	hitmonlee: {
-		name: "Hitmonlee",
+	normalkomachi: {
+		name: "Normal Komachi",
 	},
-	hitmonchan: {
-		name: "Hitmonchan",
+	assistkomachi: {
+		name: "Assist Komachi",
 	},
-	lickitung: {
-		name: "Lickitung",
+	powerkomachi: {
+		name: "Power Komachi",
 	},
-	koffing: {
-		name: "Koffing",
+	extrakomachi: {
+		name: "Extra Komachi",
 	},
-	weezing: {
-		name: "Weezing",
+	normalkonngara: {
+		name: "Normal Konngara",
 	},
-	weezinggalar: {
-		name: "Weezing-Galar",
+	powerkonngara: {
+		name: "Power Konngara",
 	},
-	rhyhorn: {
-		name: "Rhyhorn",
+	speedkonngara: {
+		name: "Speed Konngara",
 	},
-	rhydon: {
-		name: "Rhydon",
+	extrakonngara: {
+		name: "Extra Konngara",
 	},
-	chansey: {
-		name: "Chansey",
+	normalkosuzu: {
+		name: "Normal Kosuzu",
 	},
-	tangela: {
-		name: "Tangela",
+	defensekosuzu: {
+		name: "Defense Kosuzu",
 	},
-	kangaskhan: {
-		name: "Kangaskhan",
+	assistkosuzu: {
+		name: "Assist Kosuzu",
 	},
-	kangaskhanmega: {
-		name: "Kangaskhan-Mega",
+	extrakosuzu: {
+		name: "Extra Kosuzu",
 	},
-	horsea: {
-		name: "Horsea",
+	normalkotohime: {
+		name: "Normal Kotohime",
 	},
-	seadra: {
-		name: "Seadra",
+	assistkotohime: {
+		name: "Assist Kotohime",
 	},
-	goldeen: {
-		name: "Goldeen",
+	defensekotohime: {
+		name: "Defense Kotohime",
 	},
-	seaking: {
-		name: "Seaking",
+	extrakotohime: {
+		name: "Extra Kotohime",
 	},
-	staryu: {
-		name: "Staryu",
+	normalkurumi: {
+		name: "Normal Kurumi",
 	},
-	starmie: {
-		name: "Starmie",
+	powerkurumi: {
+		name: "Power Kurumi",
 	},
-	mrmime: {
-		name: "Mr. Mime",
+	assistkurumi: {
+		name: "Assist Kurumi",
 	},
-	mrmimegalar: {
-		name: "Mr. Mime-Galar",
+	extrakurumi: {
+		name: "Extra Kurumi",
 	},
-	scyther: {
-		name: "Scyther",
+	normalkutaka: {
+		name: "Normal Kutaka",
 	},
-	jynx: {
-		name: "Jynx",
+	assistkutaka: {
+		name: "Assist Kutaka",
 	},
-	electabuzz: {
-		name: "Electabuzz",
+	speedkutaka: {
+		name: "Speed Kutaka",
 	},
-	magmar: {
-		name: "Magmar",
+	extrakutaka: {
+		name: "Extra Kutaka",
 	},
-	pinsir: {
-		name: "Pinsir",
+	normalkyouko: {
+		name: "Normal Kyouko",
 	},
-	pinsirmega: {
-		name: "Pinsir-Mega",
+	powerkyouko: {
+		name: "Power Kyouko",
 	},
-	tauros: {
-		name: "Tauros",
+	assistkyouko: {
+		name: "Assist Kyouko",
 	},
-	magikarp: {
-		name: "Magikarp",
+	extrakyouko: {
+		name: "Extra Kyouko",
 	},
-	gyarados: {
-		name: "Gyarados",
+	normalletty: {
+		name: "Normal Letty",
 	},
-	gyaradosmega: {
-		name: "Gyarados-Mega",
+	powerletty: {
+		name: "Power Letty",
 	},
-	lapras: {
-		name: "Lapras",
+	defenseletty: {
+		name: "Defense Letty",
 	},
-	laprasgmax: {
-		name: "Lapras-Gmax",
+	extraletty: {
+		name: "Extra Letty",
 	},
-	ditto: {
-		name: "Ditto",
+	normallily: {
+		name: "Normal Lily",
 	},
-	eevee: {
-		name: "Eevee",
+	assistlily: {
+		name: "Assist Lily",
 	},
-	eeveestarter: {
-		name: "Eevee-Starter",
+	powerlily: {
+		name: "Power Lily",
 	},
-	eeveegmax: {
-		name: "Eevee-Gmax",
+	extralily: {
+		name: "Extra Lily",
 	},
-	vaporeon: {
-		name: "Vaporeon",
+	normallouise: {
+		name: "Normal Louise",
 	},
-	jolteon: {
-		name: "Jolteon",
+	defenselouise: {
+		name: "Defense Louise",
 	},
-	flareon: {
-		name: "Flareon",
+	assistlouise: {
+		name: "Assist Louise",
 	},
-	porygon: {
-		name: "Porygon",
+	extralouise: {
+		name: "Extra Louise",
 	},
-	omanyte: {
-		name: "Omanyte",
+	normalluna: {
+		name: "Normal Luna",
 	},
-	omastar: {
-		name: "Omastar",
+	powerluna: {
+		name: "Power Luna",
 	},
-	kabuto: {
-		name: "Kabuto",
+	speedluna: {
+		name: "Speed Luna",
 	},
-	kabutops: {
-		name: "Kabutops",
+	extraluna: {
+		name: "Extra Luna",
 	},
-	aerodactyl: {
-		name: "Aerodactyl",
+	normallunasa: {
+		name: "Normal Lunasa",
 	},
-	aerodactylmega: {
-		name: "Aerodactyl-Mega",
+	assistlunasa: {
+		name: "Assist Lunasa",
 	},
-	snorlax: {
-		name: "Snorlax",
+	defenselunasa: {
+		name: "Defense Lunasa",
 	},
-	snorlaxgmax: {
-		name: "Snorlax-Gmax",
+	extralunasa: {
+		name: "Extra Lunasa",
 	},
-	articuno: {
-		name: "Articuno",
+	normallyrica: {
+		name: "Normal Lyrica",
 	},
-	zapdos: {
-		name: "Zapdos",
+	speedlyrica: {
+		name: "Speed Lyrica",
 	},
-	moltres: {
-		name: "Moltres",
+	powerlyrica: {
+		name: "Power Lyrica",
 	},
-	dratini: {
-		name: "Dratini",
+	extralyrica: {
+		name: "Extra Lyrica",
 	},
-	dragonair: {
-		name: "Dragonair",
+	normalmagan: {
+		name: "Normal Magan",
 	},
-	dragonite: {
-		name: "Dragonite",
+	assistmagan: {
+		name: "Assist Magan",
 	},
-	mewtwo: {
-		name: "Mewtwo",
+	powermagan: {
+		name: "Power Magan",
 	},
-	mewtwomegax: {
-		name: "Mewtwo-Mega-X",
+	extramagan: {
+		name: "Extra Magan",
 	},
-	mewtwomegay: {
-		name: "Mewtwo-Mega-Y",
+	normalmai: {
+		name: "Normal Mai",
 	},
-	mew: {
-		name: "Mew",
+	powermai: {
+		name: "Power Mai",
 	},
-	chikorita: {
-		name: "Chikorita",
+	defensemai: {
+		name: "Defense Mai",
 	},
-	bayleef: {
-		name: "Bayleef",
+	extramai: {
+		name: "Extra Mai",
 	},
-	meganium: {
-		name: "Meganium",
+	normalmamizou: {
+		name: "Normal Mamizou",
 	},
-	cyndaquil: {
-		name: "Cyndaquil",
+	defensemamizou: {
+		name: "Defense Mamizou",
 	},
-	quilava: {
-		name: "Quilava",
+	powermamizou: {
+		name: "Power Mamizou",
 	},
-	typhlosion: {
-		name: "Typhlosion",
+	extramamizou: {
+		name: "Extra Mamizou",
 	},
-	typhlosionhisui: {
-		name: "Typhlosion-Hisui",
+	normalmarisa: {
+		name: "Normal Marisa",
 	},
-	totodile: {
-		name: "Totodile",
+	speedmarisa: {
+		name: "Speed Marisa",
 	},
-	croconaw: {
-		name: "Croconaw",
+	powermarisa: {
+		name: "Power Marisa",
 	},
-	feraligatr: {
-		name: "Feraligatr",
+	extramarisa: {
+		name: "Extra Marisa",
 	},
-	sentret: {
-		name: "Sentret",
+	normalmayumi: {
+		name: "Normal Mayumi",
 	},
-	furret: {
-		name: "Furret",
+	defensemayumi: {
+		name: "Defense Mayumi",
 	},
-	hoothoot: {
-		name: "Hoothoot",
+	speedmayumi: {
+		name: "Speed Mayumi",
 	},
-	noctowl: {
-		name: "Noctowl",
+	extramayumi: {
+		name: "Extra Mayumi",
 	},
-	ledyba: {
-		name: "Ledyba",
+	normalmedicine: {
+		name: "Normal Medicine",
 	},
-	ledian: {
-		name: "Ledian",
+	defensemedicine: {
+		name: "Defense Medicine",
 	},
-	spinarak: {
-		name: "Spinarak",
+	powermedicine: {
+		name: "Power Medicine",
 	},
-	ariados: {
-		name: "Ariados",
+	extramedicine: {
+		name: "Extra Medicine",
 	},
-	crobat: {
-		name: "Crobat",
+	normalmegumu: {
+		name: "Normal Megumu",
 	},
-	chinchou: {
-		name: "Chinchou",
+	speedmegumu: {
+		name: "Speed Megumu",
 	},
-	lanturn: {
-		name: "Lanturn",
+	powermegumu: {
+		name: "Power Megumu",
 	},
-	pichu: {
-		name: "Pichu",
+	extramegumu: {
+		name: "Extra Megumu",
 	},
-	pichuspikyeared: {
-		name: "Pichu-Spiky-eared",
+	normalmeiling: {
+		name: "Normal Meiling",
 	},
-	cleffa: {
-		name: "Cleffa",
+	speedmeiling: {
+		name: "Speed Meiling",
 	},
-	igglybuff: {
-		name: "Igglybuff",
+	defensemeiling: {
+		name: "Defense Meiling",
 	},
-	togepi: {
-		name: "Togepi",
+	extrameiling: {
+		name: "Extra Meiling",
 	},
-	togetic: {
-		name: "Togetic",
+	normalmeira: {
+		name: "Normal Meira",
 	},
-	natu: {
-		name: "Natu",
+	powermeira: {
+		name: "Power Meira",
 	},
-	xatu: {
-		name: "Xatu",
+	speedmeira: {
+		name: "Speed Meira",
 	},
-	mareep: {
-		name: "Mareep",
+	extrameira: {
+		name: "Extra Meira",
 	},
-	flaaffy: {
-		name: "Flaaffy",
+	normalmerlin: {
+		name: "Normal Merlin",
 	},
-	ampharos: {
-		name: "Ampharos",
+	assistmerlin: {
+		name: "Assist Merlin",
 	},
-	ampharosmega: {
-		name: "Ampharos-Mega",
+	powermerlin: {
+		name: "Power Merlin",
 	},
-	bellossom: {
-		name: "Bellossom",
+	extramerlin: {
+		name: "Extra Merlin",
 	},
-	marill: {
-		name: "Marill",
+	normalmerry: {
+		name: "Normal Merry",
 	},
-	azumarill: {
-		name: "Azumarill",
+	defensemerry: {
+		name: "Defense Merry",
 	},
-	sudowoodo: {
-		name: "Sudowoodo",
+	powermerry: {
+		name: "Power Merry",
 	},
-	politoed: {
-		name: "Politoed",
+	extramerry: {
+		name: "Extra Merry",
 	},
-	hoppip: {
-		name: "Hoppip",
+	normalmike: {
+		name: "Normal Mike",
 	},
-	skiploom: {
-		name: "Skiploom",
+	speedmike: {
+		name: "Speed Mike",
 	},
-	jumpluff: {
-		name: "Jumpluff",
+	assistmike: {
+		name: "Assist Mike",
 	},
-	aipom: {
-		name: "Aipom",
+	extramike: {
+		name: "Extra Mike",
 	},
-	sunkern: {
-		name: "Sunkern",
+	normalmiko: {
+		name: "Normal Miko",
 	},
-	sunflora: {
-		name: "Sunflora",
+	speedmiko: {
+		name: "Speed Miko",
 	},
-	yanma: {
-		name: "Yanma",
+	powermiko: {
+		name: "Power Miko",
 	},
-	wooper: {
-		name: "Wooper",
+	extramiko: {
+		name: "Extra Miko",
 	},
-	wooperpaldea: {
-		name: "Wooper-Paldea",
+	normalmima: {
+		name: "Normal Mima",
 	},
-	quagsire: {
-		name: "Quagsire",
+	defensemima: {
+		name: "Defense Mima",
 	},
-	quagsirepaldea: {
-		name: "Quagsire-Paldea",
+	powermima: {
+		name: "Power Mima",
 	},
-	espeon: {
-		name: "Espeon",
+	extramima: {
+		name: "Extra Mima",
 	},
-	umbreon: {
-		name: "Umbreon",
+	normalminoriko: {
+		name: "Normal Minoriko",
 	},
-	murkrow: {
-		name: "Murkrow",
+	powerminoriko: {
+		name: "Power Minoriko",
 	},
-	slowking: {
-		name: "Slowking",
+	defenseminoriko: {
+		name: "Defense Minoriko",
 	},
-	misdreavus: {
-		name: "Misdreavus",
+	extraminoriko: {
+		name: "Extra Minoriko",
 	},
-	unown: {
-		name: "Unown",
+	normalmisumaru: {
+		name: "Normal Misumaru",
 	},
-	wobbuffet: {
-		name: "Wobbuffet",
+	defensemisumaru: {
+		name: "Defense Misumaru",
 	},
-	girafarig: {
-		name: "Girafarig",
+	powermisumaru: {
+		name: "Power Misumaru",
 	},
-	pineco: {
-		name: "Pineco",
+	extramisumaru: {
+		name: "Extra Misumaru",
 	},
-	forretress: {
-		name: "Forretress",
+	normalmiyoi: {
+		name: "Normal Miyoi",
 	},
-	dunsparce: {
-		name: "Dunsparce",
+	assistmiyoi: {
+		name: "Assist Miyoi",
 	},
-	gligar: {
-		name: "Gligar",
+	powermiyoi: {
+		name: "Power Miyoi",
 	},
-	steelix: {
-		name: "Steelix",
+	extramiyoi: {
+		name: "Extra Miyoi",
 	},
-	steelixmega: {
-		name: "Steelix-Mega",
+	normalmokou: {
+		name: "Normal Mokou",
 	},
-	snubbull: {
-		name: "Snubbull",
+	speedmokou: {
+		name: "Speed Mokou",
 	},
-	granbull: {
-		name: "Granbull",
+	powermokou: {
+		name: "Power Mokou",
 	},
-	qwilfish: {
-		name: "Qwilfish",
+	extramokou: {
+		name: "Extra Mokou",
 	},
-	qwilfishhisui: {
-		name: "Qwilfish-Hisui",
+	normalmomiji: {
+		name: "Normal Momiji",
 	},
-	scizor: {
-		name: "Scizor",
+	speedmomiji: {
+		name: "Speed Momiji",
 	},
-	scizormega: {
-		name: "Scizor-Mega",
+	defensemomiji: {
+		name: "Defense Momiji",
 	},
-	shuckle: {
-		name: "Shuckle",
+	extramomiji: {
+		name: "Extra Momiji",
 	},
-	heracross: {
-		name: "Heracross",
+	normalmomoyo: {
+		name: "Normal Momoyo",
 	},
-	heracrossmega: {
-		name: "Heracross-Mega",
+	powermomoyo: {
+		name: "Power Momoyo",
 	},
-	sneasel: {
-		name: "Sneasel",
+	speedmomoyo: {
+		name: "Speed Momoyo",
 	},
-	sneaselhisui: {
-		name: "Sneasel-Hisui",
+	extramomoyo: {
+		name: "Extra Momoyo",
 	},
-	teddiursa: {
-		name: "Teddiursa",
+	normalmugetsu: {
+		name: "Normal Mugetsu",
 	},
-	ursaring: {
-		name: "Ursaring",
+	powermugetsu: {
+		name: "Power Mugetsu",
 	},
-	slugma: {
-		name: "Slugma",
+	assistmugetsu: {
+		name: "Assist Mugetsu",
 	},
-	magcargo: {
-		name: "Magcargo",
+	extramugetsu: {
+		name: "Extra Mugetsu",
 	},
-	swinub: {
-		name: "Swinub",
+	normalmurasa: {
+		name: "Normal Murasa",
 	},
-	piloswine: {
-		name: "Piloswine",
+	powermurasa: {
+		name: "Power Murasa",
 	},
-	corsola: {
-		name: "Corsola",
+	defensemurasa: {
+		name: "Defense Murasa",
 	},
-	corsolagalar: {
-		name: "Corsola-Galar",
+	extramurasa: {
+		name: "Extra Murasa",
 	},
-	remoraid: {
-		name: "Remoraid",
+	normalmystia: {
+		name: "Normal Mystia",
 	},
-	octillery: {
-		name: "Octillery",
+	defensemystia: {
+		name: "Defense Mystia",
 	},
-	delibird: {
-		name: "Delibird",
+	powermystia: {
+		name: "Power Mystia",
 	},
-	mantine: {
-		name: "Mantine",
+	extramystia: {
+		name: "Extra Mystia",
 	},
-	skarmory: {
-		name: "Skarmory",
+	normalnarumi: {
+		name: "Normal Narumi",
 	},
-	houndour: {
-		name: "Houndour",
+	defensenarumi: {
+		name: "Defense Narumi",
 	},
-	houndoom: {
-		name: "Houndoom",
+	powernarumi: {
+		name: "Power Narumi",
 	},
-	houndoommega: {
-		name: "Houndoom-Mega",
+	extranarumi: {
+		name: "Extra Narumi",
 	},
-	kingdra: {
-		name: "Kingdra",
+	normalnazrin: {
+		name: "Normal Nazrin",
 	},
-	phanpy: {
-		name: "Phanpy",
+	speednazrin: {
+		name: "Speed Nazrin",
 	},
-	donphan: {
-		name: "Donphan",
+	defensenazrin: {
+		name: "Defense Nazrin",
 	},
-	porygon2: {
-		name: "Porygon2",
+	extranazrin: {
+		name: "Extra Nazrin",
 	},
-	stantler: {
-		name: "Stantler",
+	normalnemuno: {
+		name: "Normal Nemuno",
 	},
-	smeargle: {
-		name: "Smeargle",
+	powernemuno: {
+		name: "Power Nemuno",
 	},
-	tyrogue: {
-		name: "Tyrogue",
+	defensenemuno: {
+		name: "Defense Nemuno",
 	},
-	hitmontop: {
-		name: "Hitmontop",
+	extranemuno: {
+		name: "Extra Nemuno",
 	},
-	smoochum: {
-		name: "Smoochum",
+	normalnitori: {
+		name: "Normal Nitori",
 	},
-	elekid: {
-		name: "Elekid",
+	powernitori: {
+		name: "Power Nitori",
 	},
-	magby: {
-		name: "Magby",
+	speednitori: {
+		name: "Speed Nitori",
 	},
-	miltank: {
-		name: "Miltank",
+	extranitori: {
+		name: "Extra Nitori",
 	},
-	blissey: {
-		name: "Blissey",
+	normalnue: {
+		name: "Normal Nue",
 	},
-	raikou: {
-		name: "Raikou",
+	powernue: {
+		name: "Power Nue",
 	},
-	entei: {
-		name: "Entei",
+	defensenue: {
+		name: "Defense Nue",
 	},
-	suicune: {
-		name: "Suicune",
+	extranue: {
+		name: "Extra Nue",
 	},
-	larvitar: {
-		name: "Larvitar",
+	normalokina: {
+		name: "Normal Okina",
 	},
-	pupitar: {
-		name: "Pupitar",
+	powerokina: {
+		name: "Power Okina",
 	},
-	tyranitar: {
-		name: "Tyranitar",
+	defenseokina: {
+		name: "Defense Okina",
 	},
-	tyranitarmega: {
-		name: "Tyranitar-Mega",
+	extraokina: {
+		name: "Extra Okina",
 	},
-	lugia: {
-		name: "Lugia",
+	normalorange: {
+		name: "Normal Orange",
 	},
-	hooh: {
-		name: "Ho-Oh",
+	defenseorange: {
+		name: "Defense Orange",
 	},
-	celebi: {
-		name: "Celebi",
+	powerorange: {
+		name: "Power Orange",
 	},
-	treecko: {
-		name: "Treecko",
+	extraorange: {
+		name: "Extra Orange",
 	},
-	grovyle: {
-		name: "Grovyle",
+	normalparsee: {
+		name: "Normal Parsee",
 	},
-	sceptile: {
-		name: "Sceptile",
+	defenseparsee: {
+		name: "Defense Parsee",
 	},
-	sceptilemega: {
-		name: "Sceptile-Mega",
+	assistparsee: {
+		name: "Assist Parsee",
 	},
-	torchic: {
-		name: "Torchic",
+	extraparsee: {
+		name: "Extra Parsee",
 	},
-	combusken: {
-		name: "Combusken",
+	normalpatchouli: {
+		name: "Normal Patchouli",
 	},
-	blaziken: {
-		name: "Blaziken",
+	powerpatchouli: {
+		name: "Power Patchouli",
 	},
-	blazikenmega: {
-		name: "Blaziken-Mega",
+	defensepatchouli: {
+		name: "Defense Patchouli",
 	},
-	mudkip: {
-		name: "Mudkip",
+	extrapatchouli: {
+		name: "Extra Patchouli",
 	},
-	marshtomp: {
-		name: "Marshtomp",
+	normalraiko: {
+		name: "Normal Raiko",
 	},
-	swampert: {
-		name: "Swampert",
+	powerraiko: {
+		name: "Power Raiko",
 	},
-	swampertmega: {
-		name: "Swampert-Mega",
+	assistraiko: {
+		name: "Assist Raiko",
 	},
-	poochyena: {
-		name: "Poochyena",
+	extraraiko: {
+		name: "Extra Raiko",
 	},
-	mightyena: {
-		name: "Mightyena",
+	normalran: {
+		name: "Normal Ran",
 	},
-	zigzagoon: {
-		name: "Zigzagoon",
+	powerran: {
+		name: "Power Ran",
 	},
-	zigzagoongalar: {
-		name: "Zigzagoon-Galar",
+	defenseran: {
+		name: "Defense Ran",
 	},
-	linoone: {
-		name: "Linoone",
+	extraran: {
+		name: "Extra Ran",
 	},
-	linoonegalar: {
-		name: "Linoone-Galar",
+	normalreimu: {
+		name: "Normal Reimu",
 	},
-	wurmple: {
-		name: "Wurmple",
+	defensereimu: {
+		name: "Defense Reimu",
 	},
-	silcoon: {
-		name: "Silcoon",
+	powerreimu: {
+		name: "Power Reimu",
 	},
-	beautifly: {
-		name: "Beautifly",
+	extrareimu: {
+		name: "Extra Reimu",
 	},
-	cascoon: {
-		name: "Cascoon",
+	normalreisen: {
+		name: "Normal Rei'sen",
 	},
-	dustox: {
-		name: "Dustox",
+	speedreisen: {
+		name: "Speed Rei'sen",
 	},
-	lotad: {
-		name: "Lotad",
+	powerreisen: {
+		name: "Power Rei'sen",
 	},
-	lombre: {
-		name: "Lombre",
+	extrareisen: {
+		name: "Extra Rei'sen",
 	},
-	ludicolo: {
-		name: "Ludicolo",
+	normalremilia: {
+		name: "Normal Remilia",
 	},
-	seedot: {
-		name: "Seedot",
+	powerremilia: {
+		name: "Power Remilia",
 	},
-	nuzleaf: {
-		name: "Nuzleaf",
+	speedremilia: {
+		name: "Speed Remilia",
 	},
-	shiftry: {
-		name: "Shiftry",
+	extraremilia: {
+		name: "Extra Remilia",
 	},
-	taillow: {
-		name: "Taillow",
+	normalrenko: {
+		name: "Normal Renko",
 	},
-	swellow: {
-		name: "Swellow",
+	assistrenko: {
+		name: "Assist Renko",
 	},
-	wingull: {
-		name: "Wingull",
+	speedrenko: {
+		name: "Speed Renko",
 	},
-	pelipper: {
-		name: "Pelipper",
+	extrarenko: {
+		name: "Extra Renko",
 	},
-	ralts: {
-		name: "Ralts",
+	normalrika: {
+		name: "Normal Rika",
 	},
-	kirlia: {
-		name: "Kirlia",
+	speedrika: {
+		name: "Speed Rika",
 	},
-	gardevoir: {
-		name: "Gardevoir",
+	powerrika: {
+		name: "Power Rika",
 	},
-	gardevoirmega: {
-		name: "Gardevoir-Mega",
+	extrarika: {
+		name: "Extra Rika",
 	},
-	surskit: {
-		name: "Surskit",
+	normalrikako: {
+		name: "Normal Rikako",
 	},
-	masquerain: {
-		name: "Masquerain",
+	powerrikako: {
+		name: "Power Rikako",
 	},
-	shroomish: {
-		name: "Shroomish",
+	speedrikako: {
+		name: "Speed Rikako",
 	},
-	breloom: {
-		name: "Breloom",
+	extrarikako: {
+		name: "Extra Rikako",
 	},
-	slakoth: {
-		name: "Slakoth",
+	normalrin: {
+		name: "Normal Rin",
 	},
-	vigoroth: {
-		name: "Vigoroth",
+	speedrin: {
+		name: "Speed Rin",
 	},
-	slaking: {
-		name: "Slaking",
+	powerrin: {
+		name: "Power Rin",
 	},
-	nincada: {
-		name: "Nincada",
+	extrarin: {
+		name: "Extra Rin",
 	},
-	ninjask: {
-		name: "Ninjask",
+	normalringo: {
+		name: "Normal Ringo",
 	},
-	shedinja: {
-		name: "Shedinja",
+	defenseringo: {
+		name: "Defense Ringo",
 	},
-	whismur: {
-		name: "Whismur",
+	powerringo: {
+		name: "Power Ringo",
 	},
-	loudred: {
-		name: "Loudred",
+	extraringo: {
+		name: "Extra Ringo",
 	},
-	exploud: {
-		name: "Exploud",
+	normalrinnosuke: {
+		name: "Normal Rinnosuke",
 	},
-	makuhita: {
-		name: "Makuhita",
+	defenserinnosuke: {
+		name: "Defense Rinnosuke",
 	},
-	hariyama: {
-		name: "Hariyama",
+	powerrinnosuke: {
+		name: "Power Rinnosuke",
 	},
-	azurill: {
-		name: "Azurill",
+	extrarinnosuke: {
+		name: "Extra Rinnosuke",
 	},
-	nosepass: {
-		name: "Nosepass",
+	normalrumia: {
+		name: "Normal Rumia",
 	},
-	skitty: {
-		name: "Skitty",
+	defenserumia: {
+		name: "Defense Rumia",
 	},
-	delcatty: {
-		name: "Delcatty",
+	powerrumia: {
+		name: "Power Rumia",
 	},
-	sableye: {
-		name: "Sableye",
+	extrarumia: {
+		name: "Extra Rumia",
 	},
-	sableyemega: {
-		name: "Sableye-Mega",
+	normalruukoto: {
+		name: "Normal Ruukoto",
 	},
-	mawile: {
-		name: "Mawile",
+	assistruukoto: {
+		name: "Assist Ruukoto",
 	},
-	mawilemega: {
-		name: "Mawile-Mega",
+	powerruukoto: {
+		name: "Power Ruukoto",
 	},
-	aron: {
-		name: "Aron",
+	extraruukoto: {
+		name: "Extra Ruukoto",
 	},
-	lairon: {
-		name: "Lairon",
+	normalsagume: {
+		name: "Normal Sagume",
 	},
-	aggron: {
-		name: "Aggron",
+	powersagume: {
+		name: "Power Sagume",
 	},
-	aggronmega: {
-		name: "Aggron-Mega",
+	defensesagume: {
+		name: "Defense Sagume",
 	},
-	meditite: {
-		name: "Meditite",
+	extrasagume: {
+		name: "Extra Sagume",
 	},
-	medicham: {
-		name: "Medicham",
+	normalsaki: {
+		name: "Normal Saki",
 	},
-	medichammega: {
-		name: "Medicham-Mega",
+	speedsaki: {
+		name: "Speed Saki",
 	},
-	electrike: {
-		name: "Electrike",
+	powersaki: {
+		name: "Power Saki",
 	},
-	manectric: {
-		name: "Manectric",
+	extrasaki: {
+		name: "Extra Saki",
 	},
-	manectricmega: {
-		name: "Manectric-Mega",
+	normalsakuya: {
+		name: "Normal Sakuya",
 	},
-	plusle: {
-		name: "Plusle",
+	speedsakuya: {
+		name: "Speed Sakuya",
 	},
-	minun: {
-		name: "Minun",
+	powersakuya: {
+		name: "Power Sakuya",
 	},
-	volbeat: {
-		name: "Volbeat",
+	extrasakuya: {
+		name: "Extra Sakuya",
 	},
-	illumise: {
-		name: "Illumise",
+	normalsanae: {
+		name: "Normal Sanae",
 	},
-	roselia: {
-		name: "Roselia",
+	powersanae: {
+		name: "Power Sanae",
 	},
-	gulpin: {
-		name: "Gulpin",
+	speedsanae: {
+		name: "Speed Sanae",
 	},
-	swalot: {
-		name: "Swalot",
+	extrasanae: {
+		name: "Extra Sanae",
 	},
-	carvanha: {
-		name: "Carvanha",
+	normalsannyo: {
+		name: "Normal Sannyo",
 	},
-	sharpedo: {
-		name: "Sharpedo",
+	assistsannyo: {
+		name: "Assist Sannyo",
 	},
-	sharpedomega: {
-		name: "Sharpedo-Mega",
+	powersannyo: {
+		name: "Power Sannyo",
 	},
-	wailmer: {
-		name: "Wailmer",
+	extrasannyo: {
+		name: "Extra Sannyo",
 	},
-	wailord: {
-		name: "Wailord",
+	normalsara: {
+		name: "Normal Sara",
 	},
-	numel: {
-		name: "Numel",
+	defensesara: {
+		name: "Defense Sara",
 	},
-	camerupt: {
-		name: "Camerupt",
+	speedsara: {
+		name: "Speed Sara",
 	},
-	cameruptmega: {
-		name: "Camerupt-Mega",
+	extrasara: {
+		name: "Extra Sara",
 	},
-	torkoal: {
-		name: "Torkoal",
+	normalsariel: {
+		name: "Normal Sariel",
 	},
-	spoink: {
-		name: "Spoink",
+	powersariel: {
+		name: "Power Sariel",
 	},
-	grumpig: {
-		name: "Grumpig",
+	defensesariel: {
+		name: "Defense Sariel",
 	},
-	spinda: {
-		name: "Spinda",
+	extrasariel: {
+		name: "Extra Sariel",
 	},
-	trapinch: {
-		name: "Trapinch",
+	normalsatono: {
+		name: "Normal Satono",
 	},
-	vibrava: {
-		name: "Vibrava",
+	assistsatono: {
+		name: "Assist Satono",
 	},
-	flygon: {
-		name: "Flygon",
+	speedsatono: {
+		name: "Speed Satono",
 	},
-	cacnea: {
-		name: "Cacnea",
+	extrasatono: {
+		name: "Extra Satono",
 	},
-	cacturne: {
-		name: "Cacturne",
+	normalsatori: {
+		name: "Normal Satori",
 	},
-	swablu: {
-		name: "Swablu",
+	defensesatori: {
+		name: "Defense Satori",
 	},
-	altaria: {
-		name: "Altaria",
+	assistsatori: {
+		name: "Assist Satori",
 	},
-	altariamega: {
-		name: "Altaria-Mega",
+	extrasatori: {
+		name: "Extra Satori",
 	},
-	zangoose: {
-		name: "Zangoose",
+	normalseiga: {
+		name: "Normal Seiga",
 	},
-	seviper: {
-		name: "Seviper",
+	speedseiga: {
+		name: "Speed Seiga",
 	},
-	lunatone: {
-		name: "Lunatone",
+	powerseiga: {
+		name: "Power Seiga",
 	},
-	solrock: {
-		name: "Solrock",
+	extraseiga: {
+		name: "Extra Seiga",
 	},
-	barboach: {
-		name: "Barboach",
+	normalseija: {
+		name: "Normal Seija",
 	},
-	whiscash: {
-		name: "Whiscash",
+	speedseija: {
+		name: "Speed Seija",
 	},
-	corphish: {
-		name: "Corphish",
+	defenseseija: {
+		name: "Defense Seija",
 	},
-	crawdaunt: {
-		name: "Crawdaunt",
+	extraseija: {
+		name: "Extra Seija",
 	},
-	baltoy: {
-		name: "Baltoy",
+	normalseiran: {
+		name: "Normal Seiran",
 	},
-	claydol: {
-		name: "Claydol",
+	speedseiran: {
+		name: "Speed Seiran",
 	},
-	lileep: {
-		name: "Lileep",
+	defenseseiran: {
+		name: "Defense Seiran",
 	},
-	cradily: {
-		name: "Cradily",
+	extraseiran: {
+		name: "Extra Seiran",
 	},
-	anorith: {
-		name: "Anorith",
+	normalsekibanki: {
+		name: "Normal Sekibanki",
 	},
-	armaldo: {
-		name: "Armaldo",
+	powersekibanki: {
+		name: "Power Sekibanki",
 	},
-	feebas: {
-		name: "Feebas",
+	assistsekibanki: {
+		name: "Assist Sekibanki",
 	},
-	milotic: {
-		name: "Milotic",
+	extrasekibanki: {
+		name: "Extra Sekibanki",
 	},
-	castform: {
-		name: "Castform",
+	normalshingyoku: {
+		name: "Normal Shingyoku",
 	},
-	castformsunny: {
-		name: "Castform-Sunny",
+	assistshingyoku: {
+		name: "Assist Shingyoku",
 	},
-	castformrainy: {
-		name: "Castform-Rainy",
+	defenseshingyoku: {
+		name: "Defense Shingyoku",
 	},
-	castformsnowy: {
-		name: "Castform-Snowy",
+	extrashingyoku: {
+		name: "Extra Shingyoku",
 	},
-	kecleon: {
-		name: "Kecleon",
+	normalshinki: {
+		name: "Normal Shinki",
 	},
-	shuppet: {
-		name: "Shuppet",
+	powershinki: {
+		name: "Power Shinki",
 	},
-	banette: {
-		name: "Banette",
+	speedshinki: {
+		name: "Speed Shinki",
 	},
-	banettemega: {
-		name: "Banette-Mega",
+	extrashinki: {
+		name: "Extra Shinki",
 	},
-	duskull: {
-		name: "Duskull",
+	normalshizuha: {
+		name: "Normal Shizuha",
 	},
-	dusclops: {
-		name: "Dusclops",
+	speedshizuha: {
+		name: "Speed Shizuha",
 	},
-	tropius: {
-		name: "Tropius",
+	powershizuha: {
+		name: "Power Shizuha",
 	},
-	chimecho: {
-		name: "Chimecho",
+	extrashizuha: {
+		name: "Extra Shizuha",
 	},
-	absol: {
-		name: "Absol",
+	normalshou: {
+		name: "Normal Shou",
 	},
-	absolmega: {
-		name: "Absol-Mega",
+	powershou: {
+		name: "Power Shou",
 	},
-	wynaut: {
-		name: "Wynaut",
+	speedshou: {
+		name: "Speed Shou",
 	},
-	snorunt: {
-		name: "Snorunt",
+	extrashou: {
+		name: "Extra Shou",
 	},
-	glalie: {
-		name: "Glalie",
+	normalstar: {
+		name: "Normal Star",
 	},
-	glaliemega: {
-		name: "Glalie-Mega",
+	powerstar: {
+		name: "Power Star",
 	},
-	spheal: {
-		name: "Spheal",
+	defensestar: {
+		name: "Defense Star",
 	},
-	sealeo: {
-		name: "Sealeo",
+	extrastar: {
+		name: "Extra Star",
 	},
-	walrein: {
-		name: "Walrein",
+	normalsuika: {
+		name: "Normal Suika",
 	},
-	clamperl: {
-		name: "Clamperl",
+	powersuika: {
+		name: "Power Suika",
 	},
-	huntail: {
-		name: "Huntail",
+	defensesuika: {
+		name: "Defense Suika",
 	},
-	gorebyss: {
-		name: "Gorebyss",
+	extrasuika: {
+		name: "Extra Suika",
 	},
-	relicanth: {
-		name: "Relicanth",
+	normalsukuna: {
+		name: "Normal Sukuna",
 	},
-	luvdisc: {
-		name: "Luvdisc",
+	defensesukuna: {
+		name: "Defense Sukuna",
 	},
-	bagon: {
-		name: "Bagon",
+	powersukuna: {
+		name: "Power Sukuna",
 	},
-	shelgon: {
-		name: "Shelgon",
+	extrasukuna: {
+		name: "Extra Sukuna",
 	},
-	salamence: {
-		name: "Salamence",
+	normalsumireko: {
+		name: "Normal Sumireko",
 	},
-	salamencemega: {
-		name: "Salamence-Mega",
+	powersumireko: {
+		name: "Power Sumireko",
 	},
-	beldum: {
-		name: "Beldum",
+	speedsumireko: {
+		name: "Speed Sumireko",
 	},
-	metang: {
-		name: "Metang",
+	extrasumireko: {
+		name: "Extra Sumireko",
 	},
-	metagross: {
-		name: "Metagross",
+	normalsunny: {
+		name: "Normal Sunny",
 	},
-	metagrossmega: {
-		name: "Metagross-Mega",
+	assistsunny: {
+		name: "Assist Sunny",
 	},
-	regirock: {
-		name: "Regirock",
+	powersunny: {
+		name: "Power Sunny",
 	},
-	regice: {
-		name: "Regice",
+	extrasunny: {
+		name: "Extra Sunny",
 	},
-	registeel: {
-		name: "Registeel",
+	normalsuwako: {
+		name: "Normal Suwako",
 	},
-	latias: {
-		name: "Latias",
+	speedsuwako: {
+		name: "Speed Suwako",
 	},
-	latiasmega: {
-		name: "Latias-Mega",
+	defensesuwako: {
+		name: "Defense Suwako",
 	},
-	latios: {
-		name: "Latios",
+	extrasuwako: {
+		name: "Extra Suwako",
 	},
-	latiosmega: {
-		name: "Latios-Mega",
+	normaltakane: {
+		name: "Normal Takane",
 	},
-	kyogre: {
-		name: "Kyogre",
+	powertakane: {
+		name: "Power Takane",
 	},
-	kyogreprimal: {
-		name: "Kyogre-Primal",
+	speedtakane: {
+		name: "Speed Takane",
 	},
-	groudon: {
-		name: "Groudon",
+	extratakane: {
+		name: "Extra Takane",
 	},
-	groudonprimal: {
-		name: "Groudon-Primal",
+	normalteireida: {
+		name: "Normal Teireida",
 	},
-	rayquaza: {
-		name: "Rayquaza",
+	assistteireida: {
+		name: "Assist Teireida",
 	},
-	rayquazamega: {
-		name: "Rayquaza-Mega",
+	speedteireida: {
+		name: "Speed Teireida",
 	},
-	jirachi: {
-		name: "Jirachi",
+	extrateireida: {
+		name: "Extra Teireida",
 	},
-	deoxys: {
-		name: "Deoxys",
+	normaltenshi: {
+		name: "Normal Tenshi",
 	},
-	deoxysattack: {
-		name: "Deoxys-Attack",
+	powertenshi: {
+		name: "Power Tenshi",
 	},
-	deoxysdefense: {
-		name: "Deoxys-Defense",
+	defensetenshi: {
+		name: "Defense Tenshi",
 	},
-	deoxysspeed: {
-		name: "Deoxys-Speed",
+	extratenshi: {
+		name: "Extra Tenshi",
 	},
-	turtwig: {
-		name: "Turtwig",
+	normaltewi: {
+		name: "Normal Tewi",
 	},
-	grotle: {
-		name: "Grotle",
+	assisttewi: {
+		name: "Assist Tewi",
 	},
-	torterra: {
-		name: "Torterra",
+	powertewi: {
+		name: "Power Tewi",
 	},
-	chimchar: {
-		name: "Chimchar",
+	extratewi: {
+		name: "Extra Tewi",
 	},
-	monferno: {
-		name: "Monferno",
+	normaltojiko: {
+		name: "Normal Tojiko",
 	},
-	infernape: {
-		name: "Infernape",
+	speedtojiko: {
+		name: "Speed Tojiko",
 	},
-	piplup: {
-		name: "Piplup",
+	defensetojiko: {
+		name: "Defense Tojiko",
 	},
-	prinplup: {
-		name: "Prinplup",
+	extratojiko: {
+		name: "Extra Tojiko",
 	},
-	empoleon: {
-		name: "Empoleon",
+	normaltokiko: {
+		name: "Normal Tokiko",
 	},
-	starly: {
-		name: "Starly",
+	powertokiko: {
+		name: "Power Tokiko",
 	},
-	staravia: {
-		name: "Staravia",
+	defensetokiko: {
+		name: "Defense Tokiko",
 	},
-	staraptor: {
-		name: "Staraptor",
+	extratokiko: {
+		name: "Extra Tokiko",
 	},
-	bidoof: {
-		name: "Bidoof",
+	normaltoyohime: {
+		name: "Normal Toyohime",
 	},
-	bibarel: {
-		name: "Bibarel",
+	defensetoyohime: {
+		name: "Defense Toyohime",
 	},
-	kricketot: {
-		name: "Kricketot",
+	powertoyohime: {
+		name: "Power Toyohime",
 	},
-	kricketune: {
-		name: "Kricketune",
+	extratoyohime: {
+		name: "Extra Toyohime",
 	},
-	shinx: {
-		name: "Shinx",
+	normaltsukasa: {
+		name: "Normal Tsukasa",
 	},
-	luxio: {
-		name: "Luxio",
+	speedtsukasa: {
+		name: "Speed Tsukasa",
 	},
-	luxray: {
-		name: "Luxray",
+	assisttsukasa: {
+		name: "Assist Tsukasa",
 	},
-	budew: {
-		name: "Budew",
+	extratsukasa: {
+		name: "Extra Tsukasa",
 	},
-	roserade: {
-		name: "Roserade",
+	normaludonge: {
+		name: "Normal Udonge",
 	},
-	cranidos: {
-		name: "Cranidos",
+	assistudonge: {
+		name: "Assist Udonge",
 	},
-	rampardos: {
-		name: "Rampardos",
+	powerudonge: {
+		name: "Power Udonge",
 	},
-	shieldon: {
-		name: "Shieldon",
+	extraudonge: {
+		name: "Extra Udonge",
 	},
-	bastiodon: {
-		name: "Bastiodon",
+	normalurumi: {
+		name: "Normal Urumi",
 	},
-	burmy: {
-		name: "Burmy",
+	powerurumi: {
+		name: "Power Urumi",
 	},
-	wormadam: {
-		name: "Wormadam",
+	defenseurumi: {
+		name: "Defense Urumi",
 	},
-	wormadamsandy: {
-		name: "Wormadam-Sandy",
+	extraurumi: {
+		name: "Extra Urumi",
 	},
-	wormadamtrash: {
-		name: "Wormadam-Trash",
+	normalutsuho: {
+		name: "Normal Utsuho",
 	},
-	mothim: {
-		name: "Mothim",
+	powerutsuho: {
+		name: "Power Utsuho",
 	},
-	combee: {
-		name: "Combee",
+	speedutsuho: {
+		name: "Speed Utsuho",
 	},
-	vespiquen: {
-		name: "Vespiquen",
+	extrautsuho: {
+		name: "Extra Utsuho",
 	},
-	pachirisu: {
-		name: "Pachirisu",
+	normalwakasagi: {
+		name: "Normal Wakasagi",
 	},
-	buizel: {
-		name: "Buizel",
+	powerwakasagi: {
+		name: "Power Wakasagi",
 	},
-	floatzel: {
-		name: "Floatzel",
+	speedwakasagi: {
+		name: "Speed Wakasagi",
 	},
-	cherubi: {
-		name: "Cherubi",
+	extrawakasagi: {
+		name: "Extra Wakasagi",
 	},
-	cherrim: {
-		name: "Cherrim",
+	normalwriggle: {
+		name: "Normal Wriggle",
 	},
-	cherrimsunshine: {
-		name: "Cherrim-Sunshine",
+	powerwriggle: {
+		name: "Power Wriggle",
 	},
-	shellos: {
-		name: "Shellos",
+	assistwriggle: {
+		name: "Assist Wriggle",
 	},
-	gastrodon: {
-		name: "Gastrodon",
+	extrawriggle: {
+		name: "Extra Wriggle",
 	},
-	ambipom: {
-		name: "Ambipom",
+	normalyachie: {
+		name: "Normal Yachie",
 	},
-	drifloon: {
-		name: "Drifloon",
+	poweryachie: {
+		name: "Power Yachie",
 	},
-	drifblim: {
-		name: "Drifblim",
+	defenseyachie: {
+		name: "Defense Yachie",
 	},
-	buneary: {
-		name: "Buneary",
+	extrayachie: {
+		name: "Extra Yachie",
 	},
-	lopunny: {
-		name: "Lopunny",
+	normalyamame: {
+		name: "Normal Yamame",
 	},
-	lopunnymega: {
-		name: "Lopunny-Mega",
+	poweryamame: {
+		name: "Power Yamame",
 	},
-	mismagius: {
-		name: "Mismagius",
+	assistyamame: {
+		name: "Assist Yamame",
 	},
-	honchkrow: {
-		name: "Honchkrow",
+	extrayamame: {
+		name: "Extra Yamame",
 	},
-	glameow: {
-		name: "Glameow",
+	normalyatsuhashi: {
+		name: "Normal Yatsuhashi",
 	},
-	purugly: {
-		name: "Purugly",
+	speedyatsuhashi: {
+		name: "Speed Yatsuhashi",
 	},
-	chingling: {
-		name: "Chingling",
+	defenseyatsuhashi: {
+		name: "Defense Yatsuhashi",
 	},
-	stunky: {
-		name: "Stunky",
+	extrayatsuhashi: {
+		name: "Extra Yatsuhashi",
 	},
-	skuntank: {
-		name: "Skuntank",
+	normalyorigami: {
+		name: "Normal Yorigami",
 	},
-	bronzor: {
-		name: "Bronzor",
+	poweryorigami: {
+		name: "Power Yorigami",
 	},
-	bronzong: {
-		name: "Bronzong",
+	defenseyorigami: {
+		name: "Defense Yorigami",
 	},
-	bonsly: {
-		name: "Bonsly",
+	extrayorigami: {
+		name: "Extra Yorigami",
 	},
-	mimejr: {
-		name: "Mime Jr.",
+	normalyorihime: {
+		name: "Normal Yorihime",
 	},
-	happiny: {
-		name: "Happiny",
+	poweryorihime: {
+		name: "Power Yorihime",
 	},
-	chatot: {
-		name: "Chatot",
+	speedyorihime: {
+		name: "Speed Yorihime",
 	},
-	spiritomb: {
-		name: "Spiritomb",
+	extrayorihime: {
+		name: "Extra Yorihime",
 	},
-	gible: {
-		name: "Gible",
+	normalyoshika: {
+		name: "Normal Yoshika",
 	},
-	gabite: {
-		name: "Gabite",
+	poweryoshika: {
+		name: "Power Yoshika",
 	},
-	garchomp: {
-		name: "Garchomp",
+	defenseyoshika: {
+		name: "Defense Yoshika",
 	},
-	garchompmega: {
-		name: "Garchomp-Mega",
+	extrayoshika: {
+		name: "Extra Yoshika",
 	},
-	munchlax: {
-		name: "Munchlax",
+	normalyoumu: {
+		name: "Normal Youmu",
 	},
-	riolu: {
-		name: "Riolu",
+	speedyoumu: {
+		name: "Speed Youmu",
 	},
-	lucario: {
-		name: "Lucario",
+	poweryoumu: {
+		name: "Power Youmu",
 	},
-	lucariomega: {
-		name: "Lucario-Mega",
+	extrayoumu: {
+		name: "Extra Youmu",
 	},
-	hippopotas: {
-		name: "Hippopotas",
+	normalyukari: {
+		name: "Normal Yukari",
 	},
-	hippowdon: {
-		name: "Hippowdon",
+	poweryukari: {
+		name: "Power Yukari",
 	},
-	skorupi: {
-		name: "Skorupi",
+	defenseyukari: {
+		name: "Defense Yukari",
 	},
-	drapion: {
-		name: "Drapion",
+	extrayukari: {
+		name: "Extra Yukari",
 	},
-	croagunk: {
-		name: "Croagunk",
+	normalyuki: {
+		name: "Normal Yuki",
 	},
-	toxicroak: {
-		name: "Toxicroak",
+	speedyuki: {
+		name: "Speed Yuki",
 	},
-	carnivine: {
-		name: "Carnivine",
+	poweryuki: {
+		name: "Power Yuki",
 	},
-	finneon: {
-		name: "Finneon",
+	extrayuki: {
+		name: "Extra Yuki",
 	},
-	lumineon: {
-		name: "Lumineon",
+	normalyumeko: {
+		name: "Normal Yumeko",
 	},
-	mantyke: {
-		name: "Mantyke",
+	poweryumeko: {
+		name: "Power Yumeko",
 	},
-	snover: {
-		name: "Snover",
+	speedyumeko: {
+		name: "Speed Yumeko",
 	},
-	abomasnow: {
-		name: "Abomasnow",
+	extrayumeko: {
+		name: "Extra Yumeko",
 	},
-	abomasnowmega: {
-		name: "Abomasnow-Mega",
+	normalyumemi: {
+		name: "Normal Yumemi",
 	},
-	weavile: {
-		name: "Weavile",
+	poweryumemi: {
+		name: "Power Yumemi",
 	},
-	magnezone: {
-		name: "Magnezone",
+	speedyumemi: {
+		name: "Speed Yumemi",
 	},
-	lickilicky: {
-		name: "Lickilicky",
+	extrayumemi: {
+		name: "Extra Yumemi",
 	},
-	rhyperior: {
-		name: "Rhyperior",
+	normalyuugi: {
+		name: "Normal Yuugi",
 	},
-	tangrowth: {
-		name: "Tangrowth",
+	poweryuugi: {
+		name: "Power Yuugi",
 	},
-	electivire: {
-		name: "Electivire",
+	speedyuugi: {
+		name: "Speed Yuugi",
 	},
-	magmortar: {
-		name: "Magmortar",
+	extrayuugi: {
+		name: "Extra Yuugi",
 	},
-	togekiss: {
-		name: "Togekiss",
+	normalyuuka: {
+		name: "Normal Yuuka",
 	},
-	yanmega: {
-		name: "Yanmega",
+	poweryuuka: {
+		name: "Power Yuuka",
 	},
-	leafeon: {
-		name: "Leafeon",
+	defenseyuuka: {
+		name: "Defense Yuuka",
 	},
-	glaceon: {
-		name: "Glaceon",
+	extrayuuka: {
+		name: "Extra Yuuka",
 	},
-	gliscor: {
-		name: "Gliscor",
+	normalyuuma: {
+		name: "Normal Yuuma",
 	},
-	mamoswine: {
-		name: "Mamoswine",
+	poweryuuma: {
+		name: "Power Yuuma",
 	},
-	porygonz: {
-		name: "Porygon-Z",
+	defenseyuuma: {
+		name: "Defense Yuuma",
 	},
-	gallade: {
-		name: "Gallade",
+	extrayuuma: {
+		name: "Extra Yuuma",
 	},
-	gallademega: {
-		name: "Gallade-Mega",
+	normalyuyuko: {
+		name: "Normal Yuyuko",
 	},
-	probopass: {
-		name: "Probopass",
+	defenseyuyuko: {
+		name: "Defense Yuyuko",
 	},
-	dusknoir: {
-		name: "Dusknoir",
+	poweryuyuko: {
+		name: "Power Yuyuko",
 	},
-	froslass: {
-		name: "Froslass",
-	},
-	rotom: {
-		name: "Rotom",
-	},
-	rotomheat: {
-		name: "Rotom-Heat",
-	},
-	rotomwash: {
-		name: "Rotom-Wash",
-	},
-	rotomfrost: {
-		name: "Rotom-Frost",
-	},
-	rotomfan: {
-		name: "Rotom-Fan",
-	},
-	rotommow: {
-		name: "Rotom-Mow",
-	},
-	uxie: {
-		name: "Uxie",
-	},
-	mesprit: {
-		name: "Mesprit",
-	},
-	azelf: {
-		name: "Azelf",
-	},
-	dialga: {
-		name: "Dialga",
-	},
-	dialgaorigin: {
-		name: "Dialga-Origin",
-	},
-	palkia: {
-		name: "Palkia",
-	},
-	palkiaorigin: {
-		name: "Palkia-Origin",
-	},
-	heatran: {
-		name: "Heatran",
-	},
-	regigigas: {
-		name: "Regigigas",
-	},
-	giratina: {
-		name: "Giratina",
-	},
-	giratinaorigin: {
-		name: "Giratina-Origin",
-	},
-	cresselia: {
-		name: "Cresselia",
-	},
-	phione: {
-		name: "Phione",
-	},
-	manaphy: {
-		name: "Manaphy",
-	},
-	darkrai: {
-		name: "Darkrai",
-	},
-	shaymin: {
-		name: "Shaymin",
-	},
-	shayminsky: {
-		name: "Shaymin-Sky",
-	},
-	arceus: {
-		name: "Arceus",
-	},
-	arceusbug: {
-		name: "Arceus-Bug",
-	},
-	arceusdark: {
-		name: "Arceus-Dark",
-	},
-	arceusdragon: {
-		name: "Arceus-Dragon",
-	},
-	arceuselectric: {
-		name: "Arceus-Electric",
-	},
-	arceusfairy: {
-		name: "Arceus-Fairy",
-	},
-	arceusfighting: {
-		name: "Arceus-Fighting",
-	},
-	arceusfire: {
-		name: "Arceus-Fire",
-	},
-	arceusflying: {
-		name: "Arceus-Flying",
-	},
-	arceusghost: {
-		name: "Arceus-Ghost",
-	},
-	arceusgrass: {
-		name: "Arceus-Grass",
-	},
-	arceusground: {
-		name: "Arceus-Ground",
-	},
-	arceusice: {
-		name: "Arceus-Ice",
-	},
-	arceuspoison: {
-		name: "Arceus-Poison",
-	},
-	arceuspsychic: {
-		name: "Arceus-Psychic",
-	},
-	arceusrock: {
-		name: "Arceus-Rock",
-	},
-	arceussteel: {
-		name: "Arceus-Steel",
-	},
-	arceuswater: {
-		name: "Arceus-Water",
-	},
-	victini: {
-		name: "Victini",
-	},
-	snivy: {
-		name: "Snivy",
-	},
-	servine: {
-		name: "Servine",
-	},
-	serperior: {
-		name: "Serperior",
-	},
-	tepig: {
-		name: "Tepig",
-	},
-	pignite: {
-		name: "Pignite",
-	},
-	emboar: {
-		name: "Emboar",
-	},
-	oshawott: {
-		name: "Oshawott",
-	},
-	dewott: {
-		name: "Dewott",
-	},
-	samurott: {
-		name: "Samurott",
-	},
-	samurotthisui: {
-		name: "Samurott-Hisui",
-	},
-	patrat: {
-		name: "Patrat",
-	},
-	watchog: {
-		name: "Watchog",
-	},
-	lillipup: {
-		name: "Lillipup",
-	},
-	herdier: {
-		name: "Herdier",
-	},
-	stoutland: {
-		name: "Stoutland",
-	},
-	purrloin: {
-		name: "Purrloin",
-	},
-	liepard: {
-		name: "Liepard",
-	},
-	pansage: {
-		name: "Pansage",
-	},
-	simisage: {
-		name: "Simisage",
-	},
-	pansear: {
-		name: "Pansear",
-	},
-	simisear: {
-		name: "Simisear",
-	},
-	panpour: {
-		name: "Panpour",
-	},
-	simipour: {
-		name: "Simipour",
-	},
-	munna: {
-		name: "Munna",
-	},
-	musharna: {
-		name: "Musharna",
-	},
-	pidove: {
-		name: "Pidove",
-	},
-	tranquill: {
-		name: "Tranquill",
-	},
-	unfezant: {
-		name: "Unfezant",
-	},
-	blitzle: {
-		name: "Blitzle",
-	},
-	zebstrika: {
-		name: "Zebstrika",
-	},
-	roggenrola: {
-		name: "Roggenrola",
-	},
-	boldore: {
-		name: "Boldore",
-	},
-	gigalith: {
-		name: "Gigalith",
-	},
-	woobat: {
-		name: "Woobat",
-	},
-	swoobat: {
-		name: "Swoobat",
-	},
-	drilbur: {
-		name: "Drilbur",
-	},
-	excadrill: {
-		name: "Excadrill",
-	},
-	audino: {
-		name: "Audino",
-	},
-	audinomega: {
-		name: "Audino-Mega",
-	},
-	timburr: {
-		name: "Timburr",
-	},
-	gurdurr: {
-		name: "Gurdurr",
-	},
-	conkeldurr: {
-		name: "Conkeldurr",
-	},
-	tympole: {
-		name: "Tympole",
-	},
-	palpitoad: {
-		name: "Palpitoad",
-	},
-	seismitoad: {
-		name: "Seismitoad",
-	},
-	throh: {
-		name: "Throh",
-	},
-	sawk: {
-		name: "Sawk",
-	},
-	sewaddle: {
-		name: "Sewaddle",
-	},
-	swadloon: {
-		name: "Swadloon",
-	},
-	leavanny: {
-		name: "Leavanny",
-	},
-	venipede: {
-		name: "Venipede",
-	},
-	whirlipede: {
-		name: "Whirlipede",
-	},
-	scolipede: {
-		name: "Scolipede",
-	},
-	cottonee: {
-		name: "Cottonee",
-	},
-	whimsicott: {
-		name: "Whimsicott",
-	},
-	petilil: {
-		name: "Petilil",
-	},
-	lilligant: {
-		name: "Lilligant",
-	},
-	lilliganthisui: {
-		name: "Lilligant-Hisui",
-	},
-	basculin: {
-		name: "Basculin",
-	},
-	basculinbluestriped: {
-		name: "Basculin-Blue-Striped",
-	},
-	basculinwhitestriped: {
-		name: "Basculin-White-Striped",
-	},
-	sandile: {
-		name: "Sandile",
-	},
-	krokorok: {
-		name: "Krokorok",
-	},
-	krookodile: {
-		name: "Krookodile",
-	},
-	darumaka: {
-		name: "Darumaka",
-	},
-	darumakagalar: {
-		name: "Darumaka-Galar",
-	},
-	darmanitan: {
-		name: "Darmanitan",
-	},
-	darmanitanzen: {
-		name: "Darmanitan-Zen",
-	},
-	darmanitangalar: {
-		name: "Darmanitan-Galar",
-	},
-	darmanitangalarzen: {
-		name: "Darmanitan-Galar-Zen",
-	},
-	maractus: {
-		name: "Maractus",
-	},
-	dwebble: {
-		name: "Dwebble",
-	},
-	crustle: {
-		name: "Crustle",
-	},
-	scraggy: {
-		name: "Scraggy",
-	},
-	scrafty: {
-		name: "Scrafty",
-	},
-	sigilyph: {
-		name: "Sigilyph",
-	},
-	yamask: {
-		name: "Yamask",
-	},
-	yamaskgalar: {
-		name: "Yamask-Galar",
-	},
-	cofagrigus: {
-		name: "Cofagrigus",
-	},
-	tirtouga: {
-		name: "Tirtouga",
-	},
-	carracosta: {
-		name: "Carracosta",
-	},
-	archen: {
-		name: "Archen",
-	},
-	archeops: {
-		name: "Archeops",
-	},
-	trubbish: {
-		name: "Trubbish",
-	},
-	garbodor: {
-		name: "Garbodor",
-	},
-	garbodorgmax: {
-		name: "Garbodor-Gmax",
-	},
-	zorua: {
-		name: "Zorua",
-	},
-	zoruahisui: {
-		name: "Zorua-Hisui",
-	},
-	zoroark: {
-		name: "Zoroark",
-	},
-	zoroarkhisui: {
-		name: "Zoroark-Hisui",
-	},
-	minccino: {
-		name: "Minccino",
-	},
-	cinccino: {
-		name: "Cinccino",
-	},
-	gothita: {
-		name: "Gothita",
-	},
-	gothorita: {
-		name: "Gothorita",
-	},
-	gothitelle: {
-		name: "Gothitelle",
-	},
-	solosis: {
-		name: "Solosis",
-	},
-	duosion: {
-		name: "Duosion",
-	},
-	reuniclus: {
-		name: "Reuniclus",
-	},
-	ducklett: {
-		name: "Ducklett",
-	},
-	swanna: {
-		name: "Swanna",
-	},
-	vanillite: {
-		name: "Vanillite",
-	},
-	vanillish: {
-		name: "Vanillish",
-	},
-	vanilluxe: {
-		name: "Vanilluxe",
-	},
-	deerling: {
-		name: "Deerling",
-	},
-	sawsbuck: {
-		name: "Sawsbuck",
-	},
-	emolga: {
-		name: "Emolga",
-	},
-	karrablast: {
-		name: "Karrablast",
-	},
-	escavalier: {
-		name: "Escavalier",
-	},
-	foongus: {
-		name: "Foongus",
-	},
-	amoonguss: {
-		name: "Amoonguss",
-	},
-	frillish: {
-		name: "Frillish",
-	},
-	jellicent: {
-		name: "Jellicent",
-	},
-	alomomola: {
-		name: "Alomomola",
-	},
-	joltik: {
-		name: "Joltik",
-	},
-	galvantula: {
-		name: "Galvantula",
-	},
-	ferroseed: {
-		name: "Ferroseed",
-	},
-	ferrothorn: {
-		name: "Ferrothorn",
-	},
-	klink: {
-		name: "Klink",
-	},
-	klang: {
-		name: "Klang",
-	},
-	klinklang: {
-		name: "Klinklang",
-	},
-	tynamo: {
-		name: "Tynamo",
-	},
-	eelektrik: {
-		name: "Eelektrik",
-	},
-	eelektross: {
-		name: "Eelektross",
-	},
-	elgyem: {
-		name: "Elgyem",
-	},
-	beheeyem: {
-		name: "Beheeyem",
-	},
-	litwick: {
-		name: "Litwick",
-	},
-	lampent: {
-		name: "Lampent",
-	},
-	chandelure: {
-		name: "Chandelure",
-	},
-	axew: {
-		name: "Axew",
-	},
-	fraxure: {
-		name: "Fraxure",
-	},
-	haxorus: {
-		name: "Haxorus",
-	},
-	cubchoo: {
-		name: "Cubchoo",
-	},
-	beartic: {
-		name: "Beartic",
-	},
-	cryogonal: {
-		name: "Cryogonal",
-	},
-	shelmet: {
-		name: "Shelmet",
-	},
-	accelgor: {
-		name: "Accelgor",
-	},
-	stunfisk: {
-		name: "Stunfisk",
-	},
-	stunfiskgalar: {
-		name: "Stunfisk-Galar",
-	},
-	mienfoo: {
-		name: "Mienfoo",
-	},
-	mienshao: {
-		name: "Mienshao",
-	},
-	druddigon: {
-		name: "Druddigon",
-	},
-	golett: {
-		name: "Golett",
-	},
-	golurk: {
-		name: "Golurk",
-	},
-	pawniard: {
-		name: "Pawniard",
-	},
-	bisharp: {
-		name: "Bisharp",
-	},
-	bouffalant: {
-		name: "Bouffalant",
-	},
-	rufflet: {
-		name: "Rufflet",
-	},
-	braviary: {
-		name: "Braviary",
-	},
-	braviaryhisui: {
-		name: "Braviary-Hisui",
-	},
-	vullaby: {
-		name: "Vullaby",
-	},
-	mandibuzz: {
-		name: "Mandibuzz",
-	},
-	heatmor: {
-		name: "Heatmor",
-	},
-	durant: {
-		name: "Durant",
-	},
-	deino: {
-		name: "Deino",
-	},
-	zweilous: {
-		name: "Zweilous",
-	},
-	hydreigon: {
-		name: "Hydreigon",
-	},
-	larvesta: {
-		name: "Larvesta",
-	},
-	volcarona: {
-		name: "Volcarona",
-	},
-	cobalion: {
-		name: "Cobalion",
-	},
-	terrakion: {
-		name: "Terrakion",
-	},
-	virizion: {
-		name: "Virizion",
-	},
-	tornadus: {
-		name: "Tornadus",
-	},
-	tornadustherian: {
-		name: "Tornadus-Therian",
-	},
-	thundurus: {
-		name: "Thundurus",
-	},
-	thundurustherian: {
-		name: "Thundurus-Therian",
-	},
-	reshiram: {
-		name: "Reshiram",
-	},
-	zekrom: {
-		name: "Zekrom",
-	},
-	landorus: {
-		name: "Landorus",
-	},
-	landorustherian: {
-		name: "Landorus-Therian",
-	},
-	kyurem: {
-		name: "Kyurem",
-	},
-	kyuremblack: {
-		name: "Kyurem-Black",
-	},
-	kyuremwhite: {
-		name: "Kyurem-White",
-	},
-	keldeo: {
-		name: "Keldeo",
-	},
-	keldeoresolute: {
-		name: "Keldeo-Resolute",
-	},
-	meloetta: {
-		name: "Meloetta",
-	},
-	meloettapirouette: {
-		name: "Meloetta-Pirouette",
-	},
-	genesect: {
-		name: "Genesect",
-	},
-	genesectdouse: {
-		name: "Genesect-Douse",
-	},
-	genesectshock: {
-		name: "Genesect-Shock",
-	},
-	genesectburn: {
-		name: "Genesect-Burn",
-	},
-	genesectchill: {
-		name: "Genesect-Chill",
-	},
-	chespin: {
-		name: "Chespin",
-	},
-	quilladin: {
-		name: "Quilladin",
-	},
-	chesnaught: {
-		name: "Chesnaught",
-	},
-	fennekin: {
-		name: "Fennekin",
-	},
-	braixen: {
-		name: "Braixen",
-	},
-	delphox: {
-		name: "Delphox",
-	},
-	froakie: {
-		name: "Froakie",
-	},
-	frogadier: {
-		name: "Frogadier",
-	},
-	greninja: {
-		name: "Greninja",
-	},
-	greninjaash: {
-		name: "Greninja-Ash",
-	},
-	bunnelby: {
-		name: "Bunnelby",
-	},
-	diggersby: {
-		name: "Diggersby",
-	},
-	fletchling: {
-		name: "Fletchling",
-	},
-	fletchinder: {
-		name: "Fletchinder",
-	},
-	talonflame: {
-		name: "Talonflame",
-	},
-	scatterbug: {
-		name: "Scatterbug",
-	},
-	spewpa: {
-		name: "Spewpa",
-	},
-	vivillon: {
-		name: "Vivillon",
-	},
-	vivillonfancy: {
-		name: "Vivillon-Fancy",
-	},
-	vivillonpokeball: {
-		name: "Vivillon-Pokeball",
-	},
-	litleo: {
-		name: "Litleo",
-	},
-	pyroar: {
-		name: "Pyroar",
-	},
-	flabebe: {
-		name: "Flabe\u0301be\u0301",
-	},
-	floette: {
-		name: "Floette",
-	},
-	floetteeternal: {
-		name: "Floette-Eternal",
-	},
-	florges: {
-		name: "Florges",
-	},
-	skiddo: {
-		name: "Skiddo",
-	},
-	gogoat: {
-		name: "Gogoat",
-	},
-	pancham: {
-		name: "Pancham",
-	},
-	pangoro: {
-		name: "Pangoro",
-	},
-	furfrou: {
-		name: "Furfrou",
-	},
-	espurr: {
-		name: "Espurr",
-	},
-	meowstic: {
-		name: "Meowstic",
-	},
-	meowsticf: {
-		name: "Meowstic-F",
-	},
-	honedge: {
-		name: "Honedge",
-	},
-	doublade: {
-		name: "Doublade",
-	},
-	aegislash: {
-		name: "Aegislash",
-	},
-	aegislashblade: {
-		name: "Aegislash-Blade",
-	},
-	spritzee: {
-		name: "Spritzee",
-	},
-	aromatisse: {
-		name: "Aromatisse",
-	},
-	swirlix: {
-		name: "Swirlix",
-	},
-	slurpuff: {
-		name: "Slurpuff",
-	},
-	inkay: {
-		name: "Inkay",
-	},
-	malamar: {
-		name: "Malamar",
-	},
-	binacle: {
-		name: "Binacle",
-	},
-	barbaracle: {
-		name: "Barbaracle",
-	},
-	skrelp: {
-		name: "Skrelp",
-	},
-	dragalge: {
-		name: "Dragalge",
-	},
-	clauncher: {
-		name: "Clauncher",
-	},
-	clawitzer: {
-		name: "Clawitzer",
-	},
-	helioptile: {
-		name: "Helioptile",
-	},
-	heliolisk: {
-		name: "Heliolisk",
-	},
-	tyrunt: {
-		name: "Tyrunt",
-	},
-	tyrantrum: {
-		name: "Tyrantrum",
-	},
-	amaura: {
-		name: "Amaura",
-	},
-	aurorus: {
-		name: "Aurorus",
-	},
-	sylveon: {
-		name: "Sylveon",
-	},
-	hawlucha: {
-		name: "Hawlucha",
-	},
-	dedenne: {
-		name: "Dedenne",
-	},
-	carbink: {
-		name: "Carbink",
-	},
-	goomy: {
-		name: "Goomy",
-	},
-	sliggoo: {
-		name: "Sliggoo",
-	},
-	sliggoohisui: {
-		name: "Sliggoo-Hisui",
-	},
-	goodra: {
-		name: "Goodra",
-	},
-	goodrahisui: {
-		name: "Goodra-Hisui",
-	},
-	klefki: {
-		name: "Klefki",
-	},
-	phantump: {
-		name: "Phantump",
-	},
-	trevenant: {
-		name: "Trevenant",
-	},
-	pumpkaboo: {
-		name: "Pumpkaboo",
-	},
-	pumpkaboosmall: {
-		name: "Pumpkaboo-Small",
-	},
-	pumpkaboolarge: {
-		name: "Pumpkaboo-Large",
-	},
-	pumpkaboosuper: {
-		name: "Pumpkaboo-Super",
-	},
-	gourgeist: {
-		name: "Gourgeist",
-	},
-	gourgeistsmall: {
-		name: "Gourgeist-Small",
-	},
-	gourgeistlarge: {
-		name: "Gourgeist-Large",
-	},
-	gourgeistsuper: {
-		name: "Gourgeist-Super",
-	},
-	bergmite: {
-		name: "Bergmite",
-	},
-	avalugg: {
-		name: "Avalugg",
-	},
-	avalugghisui: {
-		name: "Avalugg-Hisui",
-	},
-	noibat: {
-		name: "Noibat",
-	},
-	noivern: {
-		name: "Noivern",
-	},
-	xerneas: {
-		name: "Xerneas",
-	},
-	xerneasneutral: {
-		name: "Xerneas-Neutral",
-	},
-	yveltal: {
-		name: "Yveltal",
-	},
-	zygarde: {
-		name: "Zygarde",
-	},
-	zygarde10: {
-		name: "Zygarde-10%",
-	},
-	zygardecomplete: {
-		name: "Zygarde-Complete",
-	},
-	diancie: {
-		name: "Diancie",
-	},
-	dianciemega: {
-		name: "Diancie-Mega",
-	},
-	hoopa: {
-		name: "Hoopa",
-	},
-	hoopaunbound: {
-		name: "Hoopa-Unbound",
-	},
-	volcanion: {
-		name: "Volcanion",
-	},
-	rowlet: {
-		name: "Rowlet",
-	},
-	dartrix: {
-		name: "Dartrix",
-	},
-	decidueye: {
-		name: "Decidueye",
-	},
-	decidueyehisui: {
-		name: "Decidueye-Hisui",
-	},
-	litten: {
-		name: "Litten",
-	},
-	torracat: {
-		name: "Torracat",
-	},
-	incineroar: {
-		name: "Incineroar",
-	},
-	popplio: {
-		name: "Popplio",
-	},
-	brionne: {
-		name: "Brionne",
-	},
-	primarina: {
-		name: "Primarina",
-	},
-	pikipek: {
-		name: "Pikipek",
-	},
-	trumbeak: {
-		name: "Trumbeak",
-	},
-	toucannon: {
-		name: "Toucannon",
-	},
-	yungoos: {
-		name: "Yungoos",
-	},
-	gumshoos: {
-		name: "Gumshoos",
-	},
-	gumshoostotem: {
-		name: "Gumshoos-Totem",
-	},
-	grubbin: {
-		name: "Grubbin",
-	},
-	charjabug: {
-		name: "Charjabug",
-	},
-	vikavolt: {
-		name: "Vikavolt",
-	},
-	vikavolttotem: {
-		name: "Vikavolt-Totem",
-	},
-	crabrawler: {
-		name: "Crabrawler",
-	},
-	crabominable: {
-		name: "Crabominable",
-	},
-	oricorio: {
-		name: "Oricorio",
-	},
-	oricoriopompom: {
-		name: "Oricorio-Pom-Pom",
-	},
-	oricoriopau: {
-		name: "Oricorio-Pa'u",
-	},
-	oricoriosensu: {
-		name: "Oricorio-Sensu",
-	},
-	cutiefly: {
-		name: "Cutiefly",
-	},
-	ribombee: {
-		name: "Ribombee",
-	},
-	ribombeetotem: {
-		name: "Ribombee-Totem",
-	},
-	rockruff: {
-		name: "Rockruff",
-	},
-	lycanroc: {
-		name: "Lycanroc",
-	},
-	lycanrocmidnight: {
-		name: "Lycanroc-Midnight",
-	},
-	lycanrocdusk: {
-		name: "Lycanroc-Dusk",
-	},
-	wishiwashi: {
-		name: "Wishiwashi",
-	},
-	wishiwashischool: {
-		name: "Wishiwashi-School",
-	},
-	mareanie: {
-		name: "Mareanie",
-	},
-	toxapex: {
-		name: "Toxapex",
-	},
-	mudbray: {
-		name: "Mudbray",
-	},
-	mudsdale: {
-		name: "Mudsdale",
-	},
-	dewpider: {
-		name: "Dewpider",
-	},
-	araquanid: {
-		name: "Araquanid",
-	},
-	araquanidtotem: {
-		name: "Araquanid-Totem",
-	},
-	fomantis: {
-		name: "Fomantis",
-	},
-	lurantis: {
-		name: "Lurantis",
-	},
-	lurantistotem: {
-		name: "Lurantis-Totem",
-	},
-	morelull: {
-		name: "Morelull",
-	},
-	shiinotic: {
-		name: "Shiinotic",
-	},
-	salandit: {
-		name: "Salandit",
-	},
-	salazzle: {
-		name: "Salazzle",
-	},
-	salazzletotem: {
-		name: "Salazzle-Totem",
-	},
-	stufful: {
-		name: "Stufful",
-	},
-	bewear: {
-		name: "Bewear",
-	},
-	bounsweet: {
-		name: "Bounsweet",
-	},
-	steenee: {
-		name: "Steenee",
-	},
-	tsareena: {
-		name: "Tsareena",
-	},
-	comfey: {
-		name: "Comfey",
-	},
-	oranguru: {
-		name: "Oranguru",
-	},
-	passimian: {
-		name: "Passimian",
-	},
-	wimpod: {
-		name: "Wimpod",
-	},
-	golisopod: {
-		name: "Golisopod",
-	},
-	sandygast: {
-		name: "Sandygast",
-	},
-	palossand: {
-		name: "Palossand",
-	},
-	pyukumuku: {
-		name: "Pyukumuku",
-	},
-	typenull: {
-		name: "Type: Null",
-	},
-	silvally: {
-		name: "Silvally",
-	},
-	silvallybug: {
-		name: "Silvally-Bug",
-	},
-	silvallydark: {
-		name: "Silvally-Dark",
-	},
-	silvallydragon: {
-		name: "Silvally-Dragon",
-	},
-	silvallyelectric: {
-		name: "Silvally-Electric",
-	},
-	silvallyfairy: {
-		name: "Silvally-Fairy",
-	},
-	silvallyfighting: {
-		name: "Silvally-Fighting",
-	},
-	silvallyfire: {
-		name: "Silvally-Fire",
-	},
-	silvallyflying: {
-		name: "Silvally-Flying",
-	},
-	silvallyghost: {
-		name: "Silvally-Ghost",
-	},
-	silvallygrass: {
-		name: "Silvally-Grass",
-	},
-	silvallyground: {
-		name: "Silvally-Ground",
-	},
-	silvallyice: {
-		name: "Silvally-Ice",
-	},
-	silvallypoison: {
-		name: "Silvally-Poison",
-	},
-	silvallypsychic: {
-		name: "Silvally-Psychic",
-	},
-	silvallyrock: {
-		name: "Silvally-Rock",
-	},
-	silvallysteel: {
-		name: "Silvally-Steel",
-	},
-	silvallywater: {
-		name: "Silvally-Water",
-	},
-	minior: {
-		name: "Minior",
-	},
-	miniormeteor: {
-		name: "Minior-Meteor",
-	},
-	komala: {
-		name: "Komala",
-	},
-	turtonator: {
-		name: "Turtonator",
-	},
-	togedemaru: {
-		name: "Togedemaru",
-	},
-	togedemarutotem: {
-		name: "Togedemaru-Totem",
-	},
-	mimikyu: {
-		name: "Mimikyu",
-	},
-	mimikyubusted: {
-		name: "Mimikyu-Busted",
-	},
-	mimikyutotem: {
-		name: "Mimikyu-Totem",
-	},
-	mimikyubustedtotem: {
-		name: "Mimikyu-Busted-Totem",
-	},
-	bruxish: {
-		name: "Bruxish",
-	},
-	drampa: {
-		name: "Drampa",
-	},
-	dhelmise: {
-		name: "Dhelmise",
-	},
-	jangmoo: {
-		name: "Jangmo-o",
-	},
-	hakamoo: {
-		name: "Hakamo-o",
-	},
-	kommoo: {
-		name: "Kommo-o",
-	},
-	kommoototem: {
-		name: "Kommo-o-Totem",
-	},
-	tapukoko: {
-		name: "Tapu Koko",
-	},
-	tapulele: {
-		name: "Tapu Lele",
-	},
-	tapubulu: {
-		name: "Tapu Bulu",
-	},
-	tapufini: {
-		name: "Tapu Fini",
-	},
-	cosmog: {
-		name: "Cosmog",
-	},
-	cosmoem: {
-		name: "Cosmoem",
-	},
-	solgaleo: {
-		name: "Solgaleo",
-	},
-	lunala: {
-		name: "Lunala",
-	},
-	nihilego: {
-		name: "Nihilego",
-	},
-	buzzwole: {
-		name: "Buzzwole",
-	},
-	pheromosa: {
-		name: "Pheromosa",
-	},
-	xurkitree: {
-		name: "Xurkitree",
-	},
-	celesteela: {
-		name: "Celesteela",
-	},
-	kartana: {
-		name: "Kartana",
-	},
-	guzzlord: {
-		name: "Guzzlord",
-	},
-	necrozma: {
-		name: "Necrozma",
-	},
-	necrozmaduskmane: {
-		name: "Necrozma-Dusk-Mane",
-	},
-	necrozmadawnwings: {
-		name: "Necrozma-Dawn-Wings",
-	},
-	necrozmaultra: {
-		name: "Necrozma-Ultra",
-	},
-	magearna: {
-		name: "Magearna",
-	},
-	magearnaoriginal: {
-		name: "Magearna-Original",
-	},
-	marshadow: {
-		name: "Marshadow",
-	},
-	poipole: {
-		name: "Poipole",
-	},
-	naganadel: {
-		name: "Naganadel",
-	},
-	stakataka: {
-		name: "Stakataka",
-	},
-	blacephalon: {
-		name: "Blacephalon",
-	},
-	zeraora: {
-		name: "Zeraora",
-	},
-	meltan: {
-		name: "Meltan",
-	},
-	melmetal: {
-		name: "Melmetal",
-	},
-	melmetalgmax: {
-		name: "Melmetal-Gmax",
-	},
-	grookey: {
-		name: "Grookey",
-	},
-	thwackey: {
-		name: "Thwackey",
-	},
-	rillaboom: {
-		name: "Rillaboom",
-	},
-	rillaboomgmax: {
-		name: "Rillaboom-Gmax",
-	},
-	scorbunny: {
-		name: "Scorbunny",
-	},
-	raboot: {
-		name: "Raboot",
-	},
-	cinderace: {
-		name: "Cinderace",
-	},
-	cinderacegmax: {
-		name: "Cinderace-Gmax",
-	},
-	sobble: {
-		name: "Sobble",
-	},
-	drizzile: {
-		name: "Drizzile",
-	},
-	inteleon: {
-		name: "Inteleon",
-	},
-	inteleongmax: {
-		name: "Inteleon-Gmax",
-	},
-	skwovet: {
-		name: "Skwovet",
-	},
-	greedent: {
-		name: "Greedent",
-	},
-	rookidee: {
-		name: "Rookidee",
-	},
-	corvisquire: {
-		name: "Corvisquire",
-	},
-	corviknight: {
-		name: "Corviknight",
-	},
-	corviknightgmax: {
-		name: "Corviknight-Gmax",
-	},
-	blipbug: {
-		name: "Blipbug",
-	},
-	dottler: {
-		name: "Dottler",
-	},
-	orbeetle: {
-		name: "Orbeetle",
-	},
-	orbeetlegmax: {
-		name: "Orbeetle-Gmax",
-	},
-	nickit: {
-		name: "Nickit",
-	},
-	thievul: {
-		name: "Thievul",
-	},
-	gossifleur: {
-		name: "Gossifleur",
-	},
-	eldegoss: {
-		name: "Eldegoss",
-	},
-	wooloo: {
-		name: "Wooloo",
-	},
-	dubwool: {
-		name: "Dubwool",
-	},
-	chewtle: {
-		name: "Chewtle",
-	},
-	drednaw: {
-		name: "Drednaw",
-	},
-	drednawgmax: {
-		name: "Drednaw-Gmax",
-	},
-	yamper: {
-		name: "Yamper",
-	},
-	boltund: {
-		name: "Boltund",
-	},
-	rolycoly: {
-		name: "Rolycoly",
-	},
-	carkol: {
-		name: "Carkol",
-	},
-	coalossal: {
-		name: "Coalossal",
-	},
-	coalossalgmax: {
-		name: "Coalossal-Gmax",
-	},
-	applin: {
-		name: "Applin",
-	},
-	flapple: {
-		name: "Flapple",
-	},
-	flapplegmax: {
-		name: "Flapple-Gmax",
-	},
-	appletun: {
-		name: "Appletun",
-	},
-	appletungmax: {
-		name: "Appletun-Gmax",
-	},
-	silicobra: {
-		name: "Silicobra",
-	},
-	sandaconda: {
-		name: "Sandaconda",
-	},
-	sandacondagmax: {
-		name: "Sandaconda-Gmax",
-	},
-	cramorant: {
-		name: "Cramorant",
-	},
-	cramorantgulping: {
-		name: "Cramorant-Gulping",
-	},
-	cramorantgorging: {
-		name: "Cramorant-Gorging",
-	},
-	arrokuda: {
-		name: "Arrokuda",
-	},
-	barraskewda: {
-		name: "Barraskewda",
-	},
-	toxel: {
-		name: "Toxel",
-	},
-	toxtricity: {
-		name: "Toxtricity",
-	},
-	toxtricitylowkey: {
-		name: "Toxtricity-Low-Key",
-	},
-	toxtricitygmax: {
-		name: "Toxtricity-Gmax",
-	},
-	toxtricitylowkeygmax: {
-		name: "Toxtricity-Low-Key-Gmax",
-	},
-	sizzlipede: {
-		name: "Sizzlipede",
-	},
-	centiskorch: {
-		name: "Centiskorch",
-	},
-	centiskorchgmax: {
-		name: "Centiskorch-Gmax",
-	},
-	clobbopus: {
-		name: "Clobbopus",
-	},
-	grapploct: {
-		name: "Grapploct",
-	},
-	sinistea: {
-		name: "Sinistea",
-	},
-	sinisteaantique: {
-		name: "Sinistea-Antique",
-	},
-	polteageist: {
-		name: "Polteageist",
-	},
-	polteageistantique: {
-		name: "Polteageist-Antique",
-	},
-	hatenna: {
-		name: "Hatenna",
-	},
-	hattrem: {
-		name: "Hattrem",
-	},
-	hatterene: {
-		name: "Hatterene",
-	},
-	hatterenegmax: {
-		name: "Hatterene-Gmax",
-	},
-	impidimp: {
-		name: "Impidimp",
-	},
-	morgrem: {
-		name: "Morgrem",
-	},
-	grimmsnarl: {
-		name: "Grimmsnarl",
-	},
-	grimmsnarlgmax: {
-		name: "Grimmsnarl-Gmax",
-	},
-	obstagoon: {
-		name: "Obstagoon",
-	},
-	perrserker: {
-		name: "Perrserker",
-	},
-	cursola: {
-		name: "Cursola",
-	},
-	sirfetchd: {
-		name: "Sirfetch\u2019d",
-	},
-	mrrime: {
-		name: "Mr. Rime",
-	},
-	runerigus: {
-		name: "Runerigus",
-	},
-	milcery: {
-		name: "Milcery",
-	},
-	alcremie: {
-		name: "Alcremie",
-	},
-	alcremiegmax: {
-		name: "Alcremie-Gmax",
-	},
-	falinks: {
-		name: "Falinks",
-	},
-	pincurchin: {
-		name: "Pincurchin",
-	},
-	snom: {
-		name: "Snom",
-	},
-	frosmoth: {
-		name: "Frosmoth",
-	},
-	stonjourner: {
-		name: "Stonjourner",
-	},
-	eiscue: {
-		name: "Eiscue",
-	},
-	eiscuenoice: {
-		name: "Eiscue-Noice",
-	},
-	indeedee: {
-		name: "Indeedee",
-	},
-	indeedeef: {
-		name: "Indeedee-F",
-	},
-	morpeko: {
-		name: "Morpeko",
-	},
-	morpekohangry: {
-		name: "Morpeko-Hangry",
-	},
-	cufant: {
-		name: "Cufant",
-	},
-	copperajah: {
-		name: "Copperajah",
-	},
-	copperajahgmax: {
-		name: "Copperajah-Gmax",
-	},
-	dracozolt: {
-		name: "Dracozolt",
-	},
-	arctozolt: {
-		name: "Arctozolt",
-	},
-	dracovish: {
-		name: "Dracovish",
-	},
-	arctovish: {
-		name: "Arctovish",
-	},
-	duraludon: {
-		name: "Duraludon",
-	},
-	duraludongmax: {
-		name: "Duraludon-Gmax",
-	},
-	dreepy: {
-		name: "Dreepy",
-	},
-	drakloak: {
-		name: "Drakloak",
-	},
-	dragapult: {
-		name: "Dragapult",
-	},
-	zacian: {
-		name: "Zacian",
-	},
-	zaciancrowned: {
-		name: "Zacian-Crowned",
-	},
-	zamazenta: {
-		name: "Zamazenta",
-	},
-	zamazentacrowned: {
-		name: "Zamazenta-Crowned",
-	},
-	eternatus: {
-		name: "Eternatus",
-	},
-	eternatuseternamax: {
-		name: "Eternatus-Eternamax",
-	},
-	kubfu: {
-		name: "Kubfu",
-	},
-	urshifu: {
-		name: "Urshifu",
-	},
-	urshifurapidstrike: {
-		name: "Urshifu-Rapid-Strike",
-	},
-	urshifugmax: {
-		name: "Urshifu-Gmax",
-	},
-	urshifurapidstrikegmax: {
-		name: "Urshifu-Rapid-Strike-Gmax",
-	},
-	zarude: {
-		name: "Zarude",
-	},
-	zarudedada: {
-		name: "Zarude-Dada",
-	},
-	regieleki: {
-		name: "Regieleki",
-	},
-	regidrago: {
-		name: "Regidrago",
-	},
-	glastrier: {
-		name: "Glastrier",
-	},
-	spectrier: {
-		name: "Spectrier",
-	},
-	calyrex: {
-		name: "Calyrex",
-	},
-	calyrexice: {
-		name: "Calyrex-Ice",
-	},
-	calyrexshadow: {
-		name: "Calyrex-Shadow",
-	},
-	wyrdeer: {
-		name: "Wydreer",
-	},
-	kleavor: {
-		name: "Kleavor",
-	},
-	ursaluna: {
-		name: "Ursaluna",
-	},
-	basculegion: {
-		name: "Basculegion",
-	},
-	basculegionf: {
-		name: "Basculegion-F",
-	},
-	sneasler: {
-		name: "Sneasler",
-	},
-	overqwil: {
-		name: "Overqwil",
-	},
-	enamorus: {
-		name: "Enamorus",
-	},
-	enamorustherian: {
-		name: "Enamorus-Therian",
-	},
-	missingno: {
-		name: "MissingNo.",
-	},
-	syclar: {
-		name: "Syclar",
-	},
-	syclant: {
-		name: "Syclant",
-	},
-	revenankh: {
-		name: "Revenankh",
-	},
-	embirch: {
-		name: "Embirch",
-	},
-	flarelm: {
-		name: "Flarelm",
-	},
-	pyroak: {
-		name: "Pyroak",
-	},
-	breezi: {
-		name: "Breezi",
-	},
-	fidgit: {
-		name: "Fidgit",
-	},
-	rebble: {
-		name: "Rebble",
-	},
-	tactite: {
-		name: "Tactite",
-	},
-	stratagem: {
-		name: "Stratagem",
-	},
-	privatyke: {
-		name: "Privatyke",
-	},
-	arghonaut: {
-		name: "Arghonaut",
-	},
-	kitsunoh: {
-		name: "Kitsunoh",
-	},
-	cyclohm: {
-		name: "Cyclohm",
-	},
-	colossoil: {
-		name: "Colossoil",
-	},
-	krilowatt: {
-		name: "Krilowatt",
-	},
-	voodoll: {
-		name: "Voodoll",
-	},
-	voodoom: {
-		name: "Voodoom",
-	},
-	scratchet: {
-		name: "Scratchet",
-	},
-	tomohawk: {
-		name: "Tomohawk",
-	},
-	necturine: {
-		name: "Necturine",
-	},
-	necturna: {
-		name: "Necturna",
-	},
-	mollux: {
-		name: "Mollux",
-	},
-	cupra: {
-		name: "Cupra",
-	},
-	argalis: {
-		name: "Argalis",
-	},
-	aurumoth: {
-		name: "Aurumoth",
-	},
-	brattler: {
-		name: "Brattler",
-	},
-	malaconda: {
-		name: "Malaconda",
-	},
-	cawdet: {
-		name: "Cawdet",
-	},
-	cawmodore: {
-		name: "Cawmodore",
-	},
-	volkritter: {
-		name: "Volkritter",
-	},
-	volkraken: {
-		name: "Volkraken",
-	},
-	snugglow: {
-		name: "Snugglow",
-	},
-	plasmanta: {
-		name: "Plasmanta",
-	},
-	floatoy: {
-		name: "Floatoy",
-	},
-	caimanoe: {
-		name: "Caimanoe",
-	},
-	naviathan: {
-		name: "Naviathan",
-	},
-	crucibelle: {
-		name: "Crucibelle",
-	},
-	crucibellemega: {
-		name: "Crucibelle-Mega",
-	},
-	pluffle: {
-		name: "Pluffle",
-	},
-	kerfluffle: {
-		name: "Kerfluffle",
-	},
-	pajantom: {
-		name: "Pajantom",
-	},
-	mumbao: {
-		name: "Mumbao",
-	},
-	jumbao: {
-		name: "Jumbao",
-	},
-	fawnifer: {
-		name: "Fawnifer",
-	},
-	electrelk: {
-		name: "Electrelk",
-	},
-	caribolt: {
-		name: "Caribolt",
-	},
-	smogecko: {
-		name: "Smogecko",
-	},
-	smoguana: {
-		name: "Smoguana",
-	},
-	smokomodo: {
-		name: "Smokomodo",
-	},
-	swirlpool: {
-		name: "Swirlpool",
-	},
-	coribalis: {
-		name: "Coribalis",
-	},
-	snaelstrom: {
-		name: "Snaelstrom",
-	},
-	equilibra: {
-		name: "Equilibra",
-	},
-	astrolotl: {
-		name: "Astrolotl",
-	},
-	pokestarsmeargle: {
-		name: "Pokestar Smeargle",
-	},
-	pokestarufo: {
-		name: "Pokestar UFO",
-	},
-	pokestarufo2: {
-		name: "Pokestar UFO-2",
-	},
-	pokestarbrycenman: {
-		name: "Pokestar Brycen-Man",
-	},
-	pokestarmt: {
-		name: "Pokestar MT",
-	},
-	pokestarmt2: {
-		name: "Pokestar MT2",
-	},
-	pokestartransport: {
-		name: "Pokestar Transport",
-	},
-	pokestargiant: {
-		name: "Pokestar Giant",
-	},
-	pokestarhumanoid: {
-		name: "Pokestar Humanoid",
-	},
-	pokestarmonster: {
-		name: "Pokestar Monster",
-	},
-	pokestarf00: {
-		name: "Pokestar F-00",
-	},
-	pokestarf002: {
-		name: "Pokestar F-002",
-	},
-	pokestarspirit: {
-		name: "Pokestar Spirit",
-	},
-	pokestarblackdoor: {
-		name: "Pokestar Black Door",
-	},
-	pokestarwhitedoor: {
-		name: "Pokestar White Door",
-	},
-	pokestarblackbelt: {
-		name: "Pokestar Black Belt",
-	},
-	pokestarufopropu2: {
-		name: "Pokestar UFO-PropU2",
+	extrayuyuko: {
+		name: "Extra Yuyuko",
 	},
 };

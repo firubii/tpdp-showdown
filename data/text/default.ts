@@ -8,15 +8,15 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		opposingPokemon: "the opposing [NICKNAME]",
 		team: "your team",
 		opposingTeam: "the opposing team",
-		party: "your ally Pok\u00E9mon",
-		opposingParty: "the opposing Pok\u00E9mon",
+		party: "your ally Puppet",
+		opposingParty: "the opposing Puppet",
 
 		turn: "== Turn [NUMBER] ==",
 		switchIn: "[TRAINER] sent out [FULLNAME]!",
 		switchInOwn: "Go! [FULLNAME]!",
-		switchOut: "[TRAINER] withdrew [NICKNAME]!",
-		switchOutOwn: "[NICKNAME], come back!",
-		drag: "[FULLNAME] was dragged out!",
+		switchOut: "[NICKNAME] has returned to [TRAINER]!",
+		switchOutOwn: "[NICKNAME]! Come back!",
+		drag: "[FULLNAME] was dragged into battle!",
 		faint: "[POKEMON] fainted!",
 		swap: "[POKEMON] and [TARGET] switched places!",
 		swapCenter: "[POKEMON] moved to the center!",
@@ -43,13 +43,13 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		// message happens AFTER "Pokemon used Move!"
 		cant: "[POKEMON] can't use [MOVE]!",
 		cantNoMove: "[POKEMON] can't move!",
-		fail: "  But it failed!",
+		fail: "  But the skill failed.",
 
 		// n.b. this is the default message for in-battle forme changes
 		// for the move Transform and ability Imposter, see the entry for the move Transform
-		transform: "[POKEMON] transformed!",
-		typeChange: "  [POKEMON]'s type changed to [TYPE]!",
-		typeChangeFromEffect: "  [POKEMON]'s [EFFECT] made it the [TYPE] type!",
+		transform: "[POKEMON] has changed appearance!",
+		typeChange: "  [POKEMON] has become [TYPE]-Type!",
+		typeChangeFromEffect: "  [POKEMON] has become [TYPE]-Type due to its [EFFECT]!",
 		typeAdd: "  [TYPE] type was added to [POKEMON]!",
 
 		start: "  ([EFFECT] started on [POKEMON]!)",
@@ -75,26 +75,26 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		damageFromPokemon: "  [POKEMON] was hurt by [SOURCE]'s [ITEM]!", // Jaboca/Rowap Berry
 		damageFromItem: "  [POKEMON] was hurt by its [ITEM]!", // Sticky Barb
 		damageFromPartialTrapping: "  [POKEMON] is hurt by [MOVE]!",
-		heal: "  [POKEMON] had its HP restored.",
+		heal: "  [POKEMON] has recovered health!",
 		healFromZEffect: "  [POKEMON] restored its HP using its Z-Power!",
-		healFromEffect: "  [POKEMON] restored HP using its [EFFECT]!",
+		healFromEffect: "  [POKEMON] recovered HP with [EFFECT]!",
 
 		boost: "  [POKEMON]'s [STAT] rose!",
-		boost2: "  [POKEMON]'s [STAT] rose sharply!",
-		boost3: "  [POKEMON]'s [STAT] rose drastically!",
-		boost0: "  [POKEMON]'s [STAT] won't go any higher!",
-		boostFromItem: "  The [ITEM] raised [POKEMON]'s [STAT]!",
-		boost2FromItem: "  The [ITEM] sharply raised [POKEMON]'s [STAT]!",
-		boost3FromItem: "  The [ITEM] drastically raised [POKEMON]'s [STAT]!",
+		boost2: "  [POKEMON]'s [STAT] rose by [BOOST] stages!",
+		boost3: "  [POKEMON]'s [STAT] rose by [BOOST] stages!",
+		boost0: "  [POKEMON]'s [STAT] can't go any higher!",
+		boostFromItem: "  The [ITEM] raised [POKEMON]'s [STAT] by [BOOST] stages!",
+		boost2FromItem: "  The [ITEM] raised [POKEMON]'s [STAT] by [BOOST] stages!",
+		boost3FromItem: "  The [ITEM] raised [POKEMON]'s [STAT] by [BOOST] stages!",
 		boostFromZEffect: "  [POKEMON] boosted its [STAT] using its Z-Power!",
 		boost2FromZEffect: "  [POKEMON] boosted its [STAT] sharply using its Z-Power!",
 		boost3FromZEffect: "  [POKEMON] boosted its [STAT] drastically using its Z-Power!",
 		boostMultipleFromZEffect: "  [POKEMON] boosted its stats using its Z-Power!",
 
 		unboost: "  [POKEMON]'s [STAT] fell!",
-		unboost2: "  [POKEMON]'s [STAT] fell harshly!",
-		unboost3: "  [POKEMON]'s [STAT] fell severely!",
-		unboost0: "  [POKEMON]'s [STAT] won't go any lower!",
+		unboost2: "  [POKEMON]'s [STAT] fell by [BOOST] stages!",
+		unboost3: "  [POKEMON]'s [STAT] fell by [BOOST] stages!",
+		unboost0: "  [POKEMON]'s [STAT] can't go any lower!",
 		unboostFromItem: "  The [ITEM] lowered [POKEMON]'s [STAT]!",
 		unboost2FromItem: "  The [ITEM] harshly lowered [POKEMON]'s [STAT]!",
 		unboost3FromItem: "  The [ITEM] drastically lowered [POKEMON]'s [STAT]!",
@@ -108,24 +108,24 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		invertBoost: "  [POKEMON]'s stat changes were inverted!",
 		clearAllBoost: "  All stat changes were eliminated!",
 
-		superEffective: "  It's super effective!",
-		superEffectiveSpread: "  It's super effective on [POKEMON]!",
-		resisted: "  It's not very effective...",
-		resistedSpread: "  It's not very effective on [POKEMON].",
-		crit: "  A critical hit!",
-		critSpread: "  A critical hit on [POKEMON]!",
-		immune: "  It doesn't affect [POKEMON]...",
+		superEffective: "  The skill passed through the barrier!",
+		superEffectiveSpread: "  The skill passed through [POKEMON]'s barrier!",
+		resisted: "  Skill couldn't penetrate the barrier!",
+		resistedSpread: "  Skill couldn't penetrate [POKEMON]'s barrier!",
+		crit: "  Critical hit!",
+		critSpread: "  Critical hit on [POKEMON]!",
+		immune: "  It didn't affect [POKEMON]...",
 		immuneNoPokemon: "  It had no effect!", // old gens
 		immuneOHKO: "  [POKEMON] is unaffected!",
-		miss: "  [POKEMON] avoided the attack!",
+		miss: "  But it missed.",
 		missNoPokemon: "  [SOURCE]'s attack missed!", // old gens
 
 		center: "  Automatic center!",
 		noTarget: "  But there was no target...", // gen 5 and earlier
 		ohko: "  It's a one-hit KO!",
 		combine: "  The two moves have become one! It's a combined move!",
-		hitCount: "  The Pok\u00E9mon was hit [NUMBER] times!",
-		hitCountSingular: "  The Pok\u00E9mon was hit 1 time!",
+		hitCount: "  The Puppet was hit [NUMBER] times!",
+		hitCountSingular: "  The Puppet was hit 1 time!",
 	},
 
 	// stats
@@ -134,12 +134,12 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		statShortName: "HP",
 	},
 	atk: {
-		statName: "Attack",
-		statShortName: "Atk",
+		statName: "Fo. Atk",
+		statShortName: "FoA",
 	},
 	def: {
-		statName: "Defense",
-		statShortName: "Def",
+		statName: "Fo. Def",
+		statShortName: "FoD",
 	},
 	spa: {
 		statName: "Sp. Atk",
@@ -169,12 +169,20 @@ export const DefaultText: {[k: string]: DefaultText} = {
 
 	// statuses
 	brn: {
-		start: "  [POKEMON] was burned!",
-		startFromItem: "  [POKEMON] was burned by the [ITEM]!",
+		start: "  [POKEMON] has been Burned!",
+		startFromItem: "  [POKEMON] has been Burned!",
 		alreadyStarted: "  [POKEMON] is already burned!",
 		end: "  [POKEMON]'s burn was healed!",
 		endFromItem: "  [POKEMON]'s [ITEM] healed its burn!",
 		damage: "  [POKEMON] was hurt by its burn!",
+	},
+	brnheavy: {
+		start: "  [POKEMON] was heavily burned!",
+		startFromItem: "  [POKEMON] was heavily burned by the [ITEM]!",
+		alreadyStarted: "#brn",
+		end: "#brn",
+		endFromItem: "#brn",
+		damage: "#brn",
 	},
 	frz: {
 		start: "  [POKEMON] was frozen solid!",
@@ -185,26 +193,63 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		cant: "[POKEMON] is frozen solid!",
 	},
 	par: {
-		start: "  [POKEMON] is paralyzed! It may be unable to move!",
+		start: "  [POKEMON] was paralyzed!",
 		alreadyStarted: "  [POKEMON] is already paralyzed!",
 		end: "  [POKEMON] was cured of paralysis!",
-		endFromItem: "  [POKEMON]'s [ITEM] cured its paralysis!",
-		cant: "[POKEMON] is paralyzed! It can't move!",
+		endFromItem: "  [POKEMON]'s [ITEM] healed its paralysis!",
+	},
+	shk: {
+		start: "  [POKEMON] was shocked!",
+		alreadyStarted: "#par",
+		end: "  [POKEMON] was cured of shock!",
+		endFromItem: "  [POKEMON]'s [ITEM] healed its shock!",
 	},
 	psn: {
 		start: "  [POKEMON] was poisoned!",
 		alreadyStarted: "  [POKEMON] is already poisoned!",
 		end: "  [POKEMON] was cured of its poisoning!",
-		endFromItem: "  [POKEMON]'s [ITEM] cured its poison!",
+		endFromItem: "  [POKEMON]'s [ITEM] healed its poison!",
 		damage: "  [POKEMON] was hurt by poison!",
 	},
 	tox: {
-		start: "  [POKEMON] was badly poisoned!",
-		startFromItem: "  [POKEMON] was badly poisoned by the [ITEM]!",
+		start: "  [POKEMON] was heavily poisoned!",
+		startFromItem: "  [POKEMON] was heavily poisoned by the [ITEM]!",
 		end: "#psn",
 		endFromItem: "#psn",
 		alreadyStarted: "#psn",
 		damage: "#psn",
+	},
+	weak: {
+		start: "  [POKEMON] was weakened!",
+		alreadyStarted: "  [POKEMON] is already weakened!",
+		end: "  [POKEMON] was cured of its weakening!",
+		endFromItem: "  [POKEMON]'s [ITEM] healed its weakening!",
+	},
+	weakheavy: {
+		start: "  [POKEMON] was heavily weakened!",
+		alreadyStarted: "#weak",
+		end: "#weak",
+		endFromItem: "#weak",
+	},
+	dark: {
+		start: "  [POKEMON] was blinded!",
+		alreadyStarted: "  [POKEMON] is already blinded!",
+		end: "  [POKEMON] was cured of its blindness!",
+		endFromItem: "  [POKEMON]'s [ITEM] healed its blindness!",
+	},
+	fear: {
+		start: "  [POKEMON] has been scared!",
+		alreadyStarted: "  [POKEMON] is already scared!",
+		end: "  [POKEMON] was cured of its fear!",
+		endFromItem: "  [POKEMON]'s [ITEM] healed its fear!",
+	},
+	stp: {
+		start: "  [POKEMON] was stopped!",
+		startFromRest: "  [POKEMON] stopped and became healthy!",
+		alreadyStarted: "  [POKEMON] is already stopped!",
+		end: "  [POKEMON] can move again!",
+		endFromItem: "  [POKEMON] can move again due to its [ITEM]!",
+		cant: "[POKEMON] is stopped!",
 	},
 	slp: {
 		start: "  [POKEMON] fell asleep!",
@@ -222,8 +267,7 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		end: "  [POKEMON] snapped out of its confusion!",
 		endFromItem: "  [POKEMON]'s [ITEM] snapped it out of its confusion!",
 		alreadyStarted: "  [POKEMON] is already confused!",
-		activate: "  [POKEMON] is confused!",
-		damage: "It hurt itself in its confusion!",
+		activate: "  [POKEMON] was too confused to move!",
 	},
 	drain: {
 		heal: "  [SOURCE] had its energy drained!",
@@ -244,7 +288,7 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		cant: "[POKEMON] must recharge!",
 	},
 	recoil: {
-		damage: "  [POKEMON] was damaged by the recoil!",
+		damage: "  [POKEMON] is hit with recoil from the skill!",
 	},
 	unboost: {
 		fail: "  [POKEMON]'s stats were not lowered!",
@@ -262,8 +306,44 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		block: "  The move was blocked by the power of Dynamax!",
 		fail: "  [POKEMON] shook its head. It seems like it can't use this move...",
 	},
+	partiallytrapped: {
+		start: "  [POKEMON] is completely restricted!",
+		damage: "  [POKEMON] is completely restricted!",
+		end: "  [POKEMON] was freed from the restriction!"
+	},
+	stancebreak: {
+		start: "  [POKEMON]'s stance was broken!",
+		end: "  [POKEMON] restored their stance!",
+	},
 
 	// weather
+	calm: {
+		weatherName: "Calm",
+		start: "  The weather became Calm!",
+		end: "  The weather returned to normal!",
+	},
+	aurora: {
+		weatherName: "Aurora",
+		start: "  The weather became Aurora!",
+		end: "  The weather returned to normal!",
+	},
+	heavyfog: {
+		weatherName: "Heavy Fog",
+		start: "  The weather became Aurora!",
+		end: "  The weather returned to normal!",
+	},
+	duststorm: {
+		weatherName: "Dust Storm",
+		start: "  The weather became Dust Storm!",
+		end: "  The weather returned to normal!",
+		damage: "  [POKEMON] received damage from Dust Storm!",
+	},
+	sunshower: {
+		weatherName: "Sunshower",
+		start: "  The weather became Sunshower!",
+		end: "  The weather returned to normal!",
+	},
+
 	sandstorm: {
 		weatherName: "Sandstorm",
 		start: "  A sandstorm kicked up!",
@@ -319,6 +399,33 @@ export const DefaultText: {[k: string]: DefaultText} = {
 	},
 
 	// terrain
+	seiryu: {
+		weatherName: "Seiryu",
+		start: "  The terrain became Seiryu!",
+		end: "  The terrain returned to normal!",
+	},
+	suzaku: {
+		weatherName: "Suzaku",
+		start: "  The terrain became Suzaku!",
+		end: "  The terrain returned to normal!",
+		damage: "  [POKEMON] has lost HP due to Suzaku!",
+	},
+	byakko: {
+		weatherName: "Byakko",
+		start: "  The terrain became Byakko!",
+		end: "  The terrain returned to normal!",
+	},
+	genbu: {
+		weatherName: "Genbu",
+		start: "  The terrain became Genbu!",
+		end: "  The terrain returned to normal!",
+	},
+	kohryu: {
+		weatherName: "Kohryu",
+		start: "  The terrain became Kohryu!",
+		end: "  The terrain returned to normal!",
+	},
+
 	electricterrain: {
 		start: "  An electric current ran across the battlefield!",
 		end: "  The electricity disappeared from the battlefield.",

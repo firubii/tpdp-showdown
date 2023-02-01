@@ -15,9 +15,29 @@ export const Rulesets: {[k: string]: FormatData} = {
 		name: 'Standard',
 		desc: "The standard ruleset for all offical Smogon singles tiers (Ubers, OU, etc.)",
 		ruleset: [
-			'Obtainable', 'Team Preview', 'Sleep Clause Mod', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Items Clause', 'Evasion Moves Clause', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod',
-			'Min Source Gen = 9',
+			'Limit Sign Moves', '-Future', 'Obtainable', 'Team Preview', 'Species Clause', 'Nickname Clause', 'Endless Battle Clause', 'HP Percentage Mod', 'Cancel Mod', 'Evasion Moves Clause',
+			//'Min Source Gen = 9',
 		],
+		banlist: ['Dream Shard', 'Boundary Trance', 'Echelon Charm', 'Rosary'],
+	},
+	limitsignmoves: {
+		effectType: "ValidatorRule",
+		name: "Limit Sign Moves",
+		desc: "Limits the amount of Sign moves on Puppets",
+		onChangeSet(set, format, setHas?, teamHas?) {
+			const species = this.dex.species.get(set.species);
+
+			if (set.moves) {
+				var signs:string[] = [];
+				for (const moveId of set.moves) {
+					const move = this.dex.moves.get(moveId);
+					if (move.flags.sign)
+						signs.push(move.name);
+				}
+				if (signs.length > 1)
+					return [`${species.baseSpecies} has multiple sign moves: ${signs}`];
+			}
+		},
 	},
 	standardnext: {
 		effectType: 'ValidatorRule',
@@ -1100,7 +1120,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 		effectType: 'Rule',
 		name: 'Sleep Clause Mod',
 		desc: "Prevents players from putting more than one of their opponent's Pok&eacute;mon to sleep at a time, and bans Mega Gengar from using Hypnosis",
-		banlist: ['Hypnosis + Gengarite'],
+		//banlist: ['Hypnosis + Gengarite'],
 		onBegin() {
 			this.add('rule', 'Sleep Clause Mod: Limit one foe put to sleep');
 		},
@@ -1110,8 +1130,8 @@ export const Rulesets: {[k: string]: FormatData} = {
 			}
 			if (status.id === 'slp') {
 				for (const pokemon of target.side.pokemon) {
-					if (pokemon.hp && pokemon.status === 'slp') {
-						if (!pokemon.statusState.source || !pokemon.statusState.source.isAlly(pokemon)) {
+					if (pokemon.hp && pokemon.status['slp']) {
+						if (!pokemon.status['slp'].source || !pokemon.status['slp'].source.isAlly(pokemon)) {
 							this.add('-message', 'Sleep Clause Mod activated.');
 							this.hint("Sleep Clause Mod prevents players from putting more than one of their opponent's Pokémon to sleep at a time");
 							return false;
@@ -1134,7 +1154,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 			}
 			if (status.id === 'slp') {
 				for (const pokemon of target.side.pokemon) {
-					if (pokemon.hp && pokemon.status === 'slp') {
+					if (pokemon.hp && pokemon.status['slp']) {
 						this.add('-message', "Sleep Clause activated. (In Nintendo formats, Sleep Clause activates if any of the opponent's Pokemon are asleep, even if self-inflicted from Rest)");
 						return false;
 					}
@@ -1182,7 +1202,7 @@ export const Rulesets: {[k: string]: FormatData} = {
 			}
 			if (status.id === 'frz') {
 				for (const pokemon of target.side.pokemon) {
-					if (pokemon.status === 'frz') {
+					if (pokemon.status['frz']) {
 						this.add('-message', 'Freeze Clause activated.');
 						return false;
 					}

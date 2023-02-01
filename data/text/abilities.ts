@@ -1,4 +1,1349 @@
 export const AbilitiesText: {[k: string]: AbilityText} = {
+	thirdeye: {
+		name: "Third Eye",
+		desc: "The terrain becomes Byakko.",
+		shortDesc: "The terrain becomes Byakko.",
+	},
+	abl276: {
+		name: "ABL276",
+		desc: "(Unused) Damage from Focus Attacks is halved.",
+		shortDesc: "(Unused) Damage from Focus Attacks is halved.",
+	},
+	absorbent: {
+		name: "Absorbent",
+		desc: "When hit by a Light-type skill, damage is nullified and SpAtk is raised.",
+		shortDesc: "When hit by a Light-type skill, damage is nullified and SpAtk is raised.",
+	},
+	abyssalspirit: {
+		name: "Abyssal Spirit",
+		desc: "Boosts Dark-type skills when HP is less than 1/3.",
+		shortDesc: "Boosts Dark-type skills when HP is less than 1/3.",
+	},
+	active: {
+		name: "Active",
+		desc: "Immune to Stop status.",
+		shortDesc: "Immune to Stop status.",
+	},
+	adversewind: {
+		name: "Adverse Wind",
+		desc: "Only Wind-type opponents can flee.",
+		shortDesc: "Only Wind-type opponents can flee.",
+	},
+	affinitytwist: {
+		name: "Affinity Twist",
+		desc: "Both parties super effective and resisted elements are reversed. Type immunities will be ignored.",
+		shortDesc: "Both parties super effective and resisted elements are reversed. Type immunities will be ignored.",
+
+		start: "  Affinity Twist has inverted everyone's type effectiveness!",
+	},
+	aftermove: {
+		name: "After Move",
+		desc: "Attack power is boosted by 30% when moving second.",
+		shortDesc: "Attack power is boosted by 30% when moving second.",
+	},
+	aggressive: {
+		name: "Aggressive",
+		desc: "Adjusts offensive stats based on the foe's defensive stats.",
+		shortDesc: "Adjusts offensive stats based on the foe's defensive stats.",
+	},
+	aircushion: {
+		name: "Air Cushion",
+		desc: "When hit by an Earth-type skill, damage is nullified. Ignores Adverse Wind ability. Ignores mine/poison trap.",
+		shortDesc: "When hit by an Earth-type skill, damage is nullified. Ignores Adverse Wind ability. Ignores mine/poison trap.",
+	},
+	anathema: {
+		name: "Anathema",
+		desc: "When hit by a skill there is a 30% chance that the opponent will faint in 3 turns.",
+		shortDesc: "When hit by a skill there is a 30% chance that the opponent will faint in 3 turns.",
+	},
+	antibody: {
+		name: "Antibody",
+		desc: "Immune to Poison and Heavy Poison statuses.",
+		shortDesc: "Immune to Poison and Heavy Poison statuses.",
+	},
+	appeasedspirit: {
+		name: "Appeased Spirit",
+		desc: "When hit by a Nether-type skill, HP is restored.",
+		shortDesc: "When hit by a Nether-type skill, HP is restored.",
+	},
+	aquabonus: {
+		name: "Aqua Bonus",
+		desc: "Boosts the power of Water skills by 40%.",
+		shortDesc: "Boosts the power of Water skills by 40%.",
+	},
+	armorpurge: {
+		name: "Armor Purge",
+		desc: "When hit by a Focus Attack, FoDef decreases, FoAtk and Speed increase.",
+		shortDesc: "When hit by a Focus Attack, FoDef decreases, FoAtk and Speed increase.",
+	},
+	ascertainment: {
+		name: "Ascertainment",
+		desc: "Opponent's Ability does not boost their attacks.",
+		shortDesc: "Opponent's Ability does not boost their attacks.",
+	},
+	assault: {
+		name: "Assault",
+		desc: "Attacks have a 10% chance of causing flinching.",
+		shortDesc: "Attacks have a 10% chance of causing flinching.",
+	},
+	astronomy: {
+		name: "Astronomy",
+		desc: "Increases own BU skills' power by 20%",
+		shortDesc: "Increases own BU skills' power by 20%",
+	},
+	aurabonus: {
+		name: "Aura Bonus",
+		desc: "Boosts the power of Fighting skills by 40%.",
+		shortDesc: "Boosts the power of Fighting skills by 40%.",
+	},
+	auroragrace: {
+		name: "Aurora Grace",
+		desc: "During Aurora, Sp.Def is increased by 50% and some HP is restored at the end of every turn.",
+		shortDesc: "During Aurora, Sp.Def is increased by 50% and some HP is restored at the end of every turn.",
+	},
+	autoheal: {
+		name: "Auto Heal",
+		desc: "HP recovers every turn while not inflicted with a status ailment.",
+		shortDesc: "HP recovers every turn while not inflicted with a status ailment.",
+	},
+	avarice: {
+		name: "Avarice",
+		desc: "When an opponent is KO'd, form changes. HP is restored upon form change.",
+		shortDesc: "When an opponent is KO'd, form changes. HP is restored upon form change.",
+	},
+	badmedicine: {
+		name: "Bad Medicine",
+		desc: "Enemies will be hurt when they try to use HP leaching skills on you. Ignores Poison Labyrinth ability.",
+		shortDesc: "Enemies will be hurt when they try to use HP leaching skills on you. Ignores Poison Labyrinth ability.",
+	},
+	battlemania: {
+		name: "Battle Mania",
+		desc: "Opponents that are Fighting-type cannot flee or swap out.",
+		shortDesc: "Opponents that are Fighting-type cannot flee or swap out.",
+	},
+	benefitoffire: {
+		name: "Benefit of Fire",
+		desc: "When hit by a Fire-type skill, HP is restored.",
+		shortDesc: "When hit by a Fire-type skill, HP is restored.",
+	},
+	bibliophilia: {
+		name: "Bibliophilia",
+		desc: "When holding a youma scroll, a certain stat is doubled, and typing and ability is changed.",
+		shortDesc: "When holding a youma scroll, a certain stat is doubled, and typing and ability is changed.",
+	},
+	blizzard: {
+		name: "Blizzard",
+		desc: "At full HP, Water skills receive +1 to their priority. Unimplemented.",
+		shortDesc: "At full HP, Water skills receive +1 to their priority. Unimplemented.",
+	},
+	boundaryblurrer: {
+		name: "Boundary Blurrer",
+		desc: "During weather effects, FoAtk, FoDef, SpAtk, and SpDef are doubled.",
+		shortDesc: "During weather effects, FoAtk, FoDef, SpAtk, and SpDef are doubled.",
+	},
+	boundarysavior: {
+		name: "Boundary Savior",
+		desc: "During terrain effects, FoDef and SpDef are doubled. Recovers from ailments and deals 1/8th damage every turn.",
+		shortDesc: "During terrain effects, FoDef and SpDef are doubled. Recovers from ailments and deals 1/8th damage every turn.",
+	},
+	breather: {
+		name: "Breather",
+		desc: "During Calm, Fo.Def is increased by 50% and some HP is restored at the end of every turn.",
+		shortDesc: "During Calm, Fo.Def is increased by 50% and some HP is restored at the end of every turn.",
+	},
+	brightbonus: {
+		name: "Bright Bonus",
+		desc: "Boosts the power of Light skills by 40%.",
+		shortDesc: "Boosts the power of Light skills by 40%.",
+	},
+	brightform: {
+		name: "Bright Form",
+		desc: "Void-type skills become Light-type skills and their power is increased by 30%.",
+		shortDesc: "Void-type skills become Light-type skills and their power is increased by 30%.",
+	},
+	brutality: {
+		name: "Brutality",
+		desc: "SpAtk is boosted by 50% but accuracy is cut by 20%.",
+		shortDesc: "SpAtk is boosted by 50% but accuracy is cut by 20%.",
+	},
+	bruteforce: {
+		name: "Brute Force",
+		desc: "User is able to ignore the foe's ability, but unable to use items.",
+		shortDesc: "User is able to ignore the foe's ability, but unable to use items.",
+	},
+	burningspirit: {
+		name: "Burning Spirit",
+		desc: "Boosts Fire-type skills when HP is less than 1/3.",
+		shortDesc: "Boosts Fire-type skills when HP is less than 1/3.",
+	},
+	byakuteismetal: {
+		name: "Byakutei's Metal",
+		desc: "Steel skills are 50% more powerful during Byakko. Fire-skill damage is halved during Byakko.",
+		shortDesc: "Steel skills are 50% more powerful during Byakko. Fire-skill damage is halved during Byakko.",
+	},
+	centralexpanse: {
+		name: "Central Expanse",
+		desc: "During Kohryu, your skills ignore the foe's ability, your held items are not negated and gain Wisdom Eye.",
+		shortDesc: "During Kohryu, your skills ignore the foe's ability, your held items are not negated and gain Wisdom Eye.",
+	},
+	chaosinduction: {
+		name: "Chaos Induction",
+		desc: "Opponent has a 30% chance to become confused from any attack.",
+		shortDesc: "Opponent has a 30% chance to become confused from any attack.",
+	},
+	charge: {
+		name: "Charge!",
+		desc: "Attack damage is boosted by 30%, but their secondary effects never occur.",
+		shortDesc: "Attack damage is boosted by 30%, but their secondary effects never occur.",
+	},
+	choleric: {
+		name: "Choleric",
+		desc: "The weather becomes Dust Storm.",
+		shortDesc: "The weather becomes Dust Storm.",
+	},
+	clearedmind: {
+		name: "Cleared Mind",
+		desc: "Immune to Burn and Heavy Burn statuses.",
+		shortDesc: "Immune to Burn and Heavy Burn statuses.",
+	},
+	cloakofdarkness: {
+		name: "Cloak of Darkness",
+		desc: "Dark skills and Heavy Fog restore HP. Receives more damage from Light skills. Damaged by Aurora.",
+		shortDesc: "Dark skills and Heavy Fog restore HP. Receives more damage from Light skills. Damaged by Aurora.",
+	},
+	collectomaniac: {
+		name: "Collectomaniac",
+		desc: "If no item is held after an attack, you may take the foe's held item. Held items cannot be stolen.",
+		shortDesc: "If no item is held after an attack, you may take the foe's held item. Held items cannot be stolen.",
+	},
+	commonsenseless: {
+		name: "Common Senseless",
+		desc: "Ignores type immunities when attacking.",
+		shortDesc: "Ignores type immunities when attacking.",
+	},
+	composed: {
+		name: "Composed",
+		desc: "This Puppet is immune to Upbeat.",
+		shortDesc: "This Puppet is immune to Upbeat.",
+	},
+	convergence: {
+		name: "Convergence",
+		desc: "If you miss a skill, your accuracy increases.",
+		shortDesc: "If you miss a skill, your accuracy increases.",
+	},
+	corruptspirit: {
+		name: "Corrupt Spirit",
+		desc: "Boosts Warped-type skills when HP is less than 1/3.",
+		shortDesc: "Boosts Warped-type skills when HP is less than 1/3.",
+	},
+	counterstance: {
+		name: "Counter Stance",
+		desc: "Damages the attacker when hit with a BU skill.",
+		shortDesc: "Damages the attacker when hit with a BU skill.",
+	},
+	curiosity: {
+		name: "Curiosity",
+		desc: "Support skills receive +1 to their priority.",
+		shortDesc: "Support skills receive +1 to their priority.",
+	},
+	cursereturn: {
+		name: "Curse Return",
+		desc: "Reflects the effects of status skills back on the attacker.",
+		shortDesc: "Reflects the effects of status skills back on the attacker.",
+	},
+	cursedbeing: {
+		name: "Cursed Being",
+		desc: "Drains 10% of foe's HP every turn. Defense is lowered by 10%.",
+		shortDesc: "Drains 10% of foe's HP every turn. Defense is lowered by 10%.",
+	},
+	daredevil: {
+		name: "Daredevil",
+		desc: "FoAtk is boosted by 50% but accuracy is cut by 20%.",
+		shortDesc: "FoAtk is boosted by 50% but accuracy is cut by 20%.",
+	},
+	darkforce: {
+		name: "Dark Force",
+		desc: "Opponent has 10% chance to become blinded from their focus attacks.",
+		shortDesc: "Opponent has 10% chance to become blinded from their focus attacks.",
+	},
+	deflective: {
+		name: "Deflective",
+		desc: "Skills you're immune to will increase your Fo.Def and Sp.Def by one stage.",
+		shortDesc: "Skills you're immune to will increase your Fo.Def and Sp.Def by one stage.",
+	},
+	deploysmoke: {
+		name: "Deploy Smoke",
+		desc: "Lowers the opponent's FoAtk upon switch in.",
+		shortDesc: "Lowers the opponent's FoAtk upon switch in.",
+	},
+	desolatespirit: {
+		name: "Desolate Spirit",
+		desc: "Boosts Earth-type skills when HP is less than 1/3.",
+		shortDesc: "Boosts Earth-type skills when HP is less than 1/3.",
+	},
+	desolationform: {
+		name: "Desolation Form",
+		desc: "Void-type skills become Earth-type skills and their power is increased by 30%.",
+		shortDesc: "Void-type skills become Earth-type skills and their power is increased by 30%.",
+	},
+	desperation: {
+		name: "Desperation",
+		desc: "When poisoned, FoAtk is boosted by 50%.",
+		shortDesc: "When poisoned, FoAtk is boosted by 50%.",
+	},
+	discourager: {
+		name: "Discourager",
+		desc: "Reduces the opponent's FoAtk when hit by a skill that your barrier resists.",
+		shortDesc: "Reduces the opponent's FoAtk when hit by a skill that your barrier resists.",
+	},
+	disjointedblow: {
+		name: "Disjointed Blow",
+		desc: "The power of super effective attacks is increased by 40%.",
+		shortDesc: "The power of super effective attacks is increased by 40%.",
+	},
+	disturber: {
+		name: "Disturber",
+		desc: "Reduces the foe's FoAtk or SpAtk when hit by a skill that your barrier resists.",
+		shortDesc: "Reduces the foe's FoAtk or SpAtk when hit by a skill that your barrier resists.",
+	},
+	divinefestival: {
+		name: "Divine Festival",
+		desc: "Status ailments are cured at the end of every turn during Sunshower.",
+		shortDesc: "Status ailments are cured at the end of every turn during Sunshower.",
+	},
+	divineprotection: {
+		name: "Divine Protection",
+		desc: "Stats cannot be lowered by the enemy.",
+		shortDesc: "Stats cannot be lowered by the enemy.",
+	},
+	dreamworld: {
+		name: "Dream World",
+		desc: "Stopped opponents take damage every turn.",
+		shortDesc: "Stopped opponents take damage every turn.",
+	},
+	drunkard: {
+		name: "Drunkard",
+		desc: "Cannot attack consecutively, however it ignores the foe's ability.",
+		shortDesc: "Cannot attack consecutively, however it ignores the foe's ability.",
+	},
+	duel: {
+		name: "Duel",
+		desc: "Neither you nor your opponent will be able to miss.",
+		shortDesc: "Neither you nor your opponent will be able to miss.",
+	},
+	earthcreation: {
+		name: "Earth Creation",
+		desc: "The terrain becomes Kohryu.",
+		shortDesc: "The terrain becomes Kohryu.",
+	},
+	easternexpanse: {
+		name: "Eastern Expanse",
+		desc: "During Seiryu, same-type skills are 33% stronger.",
+		shortDesc: "During Seiryu, same-type skills are 33% stronger.",
+	},
+	economist: {
+		name: "Economist",
+		desc: "If the last item this Puppet used is a Charm, there is a 50% chance it gets restored at the end of each turn. If Calm weather is active, this chance is 100%.",
+		shortDesc: "If last item used is a Charm, 50% chance to restore it each end of turn. 100% in Calm.",
+	},
+	edensapple: {
+		name: "Eden's Apple",
+		desc: "Foe's Status moves lose their effects. Unimplemented.",
+		shortDesc: "Foe's Status moves lose their effects. Unimplemented.",
+	},
+	electrification: {
+		name: "Electrification",
+		desc: "Opponent has 30% chance to become paralyzed from any attack.",
+		shortDesc: "Opponent has 30% chance to become paralyzed from any attack.",
+	},
+	electromagnetic: {
+		name: "Electromagnetic",
+		desc: "When hit by an Electric-type skill, damage is nullified and SpAtk is raised.",
+		shortDesc: "When hit by an Electric-type skill, damage is nullified and SpAtk is raised.",
+	},
+	emergencycure: {
+		name: "Emergency Cure",
+		desc: "Recovers from status ailments when switching out.",
+		shortDesc: "Recovers from status ailments when switching out.",
+	},
+	empowered: {
+		name: "Empowered",
+		desc: "Increases own EN skills' power by 20%.",
+		shortDesc: "Increases own EN skills' power by 20%.",
+	},
+	energetic: {
+		name: "Energetic",
+		desc: "When an opponent is KO'd, SpAtk is raised.",
+		shortDesc: "When an opponent is KO'd, SpAtk is raised.",
+	},
+	evasive: {
+		name: "Evasive",
+		desc: "Skills you're immune to will increase your Sp.Def by one stage.",
+		shortDesc: "Skills you're immune to will increase your Sp.Def by one stage.",
+	},
+	fascination: {
+		name: "Fascination",
+		desc: "Summons Heavy Fog and Seiryuu.",
+		shortDesc: "Summons Heavy Fog and Seiryuu.",
+	},
+	fasttalker: {
+		name: "Fast Talker",
+		desc: "Two-turn skills can be used in one turn, but they are 10% less powerful.",
+		shortDesc: "Two-turn skills can be used in one turn, but they are 10% less powerful.",
+	},
+	finalform: {
+		name: "Final Form",
+		desc: "Boosts damage of same-type skills by 50% when HP is less than 1/3.",
+		shortDesc: "Boosts damage of same-type skills by 50% when HP is less than 1/3.",
+	},
+	finishingblow: {
+		name: "Finishing Blow",
+		desc: "Damage against a foe with a status ailment is increased by 50%.",
+		shortDesc: "Damage against a foe with a status ailment is increased by 50%.",
+	},
+	firsthit: {
+		name: "First Hit",
+		desc: "Attack power is boosted by 20% when moving first.",
+		shortDesc: "Attack power is boosted by 20% when moving first.",
+	},
+	flamebonus: {
+		name: "Flame Bonus",
+		desc: "Boosts the power of Fire skills by 40%.",
+		shortDesc: "Boosts the power of Fire skills by 40%.",
+	},
+	flaminggarment: {
+		name: "Flaming Garment",
+		desc: "Opponent has a 30% chance to become burned from any attack.",
+		shortDesc: "Opponent has a 30% chance to become burned from any attack.",
+	},
+	flash: {
+		name: "Flash",
+		desc: "During Aurora, Speed is doubled.",
+		shortDesc: "During Aurora, Speed is doubled.",
+	},
+	flatspeed: {
+		name: "Flat Speed",
+		desc: "Lowers increased priority skills to 0 for both sides.",
+		shortDesc: "Lowers increased priority skills to 0 for both sides.",
+	},
+	flawless: {
+		name: "Flawless",
+		desc: "Evasion against status and stat changing skills is increased.",
+		shortDesc: "Evasion against status and stat changing skills is increased.",
+	},
+	flexible: {
+		name: "Flexible",
+		desc: "Immune to Paralysis and Shock statuses.",
+		shortDesc: "Immune to Paralysis and Shock statuses.",
+	},
+	fogtraveler: {
+		name: "Fog Traveler",
+		desc: "During Heavy Fog, Speed is doubled.",
+		shortDesc: "During Heavy Fog, Speed is doubled.",
+	},
+	forceofnature: {
+		name: "Force of Nature",
+		desc: "When hit by a Nature-type skill, damage is nullified and SpAtk is raised.",
+		shortDesc: "When hit by a Nature-type skill, damage is nullified and SpAtk is raised.",
+	},
+	forwarddash: {
+		name: "Forward Dash",
+		desc: "The power of spread skills are doubled.",
+		shortDesc: "The power of spread skills are doubled.",
+	},
+	foxswedding: {
+		name: "Fox's Wedding",
+		desc: "Doubles Speed during Sunshower.",
+		shortDesc: "Doubles Speed during Sunshower.",
+	},
+	frailhealth: {
+		name: "Frail Health",
+		desc: "Take no damage from attacks that do not penetrate the barrier.",
+		shortDesc: "Take no damage from attacks that do not penetrate the barrier.",
+	},
+	freewill: {
+		name: "Free Will",
+		desc: "Immune to skill usage restrictions.",
+		shortDesc: "Immune to skill usage restrictions.",
+	},
+	fullpower: {
+		name: "Full Power",
+		desc: "Skills are 20% more powerful, but takes damage after attacking.",
+		shortDesc: "Skills are 20% more powerful, but takes damage after attacking.",
+	},
+	gale: {
+		name: "Gale",
+		desc: "When inflicted with an ailment, Speed is boosted 50%. Speed drop from paralysis is ignored.",
+		shortDesc: "When inflicted with an ailment, Speed is boosted 50%. Speed drop from paralysis is ignored.",
+	},
+	galeform: {
+		name: "Gale Form",
+		desc: "Void-type skills become Wind-type skills and their power is increased by 30%.",
+		shortDesc: "Void-type skills become Wind-type skills and their power is increased by 30%.",
+	},
+	generalsform: {
+		name: "General's Form",
+		desc: "Void-type skills become Fighting-type skills and their power is increased by 30%.",
+		shortDesc: "Void-type skills become Fighting-type skills and their power is increased by 30%.",
+	},
+	genteiswater: {
+		name: "Gentei's Water",
+		desc: "Water skills are 50% more powerful during Genbu. Earth-skill damage is halved during Genbu.",
+		shortDesc: "Water skills are 50% more powerful during Genbu. Earth-skill damage is halved during Genbu.",
+	},
+	ghostform: {
+		name: "Ghost Form",
+		desc: "Void-type skills become Nether-type skills and their power is increased by 30%.",
+		shortDesc: "Void-type skills become Nether-type skills and their power is increased by 30%.",
+	},
+	glamorous: {
+		name: "Glamorous",
+		desc: "Reduces damage of attacks that penetrate your barrier by 25%.",
+		shortDesc: "Reduces damage of attacks that penetrate your barrier by 25%.",
+	},
+	goodmanagement: {
+		name: "Good Management",
+		desc: "Stat changes from skills and charms are doubled.",
+		shortDesc: "Stat changes from skills and charms are doubled.",
+	},
+	graceofwater: {
+		name: "Grace of Water",
+		desc: "When hit by a Water-type skill, HP is restored.",
+		shortDesc: "When hit by a Water-type skill, HP is restored.",
+	},
+	grandopening: {
+		name: "Grand Opening",
+		desc: "Light skills receive +1 to their priority.",
+		shortDesc: "Light skills receive +1 to their priority.",
+	},
+	groundbonus: {
+		name: "Ground Bonus",
+		desc: "Boosts the power of Earth skills by 40%.",
+		shortDesc: "Boosts the power of Earth skills by 40%.",
+	},
+	gustbonus: {
+		name: "Gust Bonus",
+		desc: "Boosts the power of Wind skills by 40%.",
+		shortDesc: "Boosts the power of Wind skills by 40%.",
+	},
+	harassment: {
+		name: "Harassment",
+		desc: "When your stats drop, so does the foe. When the foe's stats increase, your stats increase as well.",
+		shortDesc: "When your stats drop, so does the foe. When the foe's stats increase, your stats increase as well.",
+	},
+	hateincarnate: {
+		name: "Hate Incarnate",
+		desc: "Damage the opponent if fainting is caused by an attack of 70 or more BP.",
+		shortDesc: "Damage the opponent if fainting is caused by an attack of 70 or more BP.",
+	},
+	healingpower: {
+		name: "Healing Power",
+		desc: "Recovers 1/3 of maximum HP when switching out.",
+		shortDesc: "Recovers 1/3 of maximum HP when switching out.",
+	},
+	hellfireform: {
+		name: "Hellfire Form",
+		desc: "Void-type skills become Fire-type skills and their power is increased by 30%.",
+		shortDesc: "Void-type skills become Fire-type skills and their power is increased by 30%.",
+	},
+	hobgoblin: {
+		name: "Hobgoblin",
+		desc: "Changes appearance to match that of the last Puppet in the party. Reverts after taking a hit.",
+		shortDesc: "Changes appearance to match that of the last Puppet in the party. Reverts after taking a hit.",
+	},
+	hothead: {
+		name: "Hot Head",
+		desc: "FoAtk is increased by 12 stages after taking a critical hit.",
+		shortDesc: "FoAtk is increased by 12 stages after taking a critical hit.",
+	},
+	imaginaryform: {
+		name: "Imaginary Form",
+		desc: "Void-type skills become Illusion-type skills and their power is increased by 30%.",
+		shortDesc: "Void-type skills become Illusion-type skills and their power is increased by 30%.",
+	},
+	immovable: {
+		name: "Immovable",
+		desc: "Immune to flinching.",
+		shortDesc: "Immune to flinching.",
+	},
+	imposingstance: {
+		name: "Imposing Stance",
+		desc: "Damage is only received from skills.",
+		shortDesc: "Damage is only received from skills.",
+	},
+	impulsive: {
+		name: "Impulsive",
+		desc: "Skills you're immune to will increase your Speed by one stage.",
+		shortDesc: "Skills you're immune to will increase your Speed by one stage.",
+	},
+	insync: {
+		name: "In Sync",
+		desc: "When hit by an Warped-type skill, damage is nullified and any status ailment is cured.",
+		shortDesc: "When hit by an Warped-type skill, damage is nullified and any status ailment is cured.",
+	},
+	indomitable: {
+		name: "Indomitable",
+		desc: "Cannot be OHKO'd. Will not receive critical hits either.",
+		shortDesc: "Cannot be OHKO'd. Will not receive critical hits either.",
+	},
+	infectious: {
+		name: "Infectious",
+		desc: "Spreads Infection through attacks that are below 95 BP.",
+		shortDesc: "Spreads Infection through attacks that are below 95 BP.",
+	},
+	infiltration: {
+		name: "Infiltration",
+		desc: "Attacks ignore defensive fields.",
+		shortDesc: "Attacks ignore defensive fields.",
+	},
+	infinitechanges: {
+		name: "Infinite Changes",
+		desc: "Changes type to match skill immediately before use.",
+		shortDesc: "Changes type to match skill immediately before use.",
+	},
+	infinitedream: {
+		name: "Infinite Dream",
+		desc: "The terrain becomes Seiryu.",
+		shortDesc: "The terrain becomes Seiryu.",
+	},
+	insight: {
+		name: "Insight",
+		desc: "Easier to score critical hits.",
+		shortDesc: "Easier to score critical hits.",
+	},
+	instantwin: {
+		name: "Instant Win",
+		desc: "Your speed is increased by 50% on the first turn after entering the field.",
+		shortDesc: "Your speed is increased by 50% on the first turn after entering the field.",
+	},
+	intuition: {
+		name: "Intuition",
+		desc: "Blocks increased priority skills.",
+		shortDesc: "Blocks increased priority skills.",
+	},
+	invalidate: {
+		name: "Invalidate",
+		desc: "Removes the opponent's Ability on entry.",
+		shortDesc: "Removes the opponent's Ability on entry.",
+	},
+	inversereaction: {
+		name: "Inverse Reaction",
+		desc: "When hit by a Light or Dark-type skill only half the damage is taken.",
+		shortDesc: "When hit by a Light or Dark-type skill only half the damage is taken.",
+	},
+	inversetoxin: {
+		name: "Inverse Toxin",
+		desc: "When poisoned, HP is restored instead of lost. Ignores Poison Labyrinth ability.",
+		shortDesc: "When poisoned, HP is restored instead of lost. Ignores Poison Labyrinth ability.",
+	},
+	invigorative: {
+		name: "Invigorative",
+		desc: "Skills you're immune to will increase your Fo.Atk by one stage.",
+		shortDesc: "Skills you're immune to will increase your Fo.Atk by one stage.",
+	},
+	ironresolve: {
+		name: "Iron Resolve",
+		desc: "Cannot be forced to switch out.",
+		shortDesc: "Cannot be forced to switch out.",
+	},
+	jamming: {
+		name: "Jamming",
+		desc: "Reduces the opponent's Speed after receiving an attack of 80 or more BP.",
+		shortDesc: "Reduces the opponent's Speed after receiving an attack of 80 or more BP.",
+	},
+	karmicretribution: {
+		name: "Karmic Retribution",
+		desc: "Damage the opponent after receiving an attack of 90 or more BP.",
+		shortDesc: "Damage the opponent after receiving an attack of 90 or more BP.",
+	},
+	kleptomaniac: {
+		name: "Kleptomaniac",
+		desc: "If no item is held there is a chance to steal an foe's item after attacking.",
+		shortDesc: "If no item is held there is a chance to steal an foe's item after attacking.",
+	},
+	knownlimits: {
+		name: "Known Limits",
+		desc: "Gives and receives 33% less damage from skills that don't match the user's type.",
+		shortDesc: "Gives and receives 33% less damage from skills that don't match the user's type.",
+	},
+	kouteisearth: {
+		name: "Koutei's Earth",
+		desc: "Earth skills are 50% more powerful during Kohryu. Nature-skill damage is halved during Kohryu.",
+		shortDesc: "Earth skills are 50% more powerful during Kohryu. Nature-skill damage is halved during Kohryu.",
+	},
+	lastdefense: {
+		name: "Last Defense",
+		desc: "When inflicted with an ailment, FoDef is boosted by 50%.",
+		shortDesc: "When inflicted with an ailment, FoDef is boosted by 50%.",
+	},
+	leafbonus: {
+		name: "Leaf Bonus",
+		desc: "Boosts the power of Nature skills by 40%.",
+		shortDesc: "Boosts the power of Nature skills by 40%.",
+	},
+	lightcurtain: {
+		name: "Light Curtain",
+		desc: "During Aurora, you're immune to confusion and status ailments are healed at the end of every turn.",
+		shortDesc: "During Aurora, you're immune to confusion and status ailments are healed at the end of every turn.",
+	},
+	lucky: {
+		name: "Lucky",
+		desc: "Secondary effects of skills have double the chance of occurring.",
+		shortDesc: "Secondary effects of skills have double the chance of occurring.",
+	},
+	maintenance: {
+		name: "Maintenance",
+		desc: "30% chance to heal from ailments every turn.",
+		shortDesc: "30% chance to heal from ailments every turn.",
+	},
+	mastersdefense: {
+		name: "Master's Defense",
+		desc: "When hit by a Fighting-type skill, damage is nullified and FoAtk is raised.",
+		shortDesc: "When hit by a Fighting-type skill, damage is nullified and FoAtk is raised.",
+	},
+	melancholic: {
+		name: "Melancholic",
+		desc: "The weather becomes Heavy Fog.",
+		shortDesc: "The weather becomes Heavy Fog.",
+	},
+	metalbonus: {
+		name: "Metal Bonus",
+		desc: "Boosts the power of Steel skills by 40%.",
+		shortDesc: "Boosts the power of Steel skills by 40%.",
+	},
+	metallurgy: {
+		name: "Metallurgy",
+		desc: "When hit by a Steel-type skill, damage is nullified and FoAtk is raised.",
+		shortDesc: "When hit by a Steel-type skill, damage is nullified and FoAtk is raised.",
+	},
+	miasmaform: {
+		name: "Miasma Form",
+		desc: "Void-type skills become Poison-type skills and their power is increased by 30%.",
+		shortDesc: "Void-type skills become Poison-type skills and their power is increased by 30%.",
+	},
+	midnightform: {
+		name: "Midnight Form",
+		desc: "Void-type skills become Dark-type skills and their power is increased by 30%.",
+		shortDesc: "Void-type skills become Dark-type skills and their power is increased by 30%.",
+	},
+	mindlessdance: {
+		name: "Mindless Dance",
+		desc: "2-3 turn skills have no special effects, but are 10% less powerful.",
+		shortDesc: "2-3 turn skills have no special effects, but are 10% less powerful.",
+	},
+	mindseye: {
+		name: "Mind's Eye",
+		desc: "If this Puppet has a non-volatile status condition, its Focus Attack is multiplied by 1.5. This Pokemon's Focus attacks ignore the Blindness effect of halving damage.",
+		shortDesc: "If this Puppet is statused, its Fo. Atk. is 1.5x; ignores Darkness halving physical damage.",
+	},
+	miraclemallet: {
+		name: "Miracle Mallet",
+		desc: "FoAtk and FoDef are doubled.",
+		shortDesc: "FoAtk and FoDef are doubled.",
+	},
+	modeshift: {
+		name: "Mode Shift",
+		desc: "Changes form when using attack skills. Reverts using Supernatural Border.",
+		shortDesc: "Becomes Extra Rika-Shift when using a damaging attack; Supernatural Border changes back",
+	},
+	moody: {
+		name: "Moody",
+		desc: "Every turn one random stat rises sharply and one random stat falls.",
+		shortDesc: "Every turn one random stat rises sharply and one random stat falls.",
+	},
+	moraleboost: {
+		name: "Morale Boost",
+		desc: "When an opponent is KO'd, FoAtk is raised.",
+		shortDesc: "When an opponent is KO'd, FoAtk is raised.",
+	},
+	musicbonus: {
+		name: "Music Bonus",
+		desc: "Boosts the power of Sound skills by 40%.",
+		shortDesc: "Boosts the power of Sound skills by 40%.",
+	},
+	musicalspirit: {
+		name: "Musical Spirit",
+		desc: "Boosts Sound-type skills when HP is less than 1/3.",
+		shortDesc: "Boosts Sound-type skills when HP is less than 1/3.",
+	},
+	naturalform: {
+		name: "Natural Form",
+		desc: "Void-type skills become Nature-type skills and their power is increased by 30%.",
+		shortDesc: "Void-type skills become Nature-type skills and their power is increased by 30%.",
+	},
+	negativeaura: {
+		name: "Negative Aura",
+		desc: "When hit by a Dark-type skill, damage is nullified and FoAtk is raised.",
+		shortDesc: "When hit by a Dark-type skill, damage is nullified and FoAtk is raised.",
+	},
+	niche: {
+		name: "Niche",
+		desc: "The power boost from same-type attacks is even higher.",
+		shortDesc: "The power boost from same-type attacks is even higher.",
+	},
+	nimble: {
+		name: "Nimble",
+		desc: "When a held charm is lost or consumed speed is doubled.",
+		shortDesc: "When a held charm is lost or consumed speed is doubled.",
+	},
+	none: {
+		name: "None",
+		desc: "None.",
+		shortDesc: "None.",
+	},
+	normalbonus: {
+		name: "Normal Bonus",
+		desc: "Boosts the power of Void skills by 40%.",
+		shortDesc: "Boosts the power of Void skills by 40%.",
+	},
+	northernexpanse: {
+		name: "Northern Expanse",
+		desc: "During Genbu, Speed is halved.",
+		shortDesc: "During Genbu, Speed is halved.",
+	},
+	ontheedge: {
+		name: "On the Edge",
+		desc: "At 1 HP, Speed is tripled and attacks do 30% more damage.",
+		shortDesc: "At 1 HP, Speed is tripled and attacks do 30% more damage.",
+	},
+	optimist: {
+		name: "Optimist",
+		desc: "Immune to confusion.",
+		shortDesc: "Immune to confusion.",
+	},
+	overcompensate: {
+		name: "Overcompensate",
+		desc: "Draining skills absorb 30% more HP.",
+		shortDesc: "Draining skills absorb 30% more HP.",
+	},
+	overwhelm: {
+		name: "Overwhelm",
+		desc: "Charms cannot be used by either side.",
+		shortDesc: "Charms cannot be used by either side.",
+	},
+	peaceful: {
+		name: "Peaceful",
+		desc: "Can always escape from battle. Trumps other locking abilities.",
+		shortDesc: "Can always escape from battle. Trumps other locking abilities.",
+	},
+	phalanx: {
+		name: "Phalanx",
+		desc: "Adjusts defensive stats based on the foe's offensive stats.",
+		shortDesc: "Adjusts defensive stats based on the foe's offensive stats.",
+	},
+	phlegmatic: {
+		name: "Phlegmatic",
+		desc: "The weather becomes Calm.",
+		shortDesc: "The weather becomes Calm.",
+	},
+	placid: {
+		name: "Placid",
+		desc: "For 5 turns, Spread Attack and Speed are cut in half. Afterwards, Ability changes to Serious.",
+		shortDesc: "For 5 turns, Sp. Atk. and Speed x0.5; becomes Serious Ability after 5 turns",
+	},
+	poisonbody: {
+		name: "Poison Body",
+		desc: "After an attack, the opponent has a 30% chance to become poisoned.",
+		shortDesc: "After an attack, the opponent has a 30% chance to become poisoned.",
+	},
+	poisonlabyrinth: {
+		name: "Poison Labyrinth",
+		desc: "Only Poison-type opponents can flee.",
+		shortDesc: "Only Poison-type opponents can flee.",
+	},
+	poisonthorns: {
+		name: "Poison Thorns",
+		desc: "Opponent has 30% chance to become poisoned from any attack.",
+		shortDesc: "Opponent has 30% chance to become poisoned from any attack.",
+	},
+	pokerface: {
+		name: "Poker Face",
+		desc: "Ignores the secondary skill effects from attackers.",
+		shortDesc: "Ignores the secondary skill effects from attackers.",
+	},
+	positive: {
+		name: "Positive",
+		desc: "When a stat is decreased SpAtk is raised sharply.",
+		shortDesc: "When a stat is decreased SpAtk is raised sharply.",
+	},
+	preciseaim: {
+		name: "Precise Aim",
+		desc: "Accuracy cannot be lowered. Ignores the foe's Evasion modifiers. Never-miss attacks are 50% stronger.",
+		shortDesc: "Accuracy cannot be lowered. Ignores the foe's Evasion modifiers. Never-miss attacks are 50% stronger.",
+	},
+	pride: {
+		name: "Pride",
+		desc: "SpAtk increases by 50% when statused, ignores SpAtk drop from Fear.",
+		shortDesc: "SpAtk increases by 50% when statused, ignores SpAtk drop from Fear.",
+	},
+	projection: {
+		name: "Projection",
+		desc: "Copies your opponent's ability during battle.",
+		shortDesc: "Copies your opponent's ability during battle.",
+	},
+	quickeye: {
+		name: "Quick Eye",
+		desc: "Allows you to see the held item and ability of the opponent.",
+		shortDesc: "Allows you to see the held item and ability of the opponent.",
+	},
+	ragingspirit: {
+		name: "Raging Spirit",
+		desc: "Boosts Wind-type skills when HP is less than 1/3.",
+		shortDesc: "Boosts Wind-type skills when HP is less than 1/3.",
+	},
+	rainbowspirit: {
+		name: "Rainbow Spirit",
+		desc: "Boosts Light-type skills when HP is less than 1/3.",
+		shortDesc: "Boosts Light-type skills when HP is less than 1/3.",
+	},
+	rampage: {
+		name: "Rampage",
+		desc: "Your SpAtk is increased by 50% but you are locked into the first skill used.",
+		shortDesc: "Your SpAtk is increased by 50% but you are locked into the first skill used.",
+	},
+	recalibration: {
+		name: "Recalibration",
+		desc: "During Calm, SpAtk and SpDef are boosted by 50%.",
+		shortDesc: "During Calm, SpAtk and SpDef are boosted by 50%.",
+	},
+	recitalform: {
+		name: "Recital Form",
+		desc: "Void-type skills become Sound-type skills and their power is increased by 30%.",
+		shortDesc: "Void-type skills become Sound-type skills and their power is increased by 30%.",
+	},
+	reckless: {
+		name: "Reckless",
+		desc: "Damage dealt to the opponent by recoil moves is boosted by 20%.",
+		shortDesc: "Damage dealt to the opponent by recoil moves is boosted by 20%.",
+	},
+	recoiloffset: {
+		name: "Recoil Offset",
+		desc: "Does not receive recoil damage.",
+		shortDesc: "Does not receive recoil damage.",
+	},
+	reflectguard: {
+		name: "Reflect Guard",
+		desc: "Damages the attacker when hit with a EN skill.",
+		shortDesc: "Damages the attacker when hit with a EN skill.",
+	},
+	resonance: {
+		name: "Resonance",
+		desc: "Status ailments are reflected onto opponents when inflicted.",
+		shortDesc: "Status ailments are reflected onto opponents when inflicted.",
+	},
+	restraint: {
+		name: "Restraint",
+		desc: "If the foe uses a switch-out skill, they are unable to switch for 2 turns.",
+		shortDesc: "If the foe uses a switch-out skill, they are unable to switch for 2 turns.",
+	},
+	reversefunction: {
+		name: "Reverse Function",
+		desc: "Opponent's stat changes are reversed.",
+		shortDesc: "Opponent's stat changes are reversed.",
+	},
+	reverseideology: {
+		name: "Reverse Ideology",
+		desc: "The terrain becomes Genbu.",
+		shortDesc: "The terrain becomes Genbu.",
+	},
+	robustspirit: {
+		name: "Robust Spirit",
+		desc: "Boosts Steel-type skills when HP is less than 1/3.",
+		shortDesc: "Boosts Steel-type skills when HP is less than 1/3.",
+	},
+	salvo: {
+		name: "Salvo",
+		desc: "Multi-Hit attacks always hit the maximum amount of times.",
+		shortDesc: "Multi-Hit attacks always hit the maximum amount of times.",
+	},
+	sanddevil: {
+		name: "Sand Devil",
+		desc: "During Dust Storm, Speed is doubled. No sand damage is received.",
+		shortDesc: "During Dust Storm, Speed is doubled. No sand damage is received.",
+	},
+	sandforce: {
+		name: "Sand Force",
+		desc: "During Dust Storm, Fo.Atk is boosted by 30%. No sand damage is received.",
+		shortDesc: "During Dust Storm, Fo.Atk is boosted by 30%. No sand damage is received.",
+	},
+	sandmask: {
+		name: "Sand Mask",
+		desc: "During Dust Storm, Evasion is increased. No sand damage is received.",
+		shortDesc: "During Dust Storm, Evasion is increased. No sand damage is received.",
+	},
+	sanguine: {
+		name: "Sanguine",
+		desc: "The weather becomes Aurora.",
+		shortDesc: "The weather becomes Aurora.",
+	},
+	scorchingsun: {
+		name: "Scorching Sun",
+		desc: "The terrain becomes Suzaku.",
+		shortDesc: "The terrain becomes Suzaku.",
+	},
+	secretceremony: {
+		name: "Secret Ceremony",
+		desc: "Adjusts type based on terrain and weather.",
+		shortDesc: "Adjusts type based on terrain and weather.",
+	},
+	seiteiswood: {
+		name: "Seitei's Wood",
+		desc: "Nature skills are 50% more powerful during Seiryu. Steel-skill damage is halved during Seiryu.",
+		shortDesc: "Nature skills are 50% more powerful during Seiryu. Steel-skill damage is halved during Seiryu.",
+	},
+	selfexorcism: {
+		name: "Self Exorcism",
+		desc: "This Puppet is immune to Nether-type moves and raises its Focus Attack by 1 when hit by a Nether-type move.",
+		shortDesc: "This Puppet raises its Fo. Atk. by 1 when hit by Nether moves; Nether immunity.",
+	},
+	serious: {
+		name: "Serious",
+		desc: "SpAtk and Speed increase one stage every turn.",
+		shortDesc: "SpAtk and Speed increase one stage every turn.",
+	},
+	sermon: {
+		name: "Sermon",
+		desc: "Opponent has a 30% chance to become weakened from any attack.",
+		shortDesc: "Opponent has a 30% chance to become weakened from any attack.",
+	},
+	shadebonus: {
+		name: "Shade Bonus",
+		desc: "Boosts the power of Dark skills by 40%.",
+		shortDesc: "Boosts the power of Dark skills by 40%.",
+	},
+	shadowstitch: {
+		name: "Shadow Stitch",
+		desc: "The opponent cannot flee or swap Puppets.",
+		shortDesc: "The opponent cannot flee or swap Puppets.",
+	},
+	silentrunning: {
+		name: "Silent Running",
+		desc: "During Calm, Speed is doubled.",
+		shortDesc: "During Calm, Speed is doubled.",
+	},
+	sinisterspirit: {
+		name: "Sinister Spirit",
+		desc: "Boosts Nether-type skills when HP is less than 1/3.",
+		shortDesc: "Boosts Nether-type skills when HP is less than 1/3.",
+	},
+	sixthsense: {
+		name: "Sixth Sense",
+		desc: "Notifies you of barrier-penetrating skills your foe knows.",
+		shortDesc: "Notifies you of barrier-penetrating skills your foe knows.",
+	},
+	skilledhand: {
+		name: "Skilled Hand",
+		desc: "Ignores the resistances of enemy barriers.",
+		shortDesc: "Ignores the resistances of enemy barriers.",
+	},
+	slowtempo: {
+		name: "Slow Tempo",
+		desc: "Always attacks second but receive 10% less damage.",
+		shortDesc: "Always attacks second but receive 10% less damage.",
+	},
+	smoothsailing: {
+		name: "Smooth Sailing",
+		desc: "When hit by a Wind-type skill, damage is nullified and Speed is raised.",
+		shortDesc: "When hit by a Wind-type skill, damage is nullified and Speed is raised.",
+	},
+	sniper: {
+		name: "Sniper",
+		desc: "Boosts the strength of critical hits by 50%.",
+		shortDesc: "Boosts the strength of critical hits by 50%.",
+	},
+	someguts: {
+		name: "Some Guts",
+		desc: "Damage the opponent after receiving an attack of 90 or more BP.",
+		shortDesc: "Damage the opponent after receiving an attack of 90 or more BP.",
+	},
+	soreloser: {
+		name: "Sore Loser",
+		desc: "When a stat is decreased FoAtk is raised sharply.",
+		shortDesc: "When a stat is decreased FoAtk is raised sharply.",
+	},
+	soulbonus: {
+		name: "Soul Bonus",
+		desc: "Boosts the power of Nether skills by 40%.",
+		shortDesc: "Boosts the power of Nether skills by 40%.",
+	},
+	soundabsorb: {
+		name: "Sound Absorb",
+		desc: "When hit by a Sound-type skill, damage is nullified, FoAtk is raised, and SpAtk is raised.",
+		shortDesc: "When hit by a Sound-type skill, damage is nullified, FoAtk is raised, and SpAtk is raised.",
+	},
+	soundbooster: {
+		name: "Sound Booster",
+		desc: "When hit by a Sound-type skill SpAtk is raised.",
+		shortDesc: "When hit by a Sound-type skill SpAtk is raised.",
+	},
+	southernexpanse: {
+		name: "Southern Expanse",
+		desc: "During Suzaku, your HP will recover a little bit each turn, ignoring Suzaku's effect.",
+		shortDesc: "During Suzaku, your HP will recover a little bit each turn, ignoring Suzaku's effect.",
+	},
+	sparkbonus: {
+		name: "Spark Bonus",
+		desc: "Boosts the power of Electric skills by 40%.",
+		shortDesc: "Boosts the power of Electric skills by 40%.",
+	},
+	sparkingspirit: {
+		name: "Sparking Spirit",
+		desc: "Boosts Electric-type skills when HP is less than 1/3.",
+		shortDesc: "Boosts Electric-type skills when HP is less than 1/3.",
+	},
+	spiritofyang: {
+		name: "Spirit of Yang",
+		desc: "When hit by an Electric, Light, or Illusion-type skill, damage received is lowered by 20% and Speed is raised.",
+		shortDesc: "When hit by an Electric, Light, or Illusion-type skill, damage received is lowered by 20% and Speed is raised.",
+	},
+	spiritofyin: {
+		name: "Spirit of Yin",
+		desc: "When hit by a Dark, Nether, or Poison-type skill, damage received is lowered by 20% and Speed is raised.",
+		shortDesc: "When hit by a Dark, Nether, or Poison-type skill, damage received is lowered by 20% and Speed is raised.",
+	},
+	sproutingspirit: {
+		name: "Sprouting Spirit",
+		desc: "Boosts Nature-type skills when HP is less than 1/3.",
+		shortDesc: "Boosts Nature-type skills when HP is less than 1/3.",
+	},
+	stargazer: {
+		name: "Stargazer",
+		desc: "Weather skills last forever.",
+		shortDesc: "Weather skills last forever.",
+	},
+	stimulative: {
+		name: "Stimulative",
+		desc: "Skills you're immune to will increase your Sp.Atk by one stage.",
+		shortDesc: "Skills you're immune to will increase your Sp.Atk by one stage.",
+	},
+	stonestacker: {
+		name: "Stone Stacker",
+		desc: "Status moves activate twice.",
+		shortDesc: "Status moves activate twice.",
+	},
+	strangerainbow: {
+		name: "Strange Rainbow",
+		desc: "Boosts Focus Attack by 30% in Sunshower.",
+		shortDesc: "Fo. Atk. x1.3 during Sunshower.",
+	},
+	strategist: {
+		name: "Strategist",
+		desc: "Attacks with a base power of 60 or below are boosted by 50%.",
+		shortDesc: "Attacks with a base power of 60 or below are boosted by 50%.",
+	},
+	streamform: {
+		name: "Stream Form",
+		desc: "Void-type skills become Water-type skills and their power is increased by 30%.",
+		shortDesc: "Void-type skills become Water-type skills and their power is increased by 30%.",
+	},
+	strictdosage: {
+		name: "Strict Dosage",
+		desc: "When hit by a Poison-type skill, HP is restored. Ignores poison trap. Ignores Poison Labyrinth ability.",
+		shortDesc: "When hit by a Poison-type skill, HP is restored. Ignores poison trap. Ignores Poison Labyrinth ability.",
+	},
+	strongsmile: {
+		name: "Strong Smile",
+		desc: "Opponent has a 10% chance to become afraid from their spread attacks.",
+		shortDesc: "Opponent has a 10% chance to become afraid from their spread attacks.",
+	},
+	stubborn: {
+		name: "Stubborn",
+		desc: "Cannot be OHKO'd. Neither of you can use certain skills either.",
+		shortDesc: "Cannot be OHKO'd. Neither of you can use certain skills either.",
+	},
+	supine: {
+		name: "Supine",
+		desc: "Changes weather to Sunshower upon switch in.",
+		shortDesc: "Changes weather to Sunshower upon switch in.",
+	},
+	suppression: {
+		name: "Suppression",
+		desc: "When hit by an enemy skill there is a 30% chance to seal it.",
+		shortDesc: "When hit by an enemy skill there is a 30% chance to seal it.",
+	},
+	surgingspirit: {
+		name: "Surging Spirit",
+		desc: "Boosts Water-type skills when HP is less than 1/3.",
+		shortDesc: "Boosts Water-type skills when HP is less than 1/3.",
+	},
+	surprisetactics: {
+		name: "Surprise Tactics",
+		desc: "During Heavy Fog, SpAtk is boosted by 50%. Damage is received at the end of the turn.",
+		shortDesc: "During Heavy Fog, SpAtk is boosted by 50%. Damage is received at the end of the turn.",
+	},
+	suteisfire: {
+		name: "Sutei's Fire",
+		desc: "Fire skills are 50% more powerful during Suzaku. Water-skill damage is halved during Suzaku.",
+		shortDesc: "Fire skills are 50% more powerful during Suzaku. Water-skill damage is halved during Suzaku.",
+	},
+	telescopic: {
+		name: "Telescopic",
+		desc: "Accuracy is boosted by 30%.",
+		shortDesc: "Accuracy is boosted by 30%.",
+	},
+	threebodies: {
+		name: "Three Bodies",
+		desc: "Form changes based on the class of skills used.",
+		shortDesc: "Form changes based on the class of skills used.",
+	},
+	thunderform: {
+		name: "Thunder Form",
+		desc: "Void-type skills become Electric-type skills and their power is increased by 30%.",
+		shortDesc: "Void-type skills become Electric-type skills and their power is increased by 30%.",
+	},
+	timegazer: {
+		name: "Timegazer",
+		desc: "Terrain skills last 8 turns.",
+		shortDesc: "Terrain skills last 8 turns.",
+	},
+	trueadmin: {
+		name: "True Admin",
+		desc: "When HP is less than half FoAtk and SpAtk are halved.",
+		shortDesc: "When HP is less than half FoAtk and SpAtk are halved.",
+	},
+	twistedbonus: {
+		name: "Twisted Bonus",
+		desc: "Boosts the power of Warped skills by 40%.",
+		shortDesc: "Boosts the power of Warped skills by 40%.",
+	},
+	twistedform: {
+		name: "Twisted Form",
+		desc: "Void-type skills become Warped-type skills and their power is increased by 30%.",
+		shortDesc: "Void-type skills become Warped-type skills and their power is increased by 30%.",
+	},
+	twoofakind: {
+		name: "Two of a Kind",
+		desc: "The power of skills go down by 40%, but you will do an additional attack.",
+		shortDesc: "The power of skills go down by 40%, but you will do an additional attack.",
+	},
+	unbound: {
+		name: "Unbound",
+		desc: "Attacks ignore the foe's ability.",
+		shortDesc: "Attacks ignore the foe's ability.",
+	},
+	uncompromising: {
+		name: "Uncompromising",
+		desc: "Your FoAtk is increased by 50% but you are locked into the first skill used.",
+		shortDesc: "Your FoAtk is increased by 50% but you are locked into the first skill used.",
+	},
+	uniqueshield: {
+		name: "Unique Shield",
+		desc: "Only receive half damage from Focus Attacks.",
+		shortDesc: "Only receive half damage from Focus Attacks.",
+	},
+	unjustness: {
+		name: "Unjustness",
+		desc: "The enemy's SP consumption is increased by +1.",
+		shortDesc: "The enemy's SP consumption is increased by +1.",
+
+		start: "  [POKEMON] is being unreasonable!"
+	},
+	unwaveringheart: {
+		name: "Unwavering Heart",
+		desc: "When hit by an Illusion-type skill, damage is nullified and any status ailment is cured.",
+		shortDesc: "When hit by an Illusion-type skill, damage is nullified and any status ailment is cured.",
+	},
+	unyieldingform: {
+		name: "Unyielding Form",
+		desc: "Void-type skills become Steel-type skills and their power is increased by 30%.",
+		shortDesc: "Void-type skills become Steel-type skills and their power is increased by 30%.",
+	},
+	uptempo: {
+		name: "Up Tempo",
+		desc: "Speed increases every turn.",
+		shortDesc: "Speed increases every turn.",
+	},
+	usurpation: {
+		name: "Usurpation",
+		desc: "Inverts the stat changes.",
+		shortDesc: "Inverts the stat changes.",
+	},
+	vaguespirit: {
+		name: "Vague Spirit",
+		desc: "Boosts Illusion-type skills when HP is less than 1/3.",
+		shortDesc: "Boosts Illusion-type skills when HP is less than 1/3.",
+	},
+	vanishingact: {
+		name: "Vanishing Act",
+		desc: "During Heavy Fog, evasion is increased.",
+		shortDesc: "During Heavy Fog, evasion is increased.",
+	},
+	venombonus: {
+		name: "Venom Bonus",
+		desc: "Boosts the power of Poison skills by 40%.",
+		shortDesc: "Boosts the power of Poison skills by 40%.",
+	},
+	venomousspirit: {
+		name: "Venomous Spirit",
+		desc: "Boosts Poison-type skills when HP is less than 1/3.",
+		shortDesc: "Boosts Poison-type skills when HP is less than 1/3.",
+	},
+	vigorous: {
+		name: "Vigorous",
+		desc: "Takes half the turns to return from stop status.",
+		shortDesc: "Takes half the turns to return from stop status.",
+	},
+	vigorousspirit: {
+		name: "Vigorous Spirit",
+		desc: "Boosts Fighting-type skills when HP is less than 1/3.",
+		shortDesc: "Boosts Fighting-type skills when HP is less than 1/3.",
+	},
+	visionbonus: {
+		name: "Vision Bonus",
+		desc: "Boosts the power of Illusion skills by 40%.",
+		shortDesc: "Boosts the power of Illusion skills by 40%.",
+	},
+	wariness: {
+		name: "Wariness",
+		desc: "Disables skills with 50 or less BP.",
+		shortDesc: "Disables skills with 50 or less BP.",
+	},
+	warningshot: {
+		name: "Warning Shot",
+		desc: "Lowers the opponent's SpAtk upon switch in.",
+		shortDesc: "Lowers the opponent's SpAtk upon switch in.",
+	},
+	wasteful: {
+		name: "Wasteful",
+		desc: "Effects of held items are ignored.",
+		shortDesc: "Effects of held items are ignored.",
+	},
+	weatherresist: {
+		name: "Weather Resist",
+		desc: "This Puppet is immune to the effects of weather and weather based abilities.",
+		shortDesc: "This Puppet is immune to the effects of weather and weather based abilities.",
+	},
+	werehakutaku: {
+		name: "Were-Hakutaku",
+		desc: "When HP is less than half your form is changed.",
+		shortDesc: "When HP is less than half your form is changed.",
+	},
+	westernexpanse: {
+		name: "Western Expanse",
+		desc: "During Byakko, 100 acc skills power increases by 20%, no-miss skills power increases by 50%.",
+		shortDesc: "During Byakko, 100 acc skills power increases by 20%, no-miss skills power increases by 50%.",
+	},
+	wisdomeye: {
+		name: "Wisdom Eye",
+		desc: "Attacks ignore the opponent's stat changes other than speed.",
+		shortDesc: "Attacks ignore the opponent's stat changes other than speed.",
+	},
+	worrywart: {
+		name: "Worrywart",
+		desc: "When HP is less than half the held charm is used.",
+		shortDesc: "When HP is less than half the held charm is used.",
+	},
+	yatanokagami: {
+		name: "Yata no Kagami",
+		desc: "Takes half damage when at full HP.",
+		shortDesc: "Takes half damage when at full HP.",
+	},
+	zen: {
+		name: "Zen",
+		desc: "During Calm, the user is immune to status ailments and recovers some HP at the end of every turn.",
+		shortDesc: "During Calm, the user is immune to status ailments and recovers some HP at the end of every turn.",
+	},
+
 	noability: {
 		name: "No Ability",
 		shortDesc: "Does nothing.",
@@ -991,7 +2336,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  [POKEMON] breaks the mold!",
 	},
-	moody: {
+	_moody: {
 		name: "Moody",
 		desc: "This Pokemon has a random stat, other than accuracy or evasiveness, raised by 2 stages and another stat lowered by 1 stage at the end of each turn.",
 		shortDesc: "Boosts a random stat (except accuracy/evasion) +2 and another stat -1 every turn.",
@@ -1380,7 +2725,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		changeAbility: "  [SOURCE]'s [ABILITY] was taken over!",
 	},
-	reckless: {
+	_reckless: {
 		name: "Reckless",
 		desc: "This Pokemon's attacks with recoil or crash damage have their power multiplied by 1.2. Does not affect Struggle.",
 		shortDesc: "This Pokemon's attacks with recoil or crash damage have 1.2x power; not Struggle.",
@@ -1443,7 +2788,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Run Away",
 		shortDesc: "No competitive use.",
 	},
-	sandforce: {
+	_sandforce: {
 		name: "Sand Force",
 		desc: "If Sandstorm is active, this Pokemon's Ground-, Rock-, and Steel-type attacks have their power multiplied by 1.3. This Pokemon takes no damage from Sandstorm.",
 		shortDesc: "This Pokemon's Ground/Rock/Steel attacks do 1.3x in Sandstorm; immunity to it.",
@@ -1612,7 +2957,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 			shortDesc: "If Hail is active, this Pokemon's Speed is doubled.",
 		},
 	},
-	sniper: {
+	_sniper: {
 		name: "Sniper",
 		shortDesc: "If this Pokemon strikes with a critical hit, the damage is multiplied by 1.5.",
 	},

@@ -543,9 +543,9 @@ export class TeamValidator {
 				problems.push(`"${set.nature}" is an invalid nature.`);
 			}
 		}
-		if (set.happiness !== undefined && isNaN(set.happiness)) {
+		/*if (set.happiness !== undefined && isNaN(set.happiness)) {
 			problems.push(`${name} has an invalid happiness value.`);
-		}
+		}*/
 		if (set.hpType) {
 			const type = dex.types.get(set.hpType);
 			if (!type.exists || ['normal', 'fairy'].includes(type.id)) {

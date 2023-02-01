@@ -1,4 +1,2727 @@
 export const MovesText: {[k: string]: MoveText} = {
+	//TOUHOU
+	atempo: {
+		name: "A Tempo",
+		desc: "Clears everyone's stat modifiers.",
+		shortDesc: "Clears everyone's stat modifiers.",
+	},
+	acidtears: {
+		name: "Acid Tears",
+		desc: "Poisons and scares the foe.",
+		shortDesc: "Poisons and scares the foe.",
+	},
+	aikidoarts: {
+		name: "Aikido Arts",
+		desc: "Damage is equal to the user's level.",
+		shortDesc: "Damage is equal to the user's level.",
+	},
+	airstamp: {
+		name: "Air Stamp",
+		desc: "Forces the foe to switch out for a random puppet after doing damage. Ends battles against wild puppets.",
+		shortDesc: "Forces the foe to switch out for a random puppet after doing damage. Ends battles against wild puppets.",
+	},
+	alluringmaze: {
+		name: "Alluring Maze",
+		desc: "Attacks against the foe's SpDef instead of their FoDef.",
+		shortDesc: "Attacks against the foe's SpDef instead of their FoDef.",
+	},
+	ambient: {
+		name: "Ambient",
+		desc: "10% chance to lower one of the foe's stats randomly.",
+		shortDesc: "10% chance to lower one of the foe's stats randomly.",
+	},
+	amnesia: {
+		name: "Amnesia",
+		desc: "The foe will be stopped at the end of the next turn.",
+		shortDesc: "The foe will be stopped at the end of the next turn.",
+	},
+	angelladder: {
+		name: "Angel Ladder",
+		desc: "20% chance to lower the foe's Accuracy.",
+		shortDesc: "20% chance to lower the foe's Accuracy.",
+	},
+	applebomb: {
+		name: "Apple Bomb",
+		desc: "A normal attack that lands critical hits often.",
+		shortDesc: "A normal attack that lands critical hits often.",
+	},
+	aquacannon: {
+		name: "Aqua Cannon",
+		desc: "Power decreases if the user is not at full HP.",
+		shortDesc: "Power decreases if the user is not at full HP.",
+	},
+	aquacutter: {
+		name: "Aqua Cutter",
+		desc: "A normal attack with increased priority.",
+		shortDesc: "A normal attack with increased priority.",
+	},
+	aquajavelin: {
+		name: "Aqua Javelin",
+		desc: "20% chance to lower the foe's Speed.",
+		shortDesc: "20% chance to lower the foe's Speed.",
+	},
+	aquarake: {
+		name: "Aqua Rake",
+		desc: "The user cannot move next turn.",
+		shortDesc: "The user cannot move next turn.",
+	},
+	aquasonic: {
+		name: "Aquasonic",
+		desc: "A normal attack with increased priority.",
+		shortDesc: "A normal attack with increased priority.",
+	},
+	aquaticwaltz: {
+		name: "Aquatic Waltz",
+		desc: "Changes the foe's type to Water.",
+		shortDesc: "Changes the foe's type to Water.",
+	},
+	arclight: {
+		name: "Arclight",
+		desc: "Harshly lowers the user's SpAtk.",
+		shortDesc: "Harshly lowers the user's SpAtk.",
+	},
+	armorpierce: {
+		name: "Armor Pierce",
+		desc: "10% chance to make the foe flinch.",
+		shortDesc: "10% chance to make the foe flinch.",
+	},
+	astrology: {
+		name: "Astrology",
+		desc: "Harshly lowers the foe's FoAtk.",
+		shortDesc: "Harshly lowers the foe's FoAtk.",
+	},
+	atomicenergy: {
+		name: "Atomic Energy",
+		desc: "The user recovers half of the damage dealt.",
+		shortDesc: "The user recovers half of the damage dealt.",
+	},
+	auradrain: {
+		name: "Aura Drain",
+		desc: "The user recovers half of the damage dealt.",
+		shortDesc: "The user recovers half of the damage dealt.",
+	},
+	backdraft: {
+		name: "Backdraft",
+		desc: "10% chance to burn the foe.",
+		shortDesc: "10% chance to burn the foe.",
+	},
+	backhandblow: {
+		name: "Backhand Blow",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	backupplan: {
+		name: "Backup Plan",
+		desc: "Switches to another puppet. That puppet inherits the user's stat modifiers.",
+		shortDesc: "Switches to another puppet. That puppet inherits the user's stat modifiers.",
+	},
+	badmoon: {
+		name: "Bad Moon",
+		desc: "10% chance to blind the foe.",
+		shortDesc: "10% chance to blind the foe.",
+	},
+	barrierup: {
+		name: "Barrier Up",
+		desc: "Raises the user's SpDef.",
+		shortDesc: "Raises the user's SpDef.",
+	},
+	battlepreparation: {
+		name: "Battle Preparation",
+		desc: "Raises the user's FoAtk, FoDef, and Accuracy.",
+		shortDesc: "Raises the user's FoAtk, FoDef, and Accuracy.",
+	},
+	behindyou: {
+		name: "Behind You!",
+		desc: "Scares the foe.",
+		shortDesc: "Scares the foe.",
+	},
+	bellow: {
+		name: "Bellow",
+		desc: "Lowers the foe's SpDef.",
+		shortDesc: "Lowers the foe's SpDef.",
+	},
+	bewitchingpollen: {
+		name: "Bewitching Pollen",
+		desc: "Stops the foe. Does not work on Nature-type puppets.",
+		shortDesc: "Stops the foe. Does not work on Nature-type puppets.",
+	},
+	bindtrap: {
+		name: "Bind Trap",
+		desc: "Lays a trap that lowers the Speed of foes entering the field.",
+		shortDesc: "Lays a trap that lowers the Speed of foes entering the field.",
+
+		start: "  A Bind Trap is laid on [TEAM]!",
+		activate: "  [POKEMON] fell for the Bind Trap!",
+	},
+	blackhole: {
+		name: "Black Hole",
+		desc: "The foe becomes unable to switch out until the user leaves the field.",
+		shortDesc: "The foe becomes unable to switch out until the user leaves the field.",
+	},
+	blackout: {
+		name: "Blackout",
+		desc: "30% chance to blind the foe.",
+		shortDesc: "30% chance to blind the foe.",
+	},
+	bladedance: {
+		name: "Blade Dance",
+		desc: "Yumeko EX only. Replicates Smash Spin. Always hits.",
+		shortDesc: "Yumeko EX only. Replicates Smash Spin. Always hits.",
+	},
+	blazeoftenmei: {
+		name: "Blaze of Tenmei",
+		desc: "Burns the foe.",
+		shortDesc: "Burns the foe.",
+	},
+	blazespear: {
+		name: "Blaze Spear",
+		desc: "10% chance to burn the foe.",
+		shortDesc: "10% chance to burn the foe.",
+	},
+	blitzkrieg: {
+		name: "Blitzkrieg",
+		desc: "Power doubles if the user moves before the target or the target switches.",
+		shortDesc: "Power doubles if the user moves before the target or the target switches.",
+	},
+	bloodystorm: {
+		name: "Bloody Storm",
+		desc: "10% chance to make the foe flinch.",
+		shortDesc: "10% chance to make the foe flinch.",
+	},
+	blowfromcalamity: {
+		name: "Blow from Calamity",
+		desc: "Power doubles if the user has a status ailment. Ignores the penalty from Dark status.",
+		shortDesc: "Power doubles if the user has a status ailment. Ignores the penalty from Dark status.",
+	},
+	bombardment: {
+		name: "Bombardment",
+		desc: "Yumemi EX only. Hits twice. Strikes first.",
+		shortDesc: "Yumemi EX only. Hits twice. Strikes first.",
+	},
+	booing: {
+		name: "Booing",
+		desc: "Forces the foe to switch out for a random puppet. Ends battles against wild puppets.",
+		shortDesc: "Forces the foe to switch out for a random puppet. Ends battles against wild puppets.",
+	},
+	boundaryrend: {
+		name: "Boundary Rend",
+		desc: "Maribel EX only. Sets enemy HP to 1.",
+		shortDesc: "Maribel EX only. Sets enemy HP to 1.",
+	},
+	boutdrunkard: {
+		name: "Bout Drunkard",
+		desc: "Stops the foe.",
+		shortDesc: "Stops the foe.",
+	},
+	brandish: {
+		name: "Brandish",
+		desc: "The user takes 1/3 of the damage in recoil.",
+		shortDesc: "The user takes 1/3 of the damage in recoil.",
+	},
+	braveburst: {
+		name: "Brave Burst",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	bravesong: {
+		name: "Brave Song",
+		desc: "Sharply raises the user's SpAtk.",
+		shortDesc: "Sharply raises the user's SpAtk.",
+	},
+	breakshot: {
+		name: "Break Shot",
+		desc: "Breaks the foe's Field Barrier and Field Protect effects before doing damage.",
+		shortDesc: "Breaks the foe's Field Barrier and Field Protect effects before doing damage.",
+	},
+	burnstrike: {
+		name: "Burn Strike",
+		desc: "10% chance to burn the foe. Lands critical hits more often.",
+		shortDesc: "10% chance to burn the foe. Lands critical hits more often.",
+	},
+	butterflysflit: {
+		name: "Butterfly's Flit",
+		desc: "The user recovers a little HP every turn.",
+		shortDesc: "The user recovers a little HP every turn.",
+
+		upkeep: "  Butterflies are dancing around [POKEMON]!",
+		heal: "  [POKEMON] recovered health due to Butterfly's Flit!",
+		damage: "  [POKEMON] lost health due to Butterfly's Flit...",
+	},
+	calamity: {
+		name: "Calamity",
+		desc: "Inflicts 2 random status ailments.",
+		shortDesc: "Inflicts 2 random status ailments.",
+	},
+	calamityscythe: {
+		name: "Calamity Scythe",
+		desc: "Applies weak. Amnisieri only.",
+		shortDesc: "Applies weak. Amnisieri only.",
+	},
+	callofthedead: {
+		name: "Call of the Dead",
+		desc: "If the user faints due to a Skill before their next action, the foe also faints.",
+		shortDesc: "If the user faints due to a Skill before their next action, the foe also faints.",
+	},
+	camouflage: {
+		name: "Camouflage",
+		desc: "Sharply raises the user's Evasion.",
+		shortDesc: "Sharply raises the user's Evasion.",
+	},
+	cataclysm: {
+		name: "Cataclysm",
+		desc: "The user cannot move next turn.",
+		shortDesc: "The user cannot move next turn.",
+	},
+	catastrophe: {
+		name: "Catastrophe",
+		desc: "10% chance to lower the foe's SpDef.",
+		shortDesc: "10% chance to lower the foe's SpDef.",
+	},
+	changeling: {
+		name: "Changeling",
+		desc: "If it inflicts damage, the user switches for another puppet. Ends battles against wild puppets.",
+		shortDesc: "If it inflicts damage, the user switches for another puppet. Ends battles against wild puppets.",
+	},
+	chargethief: {
+		name: "Charge Thief",
+		desc: "The user recovers half of the damage dealt.",
+		shortDesc: "The user recovers half of the damage dealt.",
+	},
+	chargingstun: {
+		name: "Charging Stun",
+		desc: "Forces the foe to switch out for a random puppet after doing damage. Ends battles against wild puppets.",
+		shortDesc: "Forces the foe to switch out for a random puppet after doing damage. Ends battles against wild puppets.",
+	},
+	charonferries: {
+		name: "Charon Ferries",
+		desc: "Damage is equal to the user's level.",
+		shortDesc: "Damage is equal to the user's level.",
+	},
+	cheer: {
+		name: "Cheer",
+		desc: "Sharply raises the user's SpDef.",
+		shortDesc: "Sharply raises the user's SpDef.",
+	},
+	chromeray: {
+		name: "Chrome Ray",
+		desc: "10% chance to lower the foe's SpDef.",
+		shortDesc: "10% chance to lower the foe's SpDef.",
+	},
+	claim: {
+		name: "Claim",
+		desc: "Prevents the foe from using the same Skill twice in a row.",
+		shortDesc: "Prevents the foe from using the same Skill twice in a row.",
+
+		move: "  [POKEMON] claimed [TARGET]!",
+		start: "  [POKEMON] was claimed!",
+	},
+	clearingmist: {
+		name: "Clearing Mist",
+		desc: "Power is higher if the foe's cost is high.",
+		shortDesc: "Power is higher if the foe's cost is high.",
+	},
+	cloudburst: {
+		name: "Cloudburst",
+		desc: "Raises the user's FoAtk and FoDef at the cost of Speed.",
+		shortDesc: "Raises the user's FoAtk and FoDef at the cost of Speed.",
+	},
+	coldrain: {
+		name: "Cold Rain",
+		desc: "10% chance to stop the foe.",
+		shortDesc: "10% chance to stop the foe.",
+	},
+	concussion: {
+		name: "Concussion",
+		desc: "20% chance to make the foe flinch.",
+		shortDesc: "20% chance to make the foe flinch.",
+	},
+	confine: {
+		name: "Confine",
+		desc: "Paralyzes the foe.",
+		shortDesc: "Paralyzes the foe.",
+	},
+	conflagration: {
+		name: "Conflagration",
+		desc: "Power is higher if the user's Cost is higher than the foe's.",
+		shortDesc: "Power is higher if the user's Cost is higher than the foe's.",
+	},
+	contagion: {
+		name: "Contagion",
+		desc: "Poisons the foe.",
+		shortDesc: "Poisons the foe.",
+	},
+	continue: {
+		name: "Continue",
+		desc: "The user recovers all HP and status, but is stopped for two turns.",
+		shortDesc: "The user recovers all HP and status, but is stopped for two turns.",
+	},
+	corkscrew: {
+		name: "Corkscrew",
+		desc: "70% chance to raise the user's FoAtk.",
+		shortDesc: "70% chance to raise the user's FoAtk.",
+	},
+	creepingdarkness: {
+		name: "Creeping Darkness",
+		desc: "Poisons and blinds the foe.",
+		shortDesc: "Poisons and blinds the foe.",
+	},
+	crosschange: {
+		name: "Cross Change",
+		desc: "Switches the user's Ability with the foe's.",
+		shortDesc: "Switches the user's Ability with the foe's.",
+
+		activate: "  [POKEMON] swapped their Abilities with its target!",
+	},
+	crosscounter: {
+		name: "Cross Counter",
+		desc: "Damage is twice the damage taken from the foe's Focus attack on the same turn.",
+		shortDesc: "Damage is twice the damage taken from the foe's Focus attack on the same turn.",
+	},
+	crossdrive: {
+		name: "Cross Drive",
+		desc: "Lowers the user's Speed.",
+		shortDesc: "Lowers the user's Speed.",
+	},
+	crossbowassault: {
+		name: "Crossbow Assault",
+		desc: "30% chance to paralyze the foe.",
+		shortDesc: "30% chance to paralyze the foe.",
+	},
+	cruciform: {
+		name: "Cruciform",
+		desc: "Hits twice.",
+		shortDesc: "Hits twice.",
+	},
+	cursereversal: {
+		name: "Curse Reversal",
+		desc: "Adds the user's and foe's current HP and sets both to half of that.",
+		shortDesc: "Adds the user's and foe's current HP and sets both to half of that.",
+	},
+	dancingrain: {
+		name: "Dancing Rain",
+		desc: "50% chance to lower the foe's FoDef.",
+		shortDesc: "50% chance to lower the foe's FoDef.",
+	},
+	dancingsword: {
+		name: "Dancing Sword",
+		desc: "A normal attack that lands critical hits often.",
+		shortDesc: "A normal attack that lands critical hits often.",
+	},
+	dancingwind: {
+		name: "Dancing Wind",
+		desc: "10% chance to raise all of the user's stats.",
+		shortDesc: "10% chance to raise all of the user's stats.",
+	},
+	danmakudance: {
+		name: "Danmaku Dance",
+		desc: "The user attacks for 2-3 turns, then becomes confused.",
+		shortDesc: "The user attacks for 2-3 turns, then becomes confused.",
+	},
+	danmakuorchestra: {
+		name: "Danmaku Orchestra",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	darkarrow: {
+		name: "Dark Arrow",
+		desc: "Hits twice.",
+		shortDesc: "Hits twice.",
+	},
+	darkball: {
+		name: "Dark Ball",
+		desc: "10% chance to blind the foe.",
+		shortDesc: "10% chance to blind the foe.",
+	},
+	darkinnocence: {
+		name: "Dark Innocence",
+		desc: "Hits two to five times.",
+		shortDesc: "Hits two to five times.",
+	},
+	darkpower: {
+		name: "Dark Power",
+		desc: "Raises the user's FoAtk and FoDef.",
+		shortDesc: "Raises the user's FoAtk and FoDef.",
+	},
+	darksign: {
+		name: "Dark Sign",
+		desc: "A normal attack. A puppet can only know one sign skill at a time.",
+		shortDesc: "A normal attack. A puppet can only know one sign skill at a time.",
+	},
+	darksphere: {
+		name: "Dark Sphere",
+		desc: "20% chance to make the foe flinch. Power increases against camouflage users and guaranteed to hit. ",
+		shortDesc: "20% chance to make the foe flinch. Power increases against camouflage users and guaranteed to hit. ",
+	},
+	darksweets: {
+		name: "Dark Sweets",
+		desc: "10% chance to blind the foe.",
+		shortDesc: "10% chance to blind the foe.",
+	},
+	darknessdance: {
+		name: "Darkness Dance",
+		desc: "The user attacks for 2-3 turns, then becomes confused.",
+		shortDesc: "The user attacks for 2-3 turns, then becomes confused.",
+	},
+	deadofnight: {
+		name: "Dead of Night",
+		desc: "Raises the user's Evasion.",
+		shortDesc: "Raises the user's Evasion.",
+	},
+	deathmatch: {
+		name: "Death Match",
+		desc: "Power is higher the lower the user's current HP is.",
+		shortDesc: "Power is higher the lower the user's current HP is.",
+	},
+	decrescendo: {
+		name: "Decrescendo",
+		desc: "Lowers the foe's FoAtk and SpAtk. The user then switches for another puppet. Ends battles against wild puppets.",
+		shortDesc: "Lowers the foe's FoAtk and SpAtk. The user then switches for another puppet. Ends battles against wild puppets.",
+	},
+	deflagration: {
+		name: "Deflagration",
+		desc: "The user cannot move next turn.",
+		shortDesc: "The user cannot move next turn.",
+	},
+	densebarrage: {
+		name: "Dense Barrage",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	densefogbloom: {
+		name: "Dense Fog Bloom",
+		desc: "A two-turn skill. The user charges on the first turn. Works instantly during Heavy Fog.",
+		shortDesc: "A two-turn skill. The user charges on the first turn. Works instantly during Heavy Fog.",
+	},
+	depressingrain: {
+		name: "Depressing Rain",
+		desc: "Always hits. Clears the foe's stat modifiers.",
+		shortDesc: "Always hits. Clears the foe's stat modifiers.",
+	},
+	destruction: {
+		name: "Destruction",
+		desc: "30% chance to make the foe flinch.",
+		shortDesc: "30% chance to make the foe flinch.",
+	},
+	destructionrift: {
+		name: "Destruction Rift",
+		desc: "Will double in power during any terrain, as well as cancel the terrain.",
+		shortDesc: "Will double in power during any terrain, as well as cancel the terrain.",
+	},
+	detonationburst: {
+		name: "Detonation Burst",
+		desc: "Lowers the user's FoAtk and FoDef.",
+		shortDesc: "Lowers the user's FoAtk and FoDef.",
+	},
+	diffusionlaser: {
+		name: "Diffusion Laser",
+		desc: "20% chance to make the foe flinch.",
+		shortDesc: "20% chance to make the foe flinch.",
+	},
+	diligence: {
+		name: "Diligence",
+		desc: "Power doubles if you take damage from a foe's Skill on the same turn.",
+		shortDesc: "Power doubles if you take damage from a foe's Skill on the same turn.",
+	},
+	direstate: {
+		name: "Dire State",
+		desc: "Power is higher the lower the user's current HP is.",
+		shortDesc: "Power is higher the lower the user's current HP is.",
+	},
+	distortionbomb: {
+		name: "Distortion Bomb",
+		desc: "10% chance to lower the foe's FoDef.",
+		shortDesc: "10% chance to lower the foe's FoDef.",
+	},
+	divinepunishment: {
+		name: "Divine Punishment",
+		desc: "The user faints to deal damage equal to the current HP.",
+		shortDesc: "The user faints to deal damage equal to the current HP.",
+	},
+	divinethunder: {
+		name: "Divine Thunder",
+		desc: "Paralyzes the foe.",
+		shortDesc: "Paralyzes the foe.",
+	},
+	doppelganger: {
+		name: "Doppelganger",
+		desc: "Changes the user's type to the foe's type.",
+		shortDesc: "Changes the user's type to the foe's type.",
+	},
+	drainseed: {
+		name: "Drain Seed",
+		desc: "The foe's HP is drained to the user's side every turn. Does not work on Nature-type puppets.",
+		shortDesc: "The foe's HP is drained to the user's side every turn. Does not work on Nature-type puppets.",
+
+		start: "  [POKEMON] was seeded!",
+		damage: "  [POKEMON] had their health siphoned from Drain Seed!",
+	},
+	drought: {
+		name: "Drought",
+		desc: "Weakens the foe.",
+		shortDesc: "Weakens the foe.",
+	},
+	dualspark: {
+		name: "Dual Spark",
+		desc: "Yuuka EX only. Hits twice.",
+		shortDesc: "Yuuka EX only. Hits twice.",
+	},
+	dustbomb: {
+		name: "Dust Bomb",
+		desc: "30% chance to poison the foe.",
+		shortDesc: "30% chance to poison the foe.",
+	},
+	dustcloud: {
+		name: "Dust Cloud",
+		desc: "30% chance to lower the foe's Accuracy.",
+		shortDesc: "30% chance to lower the foe's Accuracy.",
+	},
+	dustdevilgate: {
+		name: "Dust Devil Gate",
+		desc: "Traps the foe for 4-5 turns.",
+		shortDesc: "Traps the foe for 4-5 turns.",
+	},
+	earthsign: {
+		name: "Earth Sign",
+		desc: "A normal attack. A puppet can only know one sign skill at a time.",
+		shortDesc: "A normal attack. A puppet can only know one sign skill at a time.",
+	},
+	earthenfeast: {
+		name: "Earthen Feast",
+		desc: "10% chance to lower the foe's Accuracy.",
+		shortDesc: "10% chance to lower the foe's Accuracy.",
+	},
+	earthlyblessing: {
+		name: "Earthly Blessing",
+		desc: "During terrain, power doubles and the type changes.",
+		shortDesc: "During terrain, power doubles and the type changes.",
+	},
+	earthlyinfluence: {
+		name: "Earthly Influence",
+		desc: "During terrain, power doubles and the type changes.",
+		shortDesc: "During terrain, power doubles and the type changes.",
+	},
+	ebbtide: {
+		name: "Ebb Tide",
+		desc: "Harshly lowers the foe's Speed.",
+		shortDesc: "Harshly lowers the foe's Speed.",
+	},
+	electricheritage: {
+		name: "Electric Heritage",
+		desc: "Heals for half the damage dealt.",
+		shortDesc: "Heals for half the damage dealt.",
+	},
+	electricsign: {
+		name: "Electric Sign",
+		desc: "A normal attack. A puppet can only know one sign skill at a time.",
+		shortDesc: "A normal attack. A puppet can only know one sign skill at a time.",
+	},
+	elementreverse: {
+		name: "Element Reverse",
+		desc: "Inverts the foe's weaknesses and resistances.",
+		shortDesc: "Inverts the foe's weaknesses and resistances.",
+	},
+	encourage: {
+		name: "Encourage",
+		desc: "Forces the foe to keep using the Skill they last used for three turns.",
+		shortDesc: "Forces the foe to keep using the Skill they last used for three turns.",
+	},
+	energyabsorb: {
+		name: "Energy Absorb",
+		desc: "The user recovers half of the damage dealt.",
+		shortDesc: "The user recovers half of the damage dealt.",
+	},
+	energybolt: {
+		name: "Energy Bolt",
+		desc: "10% chance to stop the foe.",
+		shortDesc: "10% chance to stop the foe.",
+	},
+	ephemeral: {
+		name: "Ephemeral",
+		desc: "10% chance to lower the foe's FoDef.",
+		shortDesc: "10% chance to lower the foe's FoDef.",
+	},
+	eternalrecord: {
+		name: "Eternal Record",
+		desc: "Replicates Field Barrier, Field Protect, and Lucky Rainbow, but the user faints.",
+		shortDesc: "Replicates Field Barrier, Field Protect, and Lucky Rainbow, but the user faints.",
+	},
+	evilcrushingarrow: {
+		name: "Evil-Crushing Arrow",
+		desc: "10% chance to make the foe flinch.",
+		shortDesc: "10% chance to make the foe flinch.",
+	},
+	explodingblaze: {
+		name: "Exploding Blaze",
+		desc: "30% chance to burn the foe.",
+		shortDesc: "30% chance to burn the foe.",
+	},
+	explodingfist: {
+		name: "Exploding Fist",
+		desc: "Confuses the foe.",
+		shortDesc: "Confuses the foe.",
+	},
+	eyeofcalamity: {
+		name: "Eye of Calamity",
+		desc: "Burns and scares the foe.",
+		shortDesc: "Burns and scares the foe.",
+	},
+	eyeoflaplace: {
+		name: "Eye of Laplace",
+		desc: "A normal attack that lands critical hits often.",
+		shortDesc: "A normal attack that lands critical hits often.",
+	},
+	fadingout: {
+		name: "Fading Out",
+		desc: "The user switches for another puppet. Ends battles against wild puppets.",
+		shortDesc: "The user switches for another puppet. Ends battles against wild puppets.",
+	},
+	fairydance: {
+		name: "Fairy Dance",
+		desc: "Raises the user's SpAtk, SpDef, and Speed.",
+		shortDesc: "Raises the user's SpAtk, SpDef, and Speed.",
+	},
+	fakejewel: {
+		name: "Fake Jewel",
+		desc: "Steals foe's held item.",
+		shortDesc: "Steals foe's held item.",
+	},
+	falsecourage: {
+		name: "False Courage",
+		desc: "Attempts to survive the next attack with 1 HP. May fail if used consecutively.",
+		shortDesc: "Attempts to survive the next attack with 1 HP. May fail if used consecutively.",
+	},
+	fantasymelody: {
+		name: "Fantasy Melody",
+		desc: "Always hits.",
+		shortDesc: "Always hits.",
+	},
+	fantasyseal: {
+		name: "Fantasy Seal",
+		desc: "Reimu EX only. Always hits. Strikes 2-5 times.",
+		shortDesc: "Reimu EX only. Always hits. Strikes 2-5 times.",
+	},
+	favorablewind: {
+		name: "Favorable Wind",
+		desc: "Raises the user's Evasion.",
+		shortDesc: "Raises the user's Evasion.",
+	},
+	feathershot: {
+		name: "Feather Shot",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	fieldbarrier: {
+		name: "Field Barrier",
+		desc: "The user's side takes half damage from Spread skills for five turns.",
+		shortDesc: "The user's side takes half damage from Spread skills for five turns.",
+
+		start: "  Field Barrier is deployed to [TEAM] and became more resistant to Spread skills!",
+		end: "  [TEAM]'s Field Barrier wore off!",
+	},
+	fieldbreak: {
+		name: "Field Break",
+		desc: "Breaks the foe's Field Barrier and Field Protect effects before doing damage.",
+		shortDesc: "Breaks the foe's Field Barrier and Field Protect effects before doing damage.",
+	},
+	fieldprotect: {
+		name: "Field Protect",
+		desc: "The user's side takes half damage from Focus skills for five turns.",
+		shortDesc: "The user's side takes half damage from Focus skills for five turns.",
+
+		start: "  Field Protect is deployed to [TEAM] and became more resistant to Focus skills!",
+		end: "  [TEAM]'s Field Protect wore off!",
+	},
+	fieldshift: {
+		name: "Field Shift",
+		desc: "Moves the foe's Field Barrier, Field Protect, Lucky Rainbow, and Magical Barrier to your side.",
+		shortDesc: "Moves the foe's Field Barrier, Field Protect, Lucky Rainbow, and Magical Barrier to your side.",
+	},
+	fierygame: {
+		name: "Fiery Game",
+		desc: "10% chance to burn the foe.",
+		shortDesc: "10% chance to burn the foe.",
+	},
+	fightingsign: {
+		name: "Fighting Sign",
+		desc: "A normal attack. A puppet can only know one sign skill at a time.",
+		shortDesc: "A normal attack. A puppet can only know one sign skill at a time.",
+	},
+	finaltribulation: {
+		name: "Final Tribulation",
+		desc: "Bypasses half of the foe's FoDef, but the user faints. Is more powerful for Void-types.",
+		shortDesc: "Bypasses half of the foe's FoDef, but the user faints. Is more powerful for Void-types.",
+	},
+	firejavelin: {
+		name: "Fire Javelin",
+		desc: "10% chance to burn the foe.",
+		shortDesc: "10% chance to burn the foe.",
+	},
+	firesign: {
+		name: "Fire Sign",
+		desc: "A normal attack. A puppet can only know one sign skill at a time.",
+		shortDesc: "A normal attack. A puppet can only know one sign skill at a time.",
+	},
+	firewall: {
+		name: "Fire Wall",
+		desc: "If the foe holds an item, the attack is 50% stronger and destroys the item.",
+		shortDesc: "If the foe holds an item, the attack is 50% stronger and destroys the item.",
+	},
+	fireball: {
+		name: "Fireball",
+		desc: "10% chance to burn the foe.",
+		shortDesc: "10% chance to burn the foe.",
+	},
+	firedragonspiral: {
+		name: "Fire-Dragon Spiral",
+		desc: "Traps the foe for 4-5 turns.",
+		shortDesc: "Traps the foe for 4-5 turns.",
+	},
+	firesnakespiral: {
+		name: "Fire-Snake Spiral",
+		desc: "Traps the foe for 4-5 turns.",
+		shortDesc: "Traps the foe for 4-5 turns.",
+	},
+	firmspirit: {
+		name: "Firm Spirit",
+		desc: "A two-turn skill. On the first turn, the user's FoDef is raised.",
+		shortDesc: "A two-turn skill. On the first turn, the user's FoDef is raised.",
+	},
+	firstaid: {
+		name: "First Aid",
+		desc: "Restores half of the user's HP.",
+		shortDesc: "Restores half of the user's HP.",
+	},
+	flamepillar: {
+		name: "Flame Pillar",
+		desc: "20% chance to burn the foe.",
+		shortDesc: "20% chance to burn the foe.",
+	},
+	flamewave: {
+		name: "Flame Wave",
+		desc: "50% chance to raise the user's SpAtk.",
+		shortDesc: "50% chance to raise the user's SpAtk.",
+	},
+	flare: {
+		name: "Flare",
+		desc: "10% chance to burn the foe.",
+		shortDesc: "10% chance to burn the foe.",
+	},
+	flash: {
+		name: "Flash",
+		desc: "A normal attack with increased priority.",
+		shortDesc: "A normal attack with increased priority.",
+	},
+	flashbullet: {
+		name: "Flash Bullet",
+		desc: "Confuses the foe.",
+		shortDesc: "Confuses the foe.",
+	},
+	flashflood: {
+		name: "Flash Flood",
+		desc: "A normal attack that lands critical hits often.",
+		shortDesc: "A normal attack that lands critical hits often.",
+	},
+	flashover: {
+		name: "Flashover",
+		desc: "30% chance to burn the foe.",
+		shortDesc: "30% chance to burn the foe.",
+	},
+	flowerofhell: {
+		name: "Flower of Hell",
+		desc: "30% chance to break the foe's stance, preventing them from avoiding the next attack.",
+		shortDesc: "30% chance to break the foe's stance, preventing them from avoiding the next attack.",
+	},
+	flyingfrenzy: {
+		name: "Flying Frenzy",
+		desc: "10% chance to make the foe flinch.",
+		shortDesc: "10% chance to make the foe flinch.",
+	},
+	foambubbles: {
+		name: "Foam Bubbles",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	focusedmovement: {
+		name: "Focused Movement",
+		desc: "Raises the user's FoAtk and FoDef at the cost of Speed.",
+		shortDesc: "Raises the user's FoAtk and FoDef at the cost of Speed.",
+	},
+	focusedstance: {
+		name: "Focused Stance",
+		desc: "Raises the user's FoAtk and Accuracy.",
+		shortDesc: "Raises the user's FoAtk and Accuracy.",
+	},
+	foehnwinds: {
+		name: "Foehn Winds",
+		desc: "The user takes 1/3 of the damage in recoil.",
+		shortDesc: "The user takes 1/3 of the damage in recoil.",
+	},
+	forceshield: {
+		name: "Force Shield",
+		desc: "Removes your weaknesses and resistances this turn to greatly limit damage. May fail if used consecutively.",
+		shortDesc: "Removes your weaknesses and resistances this turn to greatly limit damage. May fail if used consecutively.",
+
+		start: "  [POKEMON] activated its Force Shield!",
+	},
+	foresee: {
+		name: "Foresee",
+		desc: "Attempts to use the attacking skill the foe will use, with 50% more power.",
+		shortDesc: "Attempts to use the attacking skill the foe will use, with 50% more power.",
+	},
+	foresttherapy: {
+		name: "Forest Therapy",
+		desc: "Heals the user's party of all status ailments.",
+		shortDesc: "Heals the user's party of all status ailments.",
+	},
+	forwardthrust: {
+		name: "Forward Thrust",
+		desc: "A normal attack that lands critical hits often.",
+		shortDesc: "A normal attack that lands critical hits often.",
+	},
+	fountainoflife: {
+		name: "Fountain of Life",
+		desc: "The user recovers a little HP every turn, but becomes unable to switch or be blown away.",
+		shortDesc: "The user recovers a little HP every turn, but becomes unable to switch or be blown away.",
+
+		start: "  [POKEMON] surrounded itself with a Fountain of Life!",
+		heal: "  [POKEMON] received the grace of the Fountain of Life!",
+		damage: "  [POKEMON] lost vitality in the Fountain of Life...",
+	},
+	frenziedjoururi: {
+		name: "Frenzied Joururi",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	frostedge: {
+		name: "Frost Edge",
+		desc: "10% chance to stop the foe.",
+		shortDesc: "10% chance to stop the foe.",
+	},
+	frozenprison: {
+		name: "Frozen Prison",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	fullmetalcrash: {
+		name: "Full Metal Crash",
+		desc: "The user takes half of the damage in recoil.",
+		shortDesc: "The user takes half of the damage in recoil.",
+	},
+	gatheredstars: {
+		name: "Gathered Stars",
+		desc: "Raises the user's FoAtk.",
+		shortDesc: "Raises the user's FoAtk.",
+	},
+	gensokyotyphoon: {
+		name: "Gensokyo Typhoon",
+		desc: "A two-turn skill. The user charges on the first turn. Lands critical hits more often.",
+		shortDesc: "A two-turn skill. The user charges on the first turn. Lands critical hits more often.",
+	},
+	geyser: {
+		name: "Geyser",
+		desc: "A normal attack that always lands critical hits.",
+		shortDesc: "A normal attack that always lands critical hits.",
+	},
+	ghostchase: {
+		name: "Ghost Chase",
+		desc: "Makes the user immune to Fighting-type skills.",
+		shortDesc: "Makes the user immune to Fighting-type skills.",
+	},
+	ghosttrick: {
+		name: "Ghost Trick",
+		desc: "10% chance to make the foe flinch.",
+		shortDesc: "10% chance to make the foe flinch.",
+	},
+	ghostwave: {
+		name: "Ghost Wave",
+		desc: "30% chance to scare the foe.",
+		shortDesc: "30% chance to scare the foe.",
+	},
+	gigantic: {
+		name: "GIGANTIC",
+		desc: "10% chance to lower the foe's SpDef.",
+		shortDesc: "10% chance to lower the foe's SpDef.",
+	},
+	glamorpandemic: {
+		name: "Glamor Pandemic",
+		desc: "Confuses the foe.",
+		shortDesc: "Confuses the foe.",
+	},
+	goddessdecree: {
+		name: "Goddess' Decree",
+		desc: "Shinki EX only. Increases all stats by 1 stage.",
+		shortDesc: "Shinki EX only. Increases all stats by 1 stage.",
+	},
+	godstonefrenzy: {
+		name: "Godstone Frenzy",
+		desc: "Hits two to five times.",
+		shortDesc: "Hits two to five times.",
+	},
+	goodluck: {
+		name: "Good Luck",
+		desc: "Raises one of the user's stats randomly.",
+		shortDesc: "Raises one of the user's stats randomly.",
+	},
+	gorgonseye: {
+		name: "Gorgon's Eye",
+		desc: "Stops the foe.",
+		shortDesc: "Stops the foe.",
+	},
+	graceofmana: {
+		name: "Grace of Mana",
+		desc: "Restores half of the user's HP.",
+		shortDesc: "Restores half of the user's HP.",
+	},
+	grassjavelin: {
+		name: "Grass Javelin",
+		desc: "10% chance to weaken the foe.",
+		shortDesc: "10% chance to weaken the foe.",
+	},
+	gravityblast: {
+		name: "Gravity Blast",
+		desc: "Power decreases if the foe is not at full HP.",
+		shortDesc: "Power decreases if the foe is not at full HP.",
+	},
+	grazebolt: {
+		name: "Graze Bolt",
+		desc: "20% chance to paralyze the foe.",
+		shortDesc: "20% chance to paralyze the foe.",
+	},
+	greattornado: {
+		name: "Great Tornado",
+		desc: "Traps the foe for 4-5 turns.",
+		shortDesc: "Traps the foe for 4-5 turns.",
+	},
+	guardsplit: {
+		name: "Guard Split",
+		desc: "Averages the user's FoDef and SpDef with the foe's.",
+		shortDesc: "Averages the user's FoDef and SpDef with the foe's.",
+
+		activate: "  [POKEMON] shared its guard with its target!",
+	},
+	guardswap: {
+		name: "Guard Swap",
+		desc: "Switches the user's changes to FoDef and SpDef with the foe's.",
+		shortDesc: "Switches the user's changes to FoDef and SpDef with the foe's.",
+
+		activate: "  [POKEMON] switched all changes to its FoDef and SpDef with its target!",
+	},
+	guidedmissile: {
+		name: "Guided Missile",
+		desc: "10% chance to make the foe flinch.",
+		shortDesc: "10% chance to make the foe flinch.",
+	},
+	hachimansblessing: {
+		name: "Hachiman's Blessing",
+		desc: "Greatly increases the chance that the user will land a critical hit.",
+		shortDesc: "Greatly increases the chance that the user will land a critical hit.",
+	},
+	hallucination: {
+		name: "Hallucination",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	hammerbash: {
+		name: "Hammer Bash",
+		desc: "10% chance to lower the foe's FoDef.",
+		shortDesc: "10% chance to lower the foe's FoDef.",
+	},
+	hammerthrow: {
+		name: "Hammer Throw",
+		desc: "A normal attack that lands critical hits often.",
+		shortDesc: "A normal attack that lands critical hits often.",
+	},
+	heathaze: {
+		name: "Heat Haze",
+		desc: "Lowers the foe's FoAtk.",
+		shortDesc: "Lowers the foe's FoAtk.",
+	},
+	heavenlyascent: {
+		name: "Heavenly Ascent",
+		desc: "Lowers the user's FoDef and SpDef.",
+		shortDesc: "Lowers the user's FoDef and SpDef.",
+	},
+	heavenlyblessing: {
+		name: "Heavenly Blessing",
+		desc: "During weather, power doubles and the type changes.",
+		shortDesc: "During weather, power doubles and the type changes.",
+	},
+	heavenlyinfluence: {
+		name: "Heavenly Influence",
+		desc: "During weather, power doubles and the type changes.",
+		shortDesc: "During weather, power doubles and the type changes.",
+	},
+	heavyrain: {
+		name: "Heavy Rain",
+		desc: "Traps the foe for 4-5 turns.",
+		shortDesc: "Traps the foe for 4-5 turns.",
+	},
+	highmagnetism: {
+		name: "High Magnetism",
+		desc: "Changes the next skill the foe uses to Electric-type.",
+		shortDesc: "Changes the next skill the foe uses to Electric-type.",
+	},
+	hightide: {
+		name: "High Tide",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	hightonecrush: {
+		name: "High Tone Crush",
+		desc: "10% chance to lower one of the foe's stats randomly.",
+		shortDesc: "10% chance to lower one of the foe's stats randomly.",
+	},
+	holyflare: {
+		name: "Holy Flare",
+		desc: "50% chance to burn the foe.",
+		shortDesc: "50% chance to burn the foe.",
+	},
+	honestmanslie: {
+		name: "Honest Man's Lie",
+		desc: "Moves the user's status ailment to the foe.",
+		shortDesc: "Moves the user's status ailment to the foe.",
+	},
+	hornetsflit: {
+		name: "Hornet's Flit",
+		desc: "Hits two to five times.",
+		shortDesc: "Hits two to five times.",
+	},
+	howlingvoice: {
+		name: "Howling Voice",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	iceage: {
+		name: "Ice Age",
+		desc: "10% chance to lower the foe's Speed.",
+		shortDesc: "10% chance to lower the foe's Speed.",
+	},
+	icecoffin: {
+		name: "Ice Coffin",
+		desc: "20% chance to make the foe flinch.",
+		shortDesc: "20% chance to make the foe flinch.",
+	},
+	icegatling: {
+		name: "Ice Gatling",
+		desc: "Hits two to five times.",
+		shortDesc: "Hits two to five times.",
+	},
+	illusionbullets: {
+		name: "Illusion Bullets",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	illusionsign: {
+		name: "Illusion Sign",
+		desc: "A normal attack. A puppet can only know one sign skill at a time.",
+		shortDesc: "A normal attack. A puppet can only know one sign skill at a time.",
+	},
+	imaginaryfriend: {
+		name: "Imaginary Friend",
+		desc: "10% chance to lower the foe's SpDef.",
+		shortDesc: "10% chance to lower the foe's SpDef.",
+	},
+	imagination: {
+		name: "Imagination",
+		desc: "Switches the user's FoAtk and FoDef.",
+		shortDesc: "Switches the user's FoAtk and FoDef.",
+
+		activate: "  [POKEMON] switched its FoAtk and FoDef!",
+	},
+	impactrebellion: {
+		name: "Impact Rebellion",
+		desc: "Power is proportional to the foe's Speed, and inversely proportional to the user's Speed.",
+		shortDesc: "Power is proportional to the foe's Speed, and inversely proportional to the user's Speed.",
+	},
+	imposingair: {
+		name: "Imposing Air",
+		desc: "Raises the user's FoAtk and Speed.",
+		shortDesc: "Raises the user's FoAtk and Speed.",
+	},
+	impulse: {
+		name: "Impulse",
+		desc: "10% chance to lower the foe's SpDef.",
+		shortDesc: "10% chance to lower the foe's SpDef.",
+	},
+	inferno: {
+		name: "Inferno",
+		desc: "10% chance to burn the foe.",
+		shortDesc: "10% chance to burn the foe.",
+	},
+	infinitedarkness: {
+		name: "Infinite Darkness",
+		desc: "Traps the foe for 4-5 turns.",
+		shortDesc: "Traps the foe for 4-5 turns.",
+	},
+	infinitescales: {
+		name: "Infinite Scales",
+		desc: "Power increases the more the user's stats have been increased.",
+		shortDesc: "Power increases the more the user's stats have been increased.",
+	},
+	innerpower: {
+		name: "Inner Power",
+		desc: "Sacrifices half of the user's HP to maximize FoAtk.",
+		shortDesc: "Sacrifices half of the user's HP to maximize FoAtk.",
+	},
+	inspiration: {
+		name: "Inspiration",
+		desc: "Sharply raises the user's FoDef.",
+		shortDesc: "Sharply raises the user's FoDef.",
+	},
+	invisibleheart: {
+		name: "Invisible Heart",
+		desc: "Always hits.",
+		shortDesc: "Always hits.",
+	},
+	invokedeity: {
+		name: "Invoke Deity",
+		desc: "Sharply raises one of the user's stats randomly.",
+		shortDesc: "Sharply raises one of the user's stats randomly.",
+	},
+	ironwallstance: {
+		name: "Iron Wall Stance",
+		desc: "Sharply raises the user's FoDef.",
+		shortDesc: "Sharply raises the user's FoDef.",
+	},
+	irreversibletrick: {
+		name: "Irreversible Trick",
+		desc: "Ignores Field Protect and Barrier Option, will increase in power if foe uses a support skill.",
+		shortDesc: "Ignores Field Protect and Barrier Option, will increase in power if foe uses a support skill.",
+	},
+	jewelrystorm: {
+		name: "Jewelry Storm",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	jinx: {
+		name: "Jinx",
+		desc: "Seals the skill the foe last used for four turns.",
+		shortDesc: "Seals the skill the foe last used for four turns.",
+	},
+	killingbite: {
+		name: "Killing Bite",
+		desc: "A normal attack that always lands critical hits.",
+		shortDesc: "A normal attack that always lands critical hits.",
+	},
+	knifethrow: {
+		name: "Knife Throw",
+		desc: "10% chance to lower the foe's SpDef.",
+		shortDesc: "10% chance to lower the foe's SpDef.",
+	},
+	laevateinn: {
+		name: "Laevateinn",
+		desc: "Flandre EX only. Lowers SPAtk and SpDef after use.",
+		shortDesc: "Flandre EX only. Lowers SPAtk and SpDef after use.",
+	},
+	landslide: {
+		name: "Landslide",
+		desc: "Power doubles if the foe has less than half of their HP.",
+		shortDesc: "Power doubles if the foe has less than half of their HP.",
+	},
+	lastfarewell: {
+		name: "Last Farewell",
+		desc: "Komachi EX only. Defeats the opponent if it hits.",
+		shortDesc: "Komachi EX only. Defeats the opponent if it hits.",
+	},
+	lastresort: {
+		name: "Last Resort",
+		desc: "Can only be used when all other skills have been used once.",
+		shortDesc: "Can only be used when all other skills have been used once.",
+	},
+	lastslash: {
+		name: "Last Slash",
+		desc: "Ruins the user's stance, preventing them from avoiding attacks.",
+		shortDesc: "Ruins the user's stance, preventing them from avoiding attacks.",
+	},
+	lazymist: {
+		name: "Lazy Mist",
+		desc: "30% chance to weaken the foe.",
+		shortDesc: "30% chance to weaken the foe.",
+	},
+	lifeburst: {
+		name: "Life Burst",
+		desc: "Always hits.",
+		shortDesc: "Always hits.",
+	},
+	lightjavelin: {
+		name: "Light Javelin",
+		desc: "10% chance to confuse the foe.",
+		shortDesc: "10% chance to confuse the foe.",
+	},
+	lightoforigin: {
+		name: "Light of Origin",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	lightsign: {
+		name: "Light Sign",
+		desc: "A normal attack. A puppet can only know one sign skill at a time.",
+		shortDesc: "A normal attack. A puppet can only know one sign skill at a time.",
+	},
+	lightup: {
+		name: "Light Up",
+		desc: "A normal attack that lands critical hits often.",
+		shortDesc: "A normal attack that lands critical hits often.",
+	},
+	lightningcharge: {
+		name: "Lightning Charge",
+		desc: "Raises the user's SpDef. If an Electric-type skill is used next turn, its power is doubled.",
+		shortDesc: "Raises the user's SpDef. If an Electric-type skill is used next turn, its power is doubled.",
+
+		activate: "  [POKEMON] charged up electric energy!",
+	},
+	lightningcut: {
+		name: "Lightning Cut",
+		desc: "10% chance to raise the user's Speed.",
+		shortDesc: "10% chance to raise the user's Speed.",
+	},
+	lightningspeed: {
+		name: "Lightning Speed",
+		desc: "If it inflicts damage, the user switches for another puppet. Ends battles against wild puppets.",
+		shortDesc: "If it inflicts damage, the user switches for another puppet. Ends battles against wild puppets.",
+	},
+	lightningstrike: {
+		name: "Lightning Strike",
+		desc: "10% chance to paralyze the foe.",
+		shortDesc: "10% chance to paralyze the foe.",
+	},
+	limitlessrealm: {
+		name: "Limitless Realm",
+		desc: "Cancels all weather and terrain.",
+		shortDesc: "Cancels all weather and terrain.",
+	},
+	lostcrisis: {
+		name: "Lost Crisis",
+		desc: "If a Terrain is active, inflicts double damage and removes it.",
+		shortDesc: "If a Terrain is active, inflicts double damage and removes it.",
+	},
+	loveorpain: {
+		name: "Love or Pain",
+		desc: "Does double damage if the foe has a status ailment.",
+		shortDesc: "Does double damage if the foe has a status ailment.",
+	},
+	luckyrainbow: {
+		name: "Lucky Rainbow",
+		desc: "The user's side is protected from abnormal status for five turns.",
+		shortDesc: "The user's side is protected from abnormal status for five turns.",
+
+		start: "  A Lucky Rainbow shines on [TEAM]!",
+		end: "  [TEAM]'s Lucky Rainbow wore off!",
+	},
+	lullaby: {
+		name: "Lullaby",
+		desc: "Stops the foe.",
+		shortDesc: "Stops the foe.",
+	},
+	luminousflux: {
+		name: "Luminous Flux",
+		desc: "The user takes 1/3 of the damage in recoil.",
+		shortDesc: "The user takes 1/3 of the damage in recoil.",
+	},
+	lusciouswhisper: {
+		name: "Luscious Whisper",
+		desc: "Attacks against the foe's FoDef instead of their SpDef.",
+		shortDesc: "Attacks against the foe's FoDef instead of their SpDef.",
+	},
+	macroburst: {
+		name: "Macroburst",
+		desc: "30% chance to confuse the foe.",
+		shortDesc: "30% chance to confuse the foe.",
+	},
+	madrushstance: {
+		name: "Mad Rush Stance",
+		desc: "Raises the user's FoAtk, and sharply raises their Speed.",
+		shortDesc: "Raises the user's FoAtk, and sharply raises their Speed.",
+	},
+	magicbarrier: {
+		name: "Magic Barrier",
+		desc: "Puts up a barrier using a fourth of the user's max HP.",
+		shortDesc: "Puts up a barrier using a fourth of the user's max HP.",
+
+		activate: "  [POKEMON] created a Magic Barrier!",
+		damage: "  Damage was blocked by the Magic Barrier!",
+		end: "  [POKEMON]'s Magic Barrier broke!",
+	},
+	masterspark: {
+		name: "Master Spark",
+		desc: "Marisa EX only. Ignores the opponent's stat modifiers.",
+		shortDesc: "Marisa EX only. Ignores the opponent's stat modifiers.",
+	},
+	merrydance: {
+		name: "Merry Dance",
+		desc: "Raises the user's FoDef and SpDef.",
+		shortDesc: "Raises the user's FoDef and SpDef.",
+	},
+	metalneedle: {
+		name: "Metal Needle",
+		desc: "20% chance to raise the user's SpAtk.",
+		shortDesc: "20% chance to raise the user's SpAtk.",
+	},
+	meteorimpact: {
+		name: "Meteor Impact",
+		desc: "Fails if the user is hurt on the same turn they try to use this Skill.",
+		shortDesc: "Fails if the user is hurt on the same turn they try to use this Skill.",
+	},
+	miasma: {
+		name: "Miasma",
+		desc: "Harshly poisons the foe. Always hits if the user is Poison-type.",
+		shortDesc: "Harshly poisons the foe. Always hits if the user is Poison-type.",
+	},
+	midnightspecter: {
+		name: "Midnight Specter",
+		desc: "The user takes 1/3 of the damage in recoil.",
+		shortDesc: "The user takes 1/3 of the damage in recoil.",
+	},
+	mindcontrol: {
+		name: "Mind Control",
+		desc: "Changes the foe's Ability to the user's Ability.",
+		shortDesc: "Changes the foe's Ability to the user's Ability.",
+
+		activate: "  [TARGET]'s Ability was taken over by [POKEMON]!",
+	},
+	minetrap: {
+		name: "Mine Trap",
+		desc: "Lays a trap that hurts foes entering the field. Can be set up to 3 times.",
+		shortDesc: "Lays a trap that hurts foes entering the field. Can be set up to 3 times.",
+
+		start: "  A Mine Trap is laid on [TEAM]!",
+		activate: "  [POKEMON] fell for the Mine Trap!",
+	},
+	miraclereprisal: {
+		name: "Miracle Reprisal",
+		desc: "Power increases the more the foe's stats have been increased.",
+		shortDesc: "Power increases the more the foe's stats have been increased.",
+	},
+	mirage: {
+		name: "Mirage",
+		desc: "Reflects Status skills back to the other party.",
+		shortDesc: "Reflects Status skills back to the other party.",
+	},
+	mirageedge: {
+		name: "Mirage Edge",
+		desc: "A normal attack that lands critical hits often.",
+		shortDesc: "A normal attack that lands critical hits often.",
+	},
+	mirrordamage: {
+		name: "Mirror Damage",
+		desc: "Power doubles if you take damage from a foe's Skill on the same turn.",
+		shortDesc: "Power doubles if you take damage from a foe's Skill on the same turn.",
+	},
+	mirrorworld: {
+		name: "Mirror World",
+		desc: "30% chance to make the foe flinch.",
+		shortDesc: "30% chance to make the foe flinch.",
+	},
+	mirrorsreflection: {
+		name: "Mirror's Reflection",
+		desc: "Damage is 50% more than the damage taken from the foe's attack on the same turn.",
+		shortDesc: "Damage is 50% more than the damage taken from the foe's attack on the same turn.",
+	},
+	moonbow: {
+		name: "Moonbow",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	moonsprotection: {
+		name: "Moon's Protection",
+		desc: "Raises the user's SpAtk and SpDef.",
+		shortDesc: "Raises the user's SpAtk and SpDef.",
+	},
+	moonsreflection: {
+		name: "Moon's Reflection",
+		desc: "Damage is twice the damage taken from the foe's Spread attack on the same turn.",
+		shortDesc: "Damage is twice the damage taken from the foe's Spread attack on the same turn.",
+	},
+	mountainbreaker: {
+		name: "Mountain Breaker",
+		desc: "Power is higher if the foe's cost is high.",
+		shortDesc: "Power is higher if the foe's cost is high.",
+	},
+	muddango: {
+		name: "Mud Dango",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	mudslide: {
+		name: "Mudslide",
+		desc: "10% chance to lower the foe's Accuracy.",
+		shortDesc: "10% chance to lower the foe's Accuracy.",
+	},
+	mysteriousflare: {
+		name: "Mysterious Flare",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	mysteriousliquid: {
+		name: "Mysterious Liquid",
+		desc: "Does double damage if the foe is poisoned.",
+		shortDesc: "Does double damage if the foe is poisoned.",
+	},
+	mysteriouswave: {
+		name: "Mysterious Wave",
+		desc: "Attacks against the foe's FoDef instead of their SpDef.",
+		shortDesc: "Attacks against the foe's FoDef instead of their SpDef.",
+	},
+	mysticwind: {
+		name: "Mystic Wind",
+		desc: "Drastically raises the user's FoDef.",
+		shortDesc: "Drastically raises the user's FoDef.",
+	},
+	mysticalbugmist: {
+		name: "Mystical Bug Mist",
+		desc: "Paralyzes the foe.",
+		shortDesc: "Paralyzes the foe.",
+	},
+	naturalbeauty: {
+		name: "Natural Beauty",
+		desc: "20% chance to lower the foe's FoAtk.",
+		shortDesc: "20% chance to lower the foe's FoAtk.",
+	},
+	naturesign: {
+		name: "Nature Sign",
+		desc: "A normal attack. A puppet can only know one sign skill at a time.",
+		shortDesc: "A normal attack. A puppet can only know one sign skill at a time.",
+	},
+	neardeathevent: {
+		name: "Near-Death Event",
+		desc: "Duplicates the effect of the last used Skill.",
+		shortDesc: "Duplicates the effect of the last used Skill.",
+	},
+	negativemist: {
+		name: "Negative Mist",
+		desc: "Always hits. Clears the foe's stat modifiers.",
+		shortDesc: "Always hits. Clears the foe's stat modifiers.",
+	},
+	nethersign: {
+		name: "Nether Sign",
+		desc: "A normal attack. A puppet can only know one sign skill at a time.",
+		shortDesc: "A normal attack. A puppet can only know one sign skill at a time.",
+	},
+	nightstep: {
+		name: "Night Step",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	nightwind: {
+		name: "Night Wind",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	offensivetrance: {
+		name: "Offensive Trance",
+		desc: "Sharply raises the user's FoAtk, SpAtk, and Speed at the cost of FDef and SDef.",
+		shortDesc: "Sharply raises the user's FoAtk, SpAtk, and Speed at the cost of FDef and SDef.",
+	},
+	offseasonbloom: {
+		name: "Off-Season Bloom",
+		desc: "Harshly lowers the user's SpAtk.",
+		shortDesc: "Harshly lowers the user's SpAtk.",
+	},
+	omen: {
+		name: "Omen",
+		desc: "Lowers the user's SpAtk and SpDef.",
+		shortDesc: "Lowers the user's SpAtk and SpDef.",
+	},
+	ominousdoll: {
+		name: "Ominous Doll",
+		desc: "10% chance to blind the foe.",
+		shortDesc: "10% chance to blind the foe.",
+	},
+	orreriessun: {
+		name: "Orreries Sun",
+		desc: "Mima EX only. Increases all stats by 1 stage.",
+		shortDesc: "Mima EX only. Increases all stats by 1 stage.",
+	},
+	overray: {
+		name: "Over Ray",
+		desc: "A normal attack with increased priority.",
+		shortDesc: "A normal attack with increased priority.",
+	},
+	overdrive: {
+		name: "Overdrive",
+		desc: "Harshly lowers the user's FoAtk.",
+		shortDesc: "Harshly lowers the user's FoAtk.",
+	},
+	overrun: {
+		name: "Overrun",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	overskill: {
+		name: "Overskill",
+		desc: "The user takes 1/3 of the damage in recoil.",
+		shortDesc: "The user takes 1/3 of the damage in recoil.",
+	},
+	overtakestrike: {
+		name: "Overtake Strike",
+		desc: "A normal attack with increased priority.",
+		shortDesc: "A normal attack with increased priority.",
+	},
+	paniccall: {
+		name: "Panic Call",
+		desc: "If the foe holds an item, the attack is 50% stronger and knocks away the item.",
+		shortDesc: "If the foe holds an item, the attack is 50% stronger and knocks away the item.",
+	},
+	paralyzingwave: {
+		name: "Paralyzing Wave",
+		desc: "Paralyzes the foe.",
+		shortDesc: "Paralyzes the foe.",
+	},
+	parasite: {
+		name: "Parasite",
+		desc: "The user recovers half of the damage dealt.",
+		shortDesc: "The user recovers half of the damage dealt.",
+	},
+	passingbreeze: {
+		name: "Passing Breeze",
+		desc: "Will double in power during any weather, as well as cancel the weather.",
+		shortDesc: "Will double in power during any weather, as well as cancel the weather.",
+	},
+	peachthornarrow: {
+		name: "Peach-Thorn Arrow",
+		desc: "The user takes 1/3 of the damage in recoil.",
+		shortDesc: "The user takes 1/3 of the damage in recoil.",
+	},
+	perch: {
+		name: "Perch",
+		desc: "Restores half of the user's HP, and grounds the user for the rest of the turn.",
+		shortDesc: "Restores half of the user's HP, and grounds the user for the rest of the turn.",
+	},
+	perfectaim: {
+		name: "Perfect Aim",
+		desc: "Defeats the foe if it hits, regardless of their HP.",
+		shortDesc: "Defeats the foe if it hits, regardless of their HP.",
+	},
+	petaldance: {
+		name: "Petal Dance",
+		desc: "The user attacks for 2-3 turns, then becomes confused.",
+		shortDesc: "The user attacks for 2-3 turns, then becomes confused.",
+	},
+	phantasmagoria: {
+		name: "Phantasmagoria",
+		desc: "(unimplemented)",
+		shortDesc: "(unimplemented)",
+	},
+	phantomensemble: {
+		name: "Phantom Ensemble",
+		desc: "Lowers the foe's FoAtk.",
+		shortDesc: "Lowers the foe's FoAtk.",
+	},
+	phaseinversion: {
+		name: "Phase Inversion",
+		desc: "Inverts the foe's stat modifiers.",
+		shortDesc: "Inverts the foe's stat modifiers.",
+
+		move: "  [POKEMON] inverted [TARGET]'s status changes!",
+	},
+	phoenixwaltz: {
+		name: "Phoenix Waltz",
+		desc: "Power decreases if the user is not at full HP.",
+		shortDesc: "Power decreases if the user is not at full HP.",
+	},
+	piercingstab: {
+		name: "Piercing Stab",
+		desc: "Ignores the opponent's stat modifiers.",
+		shortDesc: "Ignores the opponent's stat modifiers.",
+	},
+	plasmaball: {
+		name: "Plasma Ball",
+		desc: "Paralyzes the foe.",
+		shortDesc: "Paralyzes the foe.",
+	},
+	playghost: {
+		name: "Play Ghost",
+		desc: "10% chance to scare the foe.",
+		shortDesc: "10% chance to scare the foe.",
+	},
+	poisonbomb: {
+		name: "Poison Bomb",
+		desc: "10% chance to poison the foe.",
+		shortDesc: "10% chance to poison the foe.",
+	},
+	poisonsign: {
+		name: "Poison Sign",
+		desc: "A normal attack. A puppet can only know one sign skill at a time.",
+		shortDesc: "A normal attack. A puppet can only know one sign skill at a time.",
+	},
+	poisonstream: {
+		name: "Poison Stream",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	poisontrap: {
+		name: "Poison Trap",
+		desc: "Lays a trap that poisons foes entering the field. Can be stacked up to twice.",
+		shortDesc: "Lays a trap that poisons foes entering the field. Can be stacked up to twice.",
+
+		start: "  A Poison Trap is laid on [TEAM]!",
+		activate: "  [POKEMON] fell for the Poison Trap!",
+	},
+	poisonedarrow: {
+		name: "Poisoned Arrow",
+		desc: "10% chance to poison the foe. Lands critical hits more often.",
+		shortDesc: "10% chance to poison the foe. Lands critical hits more often.",
+	},
+	pollenmist: {
+		name: "Pollen Mist",
+		desc: "10% chance to lower the foe's SpAtk.",
+		shortDesc: "10% chance to lower the foe's SpAtk.",
+	},
+	poltergeist: {
+		name: "Poltergeist",
+		desc: "10% chance to scare the foe.",
+		shortDesc: "10% chance to scare the foe.",
+	},
+	possession: {
+		name: "Possession",
+		desc: "Changes the user's Ability to the foe's Ability.",
+		shortDesc: "Changes the user's Ability to the foe's Ability.",
+	},
+	powerdrain: {
+		name: "Power Drain",
+		desc: "The user recovers half of the damage dealt.",
+		shortDesc: "The user recovers half of the damage dealt.",
+	},
+	powersplit: {
+		name: "Power Split",
+		desc: "Averages the user's FoAtk and SpAtk with the foe's.",
+		shortDesc: "Averages the user's FoAtk and SpAtk with the foe's.",
+
+		activate: "  [POKEMON] shared its power with its target!",
+	},
+	powerspot: {
+		name: "Power Spot",
+		desc: "At the end of the next turn, the current puppet regains half of the user's max HP.",
+		shortDesc: "At the end of the next turn, the current puppet regains half of the user's max HP.",
+
+		start: "  A Power Spot has appeared below [TEAM]!",
+		heal: "  [POKEMON]'s power was restored by the Power Spot!",
+		damage: "  [POKEMON]'s power was drained by the Power Spot...",
+	},
+	powerswap: {
+		name: "Power Swap",
+		desc: "Switches the user's changes to FoAtk and SpAtk with the foe's.",
+		shortDesc: "Switches the user's changes to FoAtk and SpAtk with the foe's.",
+
+		activate: "  [POKEMON] switched all changes to its FoAtk and SpAtk with its target!",
+	},
+	prank: {
+		name: "Prank",
+		desc: "Halves the foe's current HP.",
+		shortDesc: "Halves the foe's current HP.",
+	},
+	pretense: {
+		name: "Pretense",
+		desc: "Changes the user's type to the type of the first Skill they know.",
+		shortDesc: "Changes the user's type to the type of the first Skill they know.",
+	},
+	primalnoise: {
+		name: "Primal Noise",
+		desc: "50% chance to lower the foe's SpDef.",
+		shortDesc: "50% chance to lower the foe's SpDef.",
+	},
+	projection: {
+		name: "Projection",
+		desc: "The user copies all of the foe's stat modifiers.",
+		shortDesc: "The user copies all of the foe's stat modifiers.",
+
+		move: "  [POKEMON] copied [TARGET]'s state changes!",
+	},
+	pulselaser: {
+		name: "Pulse Laser",
+		desc: "The user cannot move next turn.",
+		shortDesc: "The user cannot move next turn.",
+	},
+	puppetsgrudge: {
+		name: "Puppet's Grudge",
+		desc: "The user faints to harshly lower the foe's FoAtk and SpAtk.",
+		shortDesc: "The user faints to harshly lower the foe's FoAtk and SpAtk.",
+	},
+	purgatoryflicker: {
+		name: "Purgatory Flicker",
+		desc: "The user takes 1/3 of the damage in recoil. 10% chance to burn the foe.",
+		shortDesc: "The user takes 1/3 of the damage in recoil. 10% chance to burn the foe.",
+	},
+	purplelightning: {
+		name: "Purple Lightning",
+		desc: "70% chance to raise the user's SpAtk.",
+		shortDesc: "70% chance to raise the user's SpAtk.",
+	},
+	purplesmog: {
+		name: "Purple Smog",
+		desc: "10% chance to poison the foe.",
+		shortDesc: "10% chance to poison the foe.",
+	},
+	pursuit: {
+		name: "Pursuit",
+		desc: "If the foe attempts to switch on the same turn, attacks the fleeing puppet for double damage.",
+		shortDesc: "If the foe attempts to switch on the same turn, attacks the fleeing puppet for double damage.",
+	},
+	quadruplebarrier: {
+		name: "Quadruple Barrier",
+		desc: "Yukari EX only. Increases FoDef after dealing damage. Always hits.",
+		shortDesc: "Yukari EX only. Increases FoDef after dealing damage. Always hits.",
+	},
+	quagmire: {
+		name: "Quagmire",
+		desc: "Lowers the foe's Speed.",
+		shortDesc: "Lowers the foe's Speed.",
+	},
+	racingearth: {
+		name: "Racing Earth",
+		desc: "Sharply raises the user's Speed.",
+		shortDesc: "Sharply raises the user's Speed.",
+	},
+	raid: {
+		name: "Raid",
+		desc: "Will always make the foe flinch, but can only be used on entering combat.",
+		shortDesc: "Will always make the foe flinch, but can only be used on entering combat.",
+	},
+	rainbowflowers: {
+		name: "Rainbow Flowers",
+		desc: "A two-turn skill. The user charges on the first turn. Works instantly during Aurora.",
+		shortDesc: "A two-turn skill. The user charges on the first turn. Works instantly during Aurora.",
+	},
+	rainbowshot: {
+		name: "Rainbow Shot",
+		desc: "Replicates Veil of Water.",
+		shortDesc: "Replicates Veil of Water.",
+	},
+	rainbowslash: {
+		name: "Rainbow Slash",
+		desc: "Kogasa EX only. High flinch rate.",
+		shortDesc: "Kogasa EX only. High flinch rate.",
+	},
+	randomshots: {
+		name: "Random Shots",
+		desc: "Hits two to five times.",
+		shortDesc: "Hits two to five times.",
+	},
+	rapidthrow: {
+		name: "Rapid Throw",
+		desc: "Hits two to five times.",
+		shortDesc: "Hits two to five times.",
+	},
+	realmblackrain: {
+		name: "Realm [Black Rain]",
+		desc: "Summons Sunshower weather and Genbu terrain.",
+		shortDesc: "Summons Sunshower weather and Genbu terrain.",
+	},
+	realmcorona: {
+		name: "Realm [Corona]",
+		desc: "Summons Aurora weather and Byakko terrain.",
+		shortDesc: "Summons Aurora weather and Byakko terrain.",
+	},
+	realmgold: {
+		name: "Realm [Gold]",
+		desc: "Summons Dust Storm weather and Kohryu terrain.",
+		shortDesc: "Summons Dust Storm weather and Kohryu terrain.",
+	},
+	realmscarletmist: {
+		name: "Realm [Scarlet Mist]",
+		desc: "Summons Heavy Fog weather and Suzaku terrain.",
+		shortDesc: "Summons Heavy Fog weather and Suzaku terrain.",
+	},
+	realmserenity: {
+		name: "Realm [Serenity]",
+		desc: "Summons Calm weather and Seiryu Terrain.",
+		shortDesc: "Summons Calm weather and Seiryu Terrain.",
+	},
+	recallnightmare: {
+		name: "Recall Nightmare",
+		desc: "Changes the foe's Ability to Active, removing their old ability and preventing them from being Stopped.",
+		shortDesc: "Changes the foe's Ability to Active, removing their old ability and preventing them from being Stopped.",
+
+		move: "  [TARGET]'s ability became Active!"
+	},
+	recklessdive: {
+		name: "Reckless Dive",
+		desc: "If the skill fails to inflict damage, the user loses half of their HP.",
+		shortDesc: "If the skill fails to inflict damage, the user loses half of their HP.",
+	},
+	recollection: {
+		name: "Recollection",
+		desc: "Copies all of the foe's attributes.",
+		shortDesc: "Copies all of the foe's attributes.",
+	},
+	recompensate: {
+		name: "Recompensate",
+		desc: "Lowers the foe's HP to be the same as the user's HP.",
+		shortDesc: "Lowers the foe's HP to be the same as the user's HP.",
+	},
+	reprimand: {
+		name: "Reprimand",
+		desc: "Power doubles if moving second.",
+		shortDesc: "Power doubles if moving second.",
+	},
+	resourcefulness: {
+		name: "Resourcefulness",
+		desc: "Recovers a used held item.",
+		shortDesc: "Recovers a used held item.",
+	},
+	retaliation: {
+		name: "Retaliation",
+		desc: "Power doubles if an ally was defeated last turn.",
+		shortDesc: "Power doubles if an ally was defeated last turn.",
+	},
+	reversalsword: {
+		name: "Reversal Sword",
+		desc: "Always hits.",
+		shortDesc: "Always hits.",
+	},
+	reversesplash: {
+		name: "Reverse Splash",
+		desc: "Power doubles if the foe attacks the user on the same turn.",
+		shortDesc: "Power doubles if the foe attacks the user on the same turn.",
+	},
+	revolvingillusions: {
+		name: "Revolving Illusions",
+		desc: "Uses the foe's FoAtk instead of the user's.",
+		shortDesc: "Uses the foe's FoAtk instead of the user's.",
+	},
+	risingsun: {
+		name: "Rising Sun",
+		desc: "Raises the user's Speed.",
+		shortDesc: "Raises the user's Speed.",
+	},
+	roar: {
+		name: "Roar",
+		desc: "Sharply lowers the foe's FoDef.",
+		shortDesc: "Sharply lowers the foe's FoDef.",
+	},
+	rockdrills: {
+		name: "Rock Drills",
+		desc: "A normal attack that always lands critical hits.",
+		shortDesc: "A normal attack that always lands critical hits.",
+	},
+	rockybarrage: {
+		name: "Rocky Barrage",
+		desc: "A normal attack that lands critical hits often.",
+		shortDesc: "A normal attack that lands critical hits often.",
+	},
+	rootfrog: {
+		name: "Root Frog",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	rootinjection: {
+		name: "Root Injection",
+		desc: "Poisons the foe.",
+		shortDesc: "Poisons the foe.",
+	},
+	royalprism: {
+		name: "Royal Prism",
+		desc: "30% chance to make the foe flinch.",
+		shortDesc: "30% chance to make the foe flinch.",
+	},
+	rubburn: {
+		name: "Rub Burn",
+		desc: "Burns the foe.",
+		shortDesc: "Burns the foe.",
+	},
+	ruinousvoice: {
+		name: "Ruinous Voice",
+		desc: "Both puppets will faint in 3 turns. Switching out ends the effect.",
+		shortDesc: "Both puppets will faint in 3 turns. Switching out ends the effect.",
+
+		start: "  All Puppets that heard the voice will faint in three turns!",
+		activate: "  [POKEMON] will faint in [NUMBER] turns.",
+	},
+	rushattack: {
+		name: "Rush Attack",
+		desc: "Hits two to five times.",
+		shortDesc: "Hits two to five times.",
+	},
+	sakurablizzard: {
+		name: "Sakura Blizzard",
+		desc: "10% chance to weaken the foe.",
+		shortDesc: "10% chance to weaken the foe.",
+	},
+	samuraiedge: {
+		name: "Samurai Edge",
+		desc: "10% chance to raise the user's FoAtk.",
+		shortDesc: "10% chance to raise the user's FoAtk.",
+	},
+	scatterbeam: {
+		name: "Scatter Beam",
+		desc: "A normal attack that lands critical hits often.",
+		shortDesc: "A normal attack that lands critical hits often.",
+	},
+	scatterbeans: {
+		name: "Scatter Beans",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	scoreweb: {
+		name: "Score Web",
+		desc: "Benben EX only. If the foe holds an item, attack is 50% stronger and removes said item.",
+		shortDesc: "Benben EX only. If the foe holds an item, attack is 50% stronger and removes said item.",
+	},
+	scorn: {
+		name: "Scorn",
+		desc: "The last skill the foe used loses 4 SP.",
+		shortDesc: "The last skill the foe used loses 4 SP.",
+	},
+	seasondoyou: {
+		name: "Season [Doyou]",
+		desc: "Replicates the effects of Kohryu and Calm.",
+		shortDesc: "Replicates the effects of Kohryu and Calm.",
+	},
+	seasonfall: {
+		name: "Season [Fall]",
+		desc: "Replicates the effects of Byakko and Heavy Fog.",
+		shortDesc: "Replicates the effects of Byakko and Heavy Fog.",
+	},
+	seasonspring: {
+		name: "Season [Spring]",
+		desc: "Replicates the effects of Seiryuu and Sunshower.",
+		shortDesc: "Replicates the effects of Seiryuu and Sunshower.",
+	},
+	seasonsummer: {
+		name: "Season [Summer]",
+		desc: "Replicates the effects of Suzaku and Aurora.",
+		shortDesc: "Replicates the effects of Suzaku and Aurora.",
+	},
+	seasonwinter: {
+		name: "Season [Winter]",
+		desc: "Replicates the effects of Genbu and Duststorm.",
+		shortDesc: "Replicates the effects of Genbu and Duststorm.",
+	},
+	seasonalflowers: {
+		name: "Seasonal Flowers",
+		desc: "10% chance to lower the foe's Sp.Atk.",
+		shortDesc: "10% chance to lower the foe's Sp.Atk.",
+	},
+	shadowbomb: {
+		name: "Shadow Bomb",
+		desc: "A normal attack with increased priority.",
+		shortDesc: "A normal attack with increased priority.",
+	},
+	shadowjavelin: {
+		name: "Shadow Javelin",
+		desc: "10% chance to scare the foe.",
+		shortDesc: "10% chance to scare the foe.",
+	},
+	shadowrush: {
+		name: "Shadow Rush",
+		desc: "Bypasses Supernatural Border and Thorned Ivy, and has increased priority.",
+		shortDesc: "Bypasses Supernatural Border and Thorned Ivy, and has increased priority.",
+	},
+	sharktrade: {
+		name: "Shark Trade",
+		desc: "Trades hold items with the foe.",
+		shortDesc: "Trades hold items with the foe.",
+	},
+	sharpwind: {
+		name: "Sharp Wind",
+		desc: "Raises the user's SpAtk and Speed.",
+		shortDesc: "Raises the user's SpAtk and Speed.",
+	},
+	shatteringearth: {
+		name: "Shattering Earth",
+		desc: "Defeats the foe if it hits, regardless of their HP.",
+		shortDesc: "Defeats the foe if it hits, regardless of their HP.",
+	},
+	shieldup: {
+		name: "Shield Up",
+		desc: "Raises the user's FoDef.",
+		shortDesc: "Raises the user's FoDef.",
+	},
+	shinigamiswaltz: {
+		name: "Shinigami's Waltz",
+		desc: "Consumes half of the user's HP to sap a fourth of the foe's HP every turn.",
+		shortDesc: "Consumes half of the user's HP to sap a fourth of the foe's HP every turn.",
+
+		move: "  [POKEMON] cut its HP to call the Shinigami on its opponent!",
+		start: "  [POKEMON] has been possessed by the Shinigami...",
+		damage: "  [POKEMON] had its life taken by the Shinigami...",
+	},
+	shockingwave: {
+		name: "Shocking Wave",
+		desc: "Shocks the foe. Does not work on Earth-type puppets.",
+		shortDesc: "Shocks the foe. Does not work on Earth-type puppets.",
+	},
+	shootingarts: {
+		name: "Shooting Arts",
+		desc: "Hits two to five times.",
+		shortDesc: "Hits two to five times.",
+	},
+	shootingpress: {
+		name: "Shooting Press",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	shout: {
+		name: "Shout",
+		desc: "Lowers the foe's FoAtk.",
+		shortDesc: "Lowers the foe's FoAtk.",
+	},
+	shriek: {
+		name: "Shriek",
+		desc: "Lowers the foe's SpAtk.",
+		shortDesc: "Lowers the foe's SpAtk.",
+	},
+	silverrain: {
+		name: "Silver Rain",
+		desc: "10% chance to raise the user's SpAtk.",
+		shortDesc: "10% chance to raise the user's SpAtk.",
+	},
+	singleminded: {
+		name: "Single-Minded",
+		desc: "Raises the user's FoAtk.",
+		shortDesc: "Raises the user's FoAtk.",
+	},
+	skanda: {
+		name: "Skanda",
+		desc: "Sharply raises the user's Speed.",
+		shortDesc: "Sharply raises the user's Speed.",
+	},
+	skullbreaker: {
+		name: "Skull Breaker",
+		desc: "A normal attack",
+		shortDesc: "A normal attack",
+	},
+	slimeball: {
+		name: "Slime Ball",
+		desc: "20% chance to harshly poison the foe.",
+		shortDesc: "20% chance to harshly poison the foe.",
+	},
+	slimeshot: {
+		name: "Slime Shot",
+		desc: "Lowers the foe's Speed.",
+		shortDesc: "Lowers the foe's Speed.",
+	},
+	slingshot: {
+		name: "Slingshot",
+		desc: "Lowers the foe's Accuracy.",
+		shortDesc: "Lowers the foe's Accuracy.",
+	},
+	smashspin: {
+		name: "Smash Spin",
+		desc: "Clears the user's side of some binding effects, Drain Seed, and Trap skills.",
+		shortDesc: "Clears the user's side of some binding effects, Drain Seed, and Trap skills.",
+	},
+	smogshot: {
+		name: "Smog Shot",
+		desc: "30% chance to poison the foe.",
+		shortDesc: "30% chance to poison the foe.",
+	},
+	sneakattack: {
+		name: "Sneak Attack",
+		desc: "Fails if the foe is not readying an attacking Skill, or if the foe moves first.",
+		shortDesc: "Fails if the foe is not readying an attacking Skill, or if the foe moves first.",
+	},
+	snowballfight: {
+		name: "Snowball Fight",
+		desc: "10% chance to lower the foe's Speed.",
+		shortDesc: "10% chance to lower the foe's Speed.",
+	},
+	solareclipse: {
+		name: "Solar Eclipse",
+		desc: "Scares and confuses the foe.",
+		shortDesc: "Scares and confuses the foe.",
+	},
+	sopranovoice: {
+		name: "Soprano Voice",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	sorrowfultune: {
+		name: "Sorrowful Tune",
+		desc: "Lowers the foe's SpAtk.",
+		shortDesc: "Lowers the foe's SpAtk.",
+	},
+	soulcorruption: {
+		name: "Soul Corruption",
+		desc: "Blinds and confuses the foe.",
+		shortDesc: "Blinds and confuses the foe.",
+	},
+	souleater: {
+		name: "Soul Eater",
+		desc: "10% chance to raise all of the user's stats.",
+		shortDesc: "10% chance to raise all of the user's stats.",
+	},
+	soulhound: {
+		name: "Soul Hound",
+		desc: "Always hits.",
+		shortDesc: "Always hits.",
+	},
+	soulwalking: {
+		name: "Soul Walking",
+		desc: "30% chance to scare the foe.",
+		shortDesc: "30% chance to scare the foe.",
+	},
+	soundsign: {
+		name: "Sound Sign",
+		desc: "A normal attack. A puppet can only know one sign skill at a time.",
+		shortDesc: "A normal attack. A puppet can only know one sign skill at a time.",
+	},
+	sparkcross: {
+		name: "Spark Cross",
+		desc: "Lowers the foe's Speed.",
+		shortDesc: "Lowers the foe's Speed.",
+	},
+	sparkjavelin: {
+		name: "Spark Javelin",
+		desc: "10% chance to paralyze the foe.",
+		shortDesc: "10% chance to paralyze the foe.",
+	},
+	sparkshot: {
+		name: "Spark Shot",
+		desc: "10% chance to paralyze the foe.",
+		shortDesc: "10% chance to paralyze the foe.",
+	},
+	spearthegungnir: {
+		name: "Spear The Gungnir",
+		desc: "Remilia EX only. Defending impossible.",
+		shortDesc: "Remilia EX only. Defending impossible.",
+	},
+	specterwarning: {
+		name: "Specter Warning",
+		desc: "10% chance to make the foe flinch.",
+		shortDesc: "10% chance to make the foe flinch.",
+	},
+	specterswaltz: {
+		name: "Specter's Waltz",
+		desc: "10% chance to scare the foe.",
+		shortDesc: "10% chance to scare the foe.",
+	},
+	speedybarrage: {
+		name: "Speedy Barrage",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	spikedstones: {
+		name: "Spiked Stones",
+		desc: "Lowers the foe's Speed.",
+		shortDesc: "Lowers the foe's Speed.",
+	},
+	spinningair: {
+		name: "Spinning Air",
+		desc: "10% chance to make the foe flinch.",
+		shortDesc: "10% chance to make the foe flinch.",
+	},
+	spiralstrike: {
+		name: "Spiral Strike",
+		desc: "10% chance to raise the user's SpAtk.",
+		shortDesc: "10% chance to raise the user's SpAtk.",
+	},
+	spiritrush: {
+		name: "Spirit Rush",
+		desc: "The user takes 1/4 of the damage in recoil.",
+		shortDesc: "The user takes 1/4 of the damage in recoil.",
+	},
+	springfirst: {
+		name: "Spring First",
+		desc: "A normal attack with increased priority.",
+		shortDesc: "A normal attack with increased priority.",
+	},
+	squall: {
+		name: "Squall",
+		desc: "Forces the foe to switch out for a random puppet. Ends battles against wild puppets.",
+		shortDesc: "Forces the foe to switch out for a random puppet. Ends battles against wild puppets.",
+	},
+	stelmosfire: {
+		name: "St. Elmo's Fire",
+		desc: "If the foe holds an item, the attack is 50% stronger and destroys the item.",
+		shortDesc: "If the foe holds an item, the attack is 50% stronger and destroys the item.",
+	},
+	stalkandmurder: {
+		name: "Stalk and Murder",
+		desc: "A two-turn skill. The user vanishes on the first turn. Bypasses Field Barriers. ",
+		shortDesc: "A two-turn skill. The user vanishes on the first turn. Bypasses Field Barriers. ",
+	},
+	starflare: {
+		name: "Star Flare",
+		desc: "20% chance to lower the foe's Accuracy.",
+		shortDesc: "20% chance to lower the foe's Accuracy.",
+	},
+	starvingspirit: {
+		name: "Starving Spirit",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	stealthkill: {
+		name: "Stealth Kill",
+		desc: "Always hits. Bypasses the effects of Magical Barrier.",
+		shortDesc: "Always hits. Bypasses the effects of Magical Barrier.",
+	},
+	stealthtrap: {
+		name: "Stealth Trap",
+		desc: "Lays a trap that hurts foes entering the field. The trap's damage is Steel-typed.",
+		shortDesc: "Lays a trap that hurts foes entering the field. The trap's damage is Steel-typed.",
+
+		start: "  A Stealth Trap is laid on [TEAM]!",
+		activate: "  [POKEMON] fell for the Stealth Trap!",
+	},
+	steelsign: {
+		name: "Steel Sign",
+		desc: "A normal attack. A puppet can only know one sign skill at a time.",
+		shortDesc: "A normal attack. A puppet can only know one sign skill at a time.",
+	},
+	stonecircle: {
+		name: "Stone Circle",
+		desc: "10% chance to raise all of the user's stats.",
+		shortDesc: "10% chance to raise all of the user's stats.",
+	},
+	stonepile: {
+		name: "Stone Pile",
+		desc: "Raises the user's SpDef.",
+		shortDesc: "Raises the user's SpDef.",
+	},
+	stonerain: {
+		name: "Stone Rain",
+		desc: "20% chance to make the foe flinch.",
+		shortDesc: "20% chance to make the foe flinch.",
+	},
+	stonethrow: {
+		name: "Stone Throw",
+		desc: "Hits twice.",
+		shortDesc: "Hits twice.",
+	},
+	stormcloudseye: {
+		name: "Stormcloud's Eye",
+		desc: "30% chance to paralyze the foe.",
+		shortDesc: "30% chance to paralyze the foe.",
+	},
+	strenuousstance: {
+		name: "Strenuous Stance",
+		desc: "Sharply raises the user's FoAtk.",
+		shortDesc: "Sharply raises the user's FoAtk.",
+	},
+	strikeshot: {
+		name: "Strike Shot",
+		desc: "A normal attack with increased priority.",
+		shortDesc: "A normal attack with increased priority.",
+	},
+	struggle: {
+		name: "Struggle",
+		desc: "(struggle's description should not be visible)",
+		shortDesc: "(struggle's description should not be visible)",
+	},
+	stunbomb: {
+		name: "Stun Bomb",
+		desc: "Yumemi EX only. Paralyzes the enemy. Strikes first.",
+		shortDesc: "Yumemi EX only. Paralyzes the enemy. Strikes first.",
+	},
+	sunbeamdance: {
+		name: "Sunbeam Dance",
+		desc: "If the Weather is not clear, inflicts double damage and removes it.",
+		shortDesc: "If the Weather is not clear, inflicts double damage and removes it.",
+	},
+	sunsprotection: {
+		name: "Sun's Protection",
+		desc: "Raises the user's FoAtk and SpAtk. More potent during Calm and Aurora.",
+		shortDesc: "Raises the user's FoAtk and SpAtk. More potent during Calm and Aurora.",
+	},
+	supernaturalborder: {
+		name: "Supernatural Border",
+		desc: "Blocks all damage from the foe's attack. May fail if used consecutively.",
+		shortDesc: "Blocks all damage from the foe's attack. May fail if used consecutively.",
+
+		start: "  [POKEMON] is protected by the Supernatural Border!",
+		block: "  [POKEMON] is protected by the Supernatural Border!",
+		fail: "  [POKEMON]'s barrier couldn't block the attack!",
+	},
+	supernova: {
+		name: "Supernova",
+		desc: "Shinki EX only. Causes two random status effects. Always hits.",
+		shortDesc: "Shinki EX only. Causes two random status effects. Always hits.",
+	},
+	swallowcut: {
+		name: "Swallow Cut",
+		desc: "A normal attack with increased priority.",
+		shortDesc: "A normal attack with increased priority.",
+	},
+	swallowtaillance: {
+		name: "Swallowtail Lance",
+		desc: "Yuyuko EX only. Heal 50% of the damage dealt.",
+		shortDesc: "Yuyuko EX only. Heal 50% of the damage dealt.",
+	},
+	sweetdesperado: {
+		name: "Sweet Desperado",
+		desc: "Harshly lowers the user's SpAtk.",
+		shortDesc: "Harshly lowers the user's SpAtk.",
+	},
+	sweetnightmare: {
+		name: "Sweet Nightmare",
+		desc: "Blinds the foe.",
+		shortDesc: "Blinds the foe.",
+	},
+	swiftairraid: {
+		name: "Swift Air-Raid",
+		desc: "Always hits. Bypasses the effects of Magical Barrier.",
+		shortDesc: "Always hits. Bypasses the effects of Magical Barrier.",
+	},
+	swirlingleaves: {
+		name: "Swirling Leaves",
+		desc: "Always hits.",
+		shortDesc: "Always hits.",
+	},
+	takeover: {
+		name: "Take Over",
+		desc: "Uses the foe's SpAtk instead of the user's.",
+		shortDesc: "Uses the foe's SpAtk instead of the user's.",
+	},
+	tenseup: {
+		name: "Tense Up",
+		desc: "Raises the user's FoDef.",
+		shortDesc: "Raises the user's FoDef.",
+	},
+	terrainbyakko: {
+		name: "Terrain [Byakko]",
+		desc: "Changes the terrain to Byakko for 5 turns. This prevents anyone from avoiding attacks.",
+		shortDesc: "Changes the terrain to Byakko for 5 turns. This prevents anyone from avoiding attacks.",
+	},
+	terraingenbu: {
+		name: "Terrain [Genbu]",
+		desc: "Changes the terrain to Genbu for 5 turns. During Genbu, slower puppets move first.",
+		shortDesc: "Changes the terrain to Genbu for 5 turns. During Genbu, slower puppets move first.",
+	},
+	terrainkohryu: {
+		name: "Terrain [Kohryu]",
+		desc: "Changes the terrain to Kohryu for 5 turns. This disables the effects of items and abilities.",
+		shortDesc: "Changes the terrain to Kohryu for 5 turns. This disables the effects of items and abilities.",
+	},
+	terrainseiryu: {
+		name: "Terrain [Seiryu]",
+		desc: "Changes the terrain to Seiryu for 5 turns. During Seiryu, types do not interact.",
+		shortDesc: "Changes the terrain to Seiryu for 5 turns. During Seiryu, types do not interact.",
+	},
+	terrainsuzaku: {
+		name: "Terrain [Suzaku]",
+		desc: "Changes the terrain to Suzaku for 5 turns. During Suzaku, healing effects cause harm.",
+		shortDesc: "Changes the terrain to Suzaku for 5 turns. During Suzaku, healing effects cause harm.",
+	},
+	theripper: {
+		name: "The Ripper",
+		desc: "A normal attack that lands critical hits often.",
+		shortDesc: "A normal attack that lands critical hits often.",
+	},
+	thermit: {
+		name: "Thermit",
+		desc: "Heavily burns the foe.",
+		shortDesc: "Heavily burns the foe.",
+	},
+	thievingwind: {
+		name: "Thieving Wind",
+		desc: "Steals the foe's held item for yourself.",
+		shortDesc: "Steals the foe's held item for yourself.",
+	},
+	thornedivy: {
+		name: "Thorned Ivy",
+		desc: "Blocks all damage from the foe's attack and counters strong attacks. May fail if used consecutively.",
+		shortDesc: "Blocks all damage from the foe's attack and counters strong attacks. May fail if used consecutively.",
+
+		start: "  [POKEMON] is covered in Thorned Ivy!",
+		block: "  [TARGET] took damage from the thorns!",
+		fail: "  [POKEMON]'s barrier couldn't block the attack!",
+	},
+	thorshammer: {
+		name: "Thor's Hammer",
+		desc: "The user takes 1/3 of the damage in recoil. 10% chance to paralyze the foe.",
+		shortDesc: "The user takes 1/3 of the damage in recoil. 10% chance to paralyze the foe.",
+	},
+	thunderdrill: {
+		name: "Thunder Drill",
+		desc: "A normal attack that always lands critical hits.",
+		shortDesc: "A normal attack that always lands critical hits.",
+	},
+	thunderforce: {
+		name: "Thunder Force",
+		desc: "10% chance to paralyze the foe.",
+		shortDesc: "10% chance to paralyze the foe.",
+	},
+	thunderveil: {
+		name: "Thunder Veil",
+		desc: "Paralyzes and confuses the foe.",
+		shortDesc: "Paralyzes and confuses the foe.",
+	},
+	thunderclap: {
+		name: "Thunderclap",
+		desc: "100% chance to make the foe flinch.",
+		shortDesc: "100% chance to make the foe flinch.",
+	},
+	thunderlordsscorn: {
+		name: "Thunderlord's Scorn",
+		desc: "10% chance to paralyze the foe.",
+		shortDesc: "10% chance to paralyze the foe.",
+	},
+	tigerrush: {
+		name: "Tiger Rush",
+		desc: "A normal attack with increased priority.",
+		shortDesc: "A normal attack with increased priority.",
+	},
+	timescrew: {
+		name: "Time Screw",
+		desc: "Always hits.",
+		shortDesc: "Always hits.",
+	},
+	toxichaze: {
+		name: "Toxic Haze",
+		desc: "20% chance to harshly poison the foe.",
+		shortDesc: "20% chance to harshly poison the foe.",
+	},
+	toxicspiral: {
+		name: "Toxic Spiral",
+		desc: "Harshly lowers the foe's SpDef.",
+		shortDesc: "Harshly lowers the foe's SpDef.",
+	},
+	trickster: {
+		name: "Trickster",
+		desc: "A normal attack with increased priority.",
+		shortDesc: "A normal attack with increased priority.",
+	},
+	trieffect: {
+		name: "Tri-Effect",
+		desc: "20% chance to paralyze, blind, or scare the foe.",
+		shortDesc: "20% chance to paralyze, blind, or scare the foe.",
+	},
+	tumbleplant: {
+		name: "Tumble Plant",
+		desc: "Power is higher if the foe's cost is high.",
+		shortDesc: "Power is higher if the foe's cost is high.",
+	},
+	tuning: {
+		name: "Tuning",
+		desc: "Raises the user's SpAtk.",
+		shortDesc: "Raises the user's SpAtk.",
+	},
+	twilightinfection: {
+		name: "Twilight Infection",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	twingears: {
+		name: "Twin Gears",
+		desc: "Hits twice.",
+		shortDesc: "Hits twice.",
+	},
+	twinthrust: {
+		name: "Twin Thrust",
+		desc: "Hits twice.",
+		shortDesc: "Hits twice.",
+	},
+	twister: {
+		name: "Twister",
+		desc: "Hits two to five times.",
+		shortDesc: "Hits two to five times.",
+	},
+	ultrahightone: {
+		name: "Ultra High Tone",
+		desc: "10% chance to raise one of the user's stats randomly.",
+		shortDesc: "10% chance to raise one of the user's stats randomly.",
+	},
+	unconsciousmind: {
+		name: "Unconscious Mind",
+		desc: "Can only be used while stopped. Randomly uses another skill.",
+		shortDesc: "Can only be used while stopped. Randomly uses another skill.",
+	},
+	understep: {
+		name: "Understep",
+		desc: "Lowers the foe's Speed.",
+		shortDesc: "Lowers the foe's Speed.",
+	},
+	unfetteredsoul: {
+		name: "Unfettered Soul",
+		desc: "Does double damage if the user is not holding an item.",
+		shortDesc: "Does double damage if the user is not holding an item.",
+	},
+	unknownflare: {
+		name: "Unknown Flare",
+		desc: "30% chance to confuse the foe.",
+		shortDesc: "30% chance to confuse the foe.",
+	},
+	unstablehorizon: {
+		name: "Unstable Horizon",
+		desc: "30% chance to lower the foe's Accuracy.",
+		shortDesc: "30% chance to lower the foe's Accuracy.",
+	},
+	upbeat: {
+		name: "Upbeat",
+		desc: "Prevents the foe from using Status Skills for three turns.",
+		shortDesc: "Prevents the foe from using Status Skills for three turns.",
+	},
+	vacuumrupture: {
+		name: "Vacuum Rupture",
+		desc: "The user cannot move next turn.",
+		shortDesc: "The user cannot move next turn.",
+	},
+	veilofwater: {
+		name: "Veil of Water",
+		desc: "For 5 turns, the user's side cannot have their stats lowered by the foe's side.",
+		shortDesc: "For 5 turns, the user's side cannot have their stats lowered by the foe's side.",
+
+		end: "  [TEAM]'s Veil of Water wore off!",
+	},
+	venomfang: {
+		name: "Venom Fang",
+		desc: "30% chance to poison the foe.",
+		shortDesc: "30% chance to poison the foe.",
+	},
+	venomnova: {
+		name: "Venom Nova",
+		desc: "10% chance to poison the foe.",
+		shortDesc: "10% chance to poison the foe.",
+	},
+	venomstrike: {
+		name: "Venom Strike",
+		desc: "20% chance to poison the foe. Cannot be used when holding an item.",
+		shortDesc: "20% chance to poison the foe. Cannot be used when holding an item.",
+	},
+	vigilantwatch: {
+		name: "Vigilant Watch",
+		desc: "Sees through the foe's stance, preventing them from avoiding the next attack.",
+		shortDesc: "Sees through the foe's stance, preventing them from avoiding the next attack.",
+	},
+	voiceoffamine: {
+		name: "Voice of Famine",
+		desc: "10% chance to weaken the foe.",
+		shortDesc: "10% chance to weaken the foe.",
+	},
+	volcano: {
+		name: "Volcano",
+		desc: "Harshly lowers the user's SpAtk.",
+		shortDesc: "Harshly lowers the user's SpAtk.",
+	},
+	volley: {
+		name: "Volley",
+		desc: "Always hits.",
+		shortDesc: "Always hits.",
+	},
+	waltz: {
+		name: "Waltz",
+		desc: "10% chance to raise one of the user's stats randomly.",
+		shortDesc: "10% chance to raise one of the user's stats randomly.",
+	},
+	warpedsign: {
+		name: "Warped Sign",
+		desc: "A normal attack. A puppet can only know one sign skill at a time.",
+		shortDesc: "A normal attack. A puppet can only know one sign skill at a time.",
+	},
+	waterball: {
+		name: "Water Ball",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	watersign: {
+		name: "Water Sign",
+		desc: "A normal attack. A puppet can only know one sign skill at a time.",
+		shortDesc: "A normal attack. A puppet can only know one sign skill at a time.",
+	},
+	waterfalldrop: {
+		name: "Waterfall Drop",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	wavesofearth: {
+		name: "Waves of Earth",
+		desc: "10% chance to lower the foe's Accuracy.",
+		shortDesc: "10% chance to lower the foe's Accuracy.",
+	},
+	weatheraurora: {
+		name: "Weather [Aurora]",
+		desc: "Changes the weather to Aurora for 5 turns. This strengthens Light attacks and weakens Dark attacks.",
+		shortDesc: "Changes the weather to Aurora for 5 turns. This strengthens Light attacks and weakens Dark attacks.",
+	},
+	weathercalm: {
+		name: "Weather [Calm]",
+		desc: "Changes the weather to Calm for 5 turns. During Calm, random secondary effects of skills are blocked.",
+		shortDesc: "Changes the weather to Calm for 5 turns. During Calm, random secondary effects of skills are blocked.",
+	},
+	weatherduststorm: {
+		name: "Weather [Duststorm]",
+		desc: "Changes the weather to Dust Storm for 5 turns. This harms puppets of most types.",
+		shortDesc: "Changes the weather to Dust Storm for 5 turns. This harms puppets of most types.",
+	},
+	weatherheavyfog: {
+		name: "Weather [Heavy Fog]",
+		desc: "Changes the weather to Fog for 5 turns. This strengthens Dark attacks and weakens Light attacks.",
+		shortDesc: "Changes the weather to Fog for 5 turns. This strengthens Dark attacks and weakens Light attacks.",
+	},
+	weathersunshower: {
+		name: "Weather [Sunshower]",
+		desc: "Changes the weather to Sunshower for 5 turns. During Sunshower, FoDef and SpDef are switched.",
+		shortDesc: "Changes the weather to Sunshower for 5 turns. During Sunshower, FoDef and SpDef are switched.",
+	},
+	westerlies: {
+		name: "Westerlies",
+		desc: "20% chance to raise the user's Speed.",
+		shortDesc: "20% chance to raise the user's Speed.",
+	},
+	whitelilydance: {
+		name: "White Lily Dance",
+		desc: "The user faints. The next puppet to come out is restored to full HP and normal status.",
+		shortDesc: "The user faints. The next puppet to come out is restored to full HP and normal status.",
+
+		activate: "  [POKEMON] was healed due to the effects of White Lily Dance!",
+		fail: "  White Lily Dance failed...",
+	},
+	whitemist: {
+		name: "White Mist",
+		desc: "Drastically raises the user's SpAtk.",
+		shortDesc: "Drastically raises the user's SpAtk.",
+	},
+	wholebeing: {
+		name: "Whole Being",
+		desc: "Bypasses half of the foe's FoDef, but the user faints.",
+		shortDesc: "Bypasses half of the foe's FoDef, but the user faints.",
+	},
+	willowisp: {
+		name: "Will-o'-Wisp",
+		desc: "Burns and blinds the foe.",
+		shortDesc: "Burns and blinds the foe.",
+	},
+	windgodsgrace: {
+		name: "Wind God's Grace",
+		desc: "For five turns, the user's party's Speed is doubled. Six turns during Calm weather.",
+		shortDesc: "For five turns, the user's party's Speed is doubled. Six turns during Calm weather.",
+
+		start: "  Wind God's Grace hastens [TEAM]'s Puppet's!",
+		end: "  [TEAM]'s Wind God's Grace wore off!",
+	},
+	windjavelin: {
+		name: "Wind Javelin",
+		desc: "10% chance to make the foe flinch.",
+		shortDesc: "10% chance to make the foe flinch.",
+	},
+	windsign: {
+		name: "Wind Sign",
+		desc: "A normal attack. A puppet can only know one sign skill at a time.",
+		shortDesc: "A normal attack. A puppet can only know one sign skill at a time.",
+	},
+	windtrain: {
+		name: "Wind Train",
+		desc: "Always hits.",
+		shortDesc: "Always hits.",
+	},
+	windwave: {
+		name: "Wind Wave",
+		desc: "30% chance to make the foe flinch.",
+		shortDesc: "30% chance to make the foe flinch.",
+	},
+	wintrywind: {
+		name: "Wintry Wind",
+		desc: "A normal attack that lands critical hits often.",
+		shortDesc: "A normal attack that lands critical hits often.",
+	},
+	wordbreak: {
+		name: "Word Break",
+		desc: "Seals two of the foe's skills for four turns.",
+		shortDesc: "Seals two of the foe's skills for four turns.",
+	},
+	yangenergy: {
+		name: "Yang Energy",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+	yinenergy: {
+		name: "Yin Energy",
+		desc: "A normal attack.",
+		shortDesc: "A normal attack.",
+	},
+
+	//POKEMON (remove later)
 	"10000000voltthunderbolt": {
 		name: "10,000,000 Volt Thunderbolt",
 		desc: "Has a very high chance for a critical hit.",
@@ -116,7 +2839,7 @@ export const MovesText: {[k: string]: MoveText} = {
 			shortDesc: "Switches position with the ally on the far side.",
 		},
 	},
-	amnesia: {
+	_amnesia: {
 		name: "Amnesia",
 		desc: "Raises the user's Special Defense by 2 stages.",
 		shortDesc: "Raises the user's Sp. Def by 2.",
@@ -143,7 +2866,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 100% chance to lower the target's Special Defense by 1 stage.",
 		shortDesc: "100% chance to lower the target's Sp. Def by 1.",
 	},
-	aquacutter: {
+	_aquacutter: {
 		name: "Aqua Cutter",
 		desc: "Has a higher chance for a critical hit.",
 		shortDesc: "High critical hit ratio.",
@@ -777,7 +3500,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Raises the user's Special Attack and Special Defense by 1 stage.",
 		shortDesc: "Raises the user's Sp. Atk and Sp. Def by 1.",
 	},
-	camouflage: {
+	_camouflage: {
 		name: "Camouflage",
 		desc: "The user's type changes based on the battle terrain. Normal type on the regular Wi-Fi terrain, Electric type during Electric Terrain, Fairy type during Misty Terrain, Grass type during Grassy Terrain, and Psychic type during Psychic Terrain. Fails if the user's type cannot be changed or if the user is already purely that type.",
 		shortDesc: "Changes user's type by terrain (default Normal).",
@@ -2075,7 +4798,7 @@ export const MovesText: {[k: string]: MoveText} = {
 			shortDesc: "Has 1/3 recoil. 10% chance to burn. Thaws user.",
 		},
 	},
-	flash: {
+	_flash: {
 		name: "Flash",
 		desc: "Lowers the target's accuracy by 1 stage.",
 		shortDesc: "Lowers the target's accuracy by 1.",
@@ -2524,11 +5247,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Power is equal to the base move's Max Move power. If this move is successful, there is a 50% chance every Pokemon on the user's side has its Berry restored, even if they have a substitute.",
 		shortDesc: "Base move affects power. 50% restores Berries.",
 	},
-	gmaxresonance: {
+	//THIS BREAKS THE RESONANCE ABILITY
+	/*gmaxresonance: {
 		name: "G-Max Resonance",
 		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Aurora Veil begins on the user's side.",
 		shortDesc: "Base move affects power. Allies: Aurora Veil.",
-	},
+	},*/
 	gmaxsandblast: {
 		name: "G-Max Sandblast",
 		desc: "Power is equal to the base move's Max Move power. If this move is successful, each Pokemon on the opposing side is prevented from switching for four or five turns (seven turns if the user is holding Grip Claw), even if they have a substitute. Causes damage equal to 1/8 of their maximum HP (1/6 if the user is holding Binding Band), rounded down, at the end of each turn during effect. They can still switch out if they are holding Shed Shell or use Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends for a target if it leaves the field, or if it uses Rapid Spin or Substitute successfully. This effect is not stackable or reset by using this or another binding move.",
@@ -2705,14 +5429,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Deals damage to the target equal to 3/4 of its current HP, rounded down, but not less than 1 HP.",
 		shortDesc: "Does damage equal to 3/4 target's current HP.",
 	},
-	guardsplit: {
+	_guardsplit: {
 		name: "Guard Split",
 		desc: "The user and the target have their Defense and Special Defense stats set to be equal to the average of the user and the target's Defense and Special Defense stats, respectively, rounded down. Stat stage changes are unaffected.",
 		shortDesc: "Averages Defense and Sp. Def stats with target.",
 
 		activate: "  [POKEMON] shared its guard with the target!",
 	},
-	guardswap: {
+	_guardswap: {
 		name: "Guard Swap",
 		desc: "The user swaps its Defense and Special Defense stat stage changes with the target.",
 		shortDesc: "Swaps Defense and Sp. Def changes with target.",
@@ -3238,7 +5962,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 30% chance to burn the target. Power doubles if the target has a non-volatile status condition.",
 		shortDesc: "30% burn. 2x power if target is already statused.",
 	},
-	inferno: {
+	_inferno: {
 		name: "Inferno",
 		desc: "Has a 100% chance to burn the target.",
 		shortDesc: "100% chance to burn the target.",
@@ -3427,7 +6151,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Power doubles if the user had a stat stage lowered this turn.",
 		shortDesc: "2x power if the user had a stat lowered this turn.",
 	},
-	lastresort: {
+	_lastresort: {
 		name: "Last Resort",
 		desc: "This move fails unless the user knows this move and at least one other move, and has used all the other moves it knows at least once each since it became active or Transformed.",
 		shortDesc: "Fails unless each known move has been used.",
@@ -4428,7 +7152,7 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "Whether or not this move is successful, the user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect, even if it is already confused. If the user is prevented from moving, the effect ends without causing confusion. If this move is called by Sleep Talk, the move is used for one turn and does not confuse the user.",
 		},
 	},
-	overdrive: {
+	_overdrive: {
 		name: "Overdrive",
 		desc: "No additional effect.",
 		shortDesc: "No additional effect. Hits foe(s).",
@@ -4501,7 +7225,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "No additional effect.",
 		shortDesc: "No additional effect. Hits adjacent Pokemon.",
 	},
-	petaldance: {
+	_petaldance: {
 		name: "Petal Dance",
 		desc: "The user spends two or three turns locked into this move and becomes confused immediately after its move on the last turn of the effect if it is not already. This move targets an opposing Pokemon at random on each turn. If the user is prevented from moving, is asleep at the beginning of a turn, or the attack is not successful against the target on the first turn of the effect or the second turn of a three-turn effect, the effect ends without causing confusion. If this move is called by Sleep Talk and the user is asleep, the move is used for one turn and does not confuse the user.",
 		shortDesc: "Lasts 2-3 turns. Confuses the user afterwards.",
@@ -4628,7 +7352,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "If the target is an ally, this move restores 1/2 of its maximum HP, rounded down, instead of dealing damage.",
 		shortDesc: "If the target is an ally, heals 50% of its max HP.",
 	},
-	poltergeist: {
+	_poltergeist: {
 		name: "Poltergeist",
 		shortDesc: "Fails if the target has no held item.",
 
@@ -4671,14 +7395,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Power Gem",
 		shortDesc: "No additional effect.",
 	},
-	powersplit: {
+	_powersplit: {
 		name: "Power Split",
 		desc: "The user and the target have their Attack and Special Attack stats set to be equal to the average of the user and the target's Attack and Special Attack stats, respectively, rounded down. Stat stage changes are unaffected.",
 		shortDesc: "Averages Attack and Sp. Atk stats with target.",
 
 		activate: "  [POKEMON] shared its power with the target!",
 	},
-	powerswap: {
+	_powerswap: {
 		name: "Power Swap",
 		desc: "The user swaps its Attack and Special Attack stat stage changes with the target.",
 		shortDesc: "Swaps Attack and Sp. Atk stat stages with target.",
@@ -4851,7 +7575,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The target is cured if it has a non-volatile status condition. If the target was cured, the user restores 1/2 of its maximum HP, rounded down.",
 		shortDesc: "Cures target's status; heals user 1/2 max HP if so.",
 	},
-	pursuit: {
+	_pursuit: {
 		name: "Pursuit",
 		desc: "If an opposing Pokemon switches out this turn, this move hits that Pokemon before it leaves the field, even if it was not the original target. If the user moves after an opponent using Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch, but not Baton Pass, it will hit that opponent before it leaves the field. Power doubles and no accuracy check is done if the user hits an opponent switching out, and the user's turn is over; if an opponent faints from this, the replacement Pokemon does not become active until the end of the turn.",
 		shortDesc: "If a foe is switching out, hits it at 2x power.",
@@ -5159,7 +7883,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "If the current terrain is Electric Terrain and the target is grounded, this move's power is doubled.",
 		shortDesc: "2x power if target is grounded in Electric Terrain.",
 	},
-	roar: {
+	_roar: {
 		name: "Roar",
 		desc: "The target is forced to switch out and be replaced with a random unfainted ally. Fails if the target is the last unfainted Pokemon in its party, or if the target used Ingrain previously or has the Suction Cups Ability.",
 		shortDesc: "Forces the target to switch to a random ally.",
@@ -6282,7 +9006,7 @@ export const MovesText: {[k: string]: MoveText} = {
 			shortDesc: "Lowers the target's Speed by 1.",
 		},
 	},
-	struggle: {
+	_struggle: {
 		name: "Struggle",
 		desc: "Deals typeless damage to a random opposing Pokemon. If this move was successful, the user loses 1/4 of its maximum HP, rounded half up, and the Rock Head Ability does not prevent this. This move is automatically used if none of the user's known moves can be selected.",
 		shortDesc: "User loses 1/4 of its max HP.",
@@ -6990,7 +9714,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Twinkle Tackle",
 		shortDesc: "Power is equal to the base move's Z-Power.",
 	},
-	twister: {
+	_twister: {
 		name: "Twister",
 		desc: "Has a 20% chance to make the target flinch. Power doubles if the target is using Bounce, Fly, or Sky Drop, or is under the effect of Sky Drop.",
 		shortDesc: "20% chance to make the foe(s) flinch.",
@@ -7265,7 +9989,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "If the target lost HP, the user takes recoil damage equal to 1/4 the HP lost by the target, rounded half up, but not less than 1 HP.",
 		shortDesc: "Has 1/4 recoil.",
 	},
-	willowisp: {
+	_willowisp: {
 		name: "Will-O-Wisp",
 		desc: "Burns the target.",
 		shortDesc: "Burns the target.",

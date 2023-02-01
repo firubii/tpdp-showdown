@@ -108,6 +108,7 @@ export interface PokemonSet {
 	 * Tera Type
 	 */
 	teraType?: string;
+	costume?: number;
 }
 
 export const Teams = new class Teams {
@@ -193,12 +194,13 @@ export const Teams = new class Teams {
 			}
 
 			if (set.pokeball || set.hpType || set.gigantamax ||
-				(set.dynamaxLevel !== undefined && set.dynamaxLevel !== 10) || set.teraType) {
+				(set.dynamaxLevel !== undefined && set.dynamaxLevel !== 10) || set.teraType || set.costume) {
 				buf += ',' + (set.hpType || '');
 				buf += ',' + this.packName(set.pokeball || '');
 				buf += ',' + (set.gigantamax ? 'G' : '');
 				buf += ',' + (set.dynamaxLevel !== undefined && set.dynamaxLevel !== 10 ? set.dynamaxLevel : '');
 				buf += ',' + (set.teraType || '');
+				buf += ',' + (set.costume || '');
 			}
 		}
 
@@ -293,12 +295,12 @@ export const Teams = new class Teams {
 			if (j !== i) {
 				const ivs = buf.substring(i, j).split(',', 6);
 				set.ivs = {
-					hp: ivs[0] === '' ? 31 : Number(ivs[0]) || 0,
-					atk: ivs[1] === '' ? 31 : Number(ivs[1]) || 0,
-					def: ivs[2] === '' ? 31 : Number(ivs[2]) || 0,
-					spa: ivs[3] === '' ? 31 : Number(ivs[3]) || 0,
-					spd: ivs[4] === '' ? 31 : Number(ivs[4]) || 0,
-					spe: ivs[5] === '' ? 31 : Number(ivs[5]) || 0,
+					hp: ivs[0] === '' ? 15 : Number(ivs[0]) || 0,
+					atk: ivs[1] === '' ? 15 : Number(ivs[1]) || 0,
+					def: ivs[2] === '' ? 15 : Number(ivs[2]) || 0,
+					spa: ivs[3] === '' ? 15 : Number(ivs[3]) || 0,
+					spd: ivs[4] === '' ? 15 : Number(ivs[4]) || 0,
+					spe: ivs[5] === '' ? 15 : Number(ivs[5]) || 0,
 				};
 			}
 			i = j + 1;
@@ -319,9 +321,9 @@ export const Teams = new class Teams {
 			j = buf.indexOf(']', i);
 			let misc;
 			if (j < 0) {
-				if (i < buf.length) misc = buf.substring(i).split(',', 6);
+				if (i < buf.length) misc = buf.substring(i).split(',', 7);
 			} else {
-				if (i !== j) misc = buf.substring(i, j).split(',', 6);
+				if (i !== j) misc = buf.substring(i, j).split(',', 7);
 			}
 			if (misc) {
 				set.happiness = (misc[0] ? Number(misc[0]) : 255);
@@ -330,6 +332,7 @@ export const Teams = new class Teams {
 				set.gigantamax = !!misc[3];
 				set.dynamaxLevel = (misc[4] ? Number(misc[4]) : 10);
 				set.teraType = misc[5];
+				set.costume = (misc[6] ? Number(misc[6]) : 0);
 			}
 			if (j < 0) break;
 			i = j + 1;
@@ -387,6 +390,9 @@ export const Teams = new class Teams {
 		if (set.level && set.level !== 100) {
 			out += `Level: ${set.level}  \n`;
 		}
+		if (set.costume) {
+			out += `Costume: ${set.costume}  \n`;
+		}
 		if (set.shiny) {
 			out += `Shiny: Yes  \n`;
 		}
@@ -420,8 +426,11 @@ export const Teams = new class Teams {
 					out += `EVs: ${stats.join(" / ")}  \n`;
 				}
 			}
-			if (set.nature) {
+			/*if (set.nature) {
 				out += `${set.nature} Nature  \n`;
+			}*/
+			if (set.nature) {
+				out += `${set.nature} Emblem  \n`;
 			}
 			if (set.ivs) {
 				const stats = Dex.stats.ids().map(
@@ -477,6 +486,9 @@ export const Teams = new class Teams {
 			set.ability = line;
 		} else if (line === 'Shiny: Yes') {
 			set.shiny = true;
+		} else if (line.startsWith('Costume: ')) {
+			line = line.slice(9);
+			set.costume = +line;
 		} else if (line.startsWith('Level: ')) {
 			line = line.slice(7);
 			set.level = +line;
@@ -508,18 +520,24 @@ export const Teams = new class Teams {
 		} else if (line.startsWith('IVs: ')) {
 			line = line.slice(5);
 			const ivLines = line.split('/');
-			set.ivs = {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31};
+			set.ivs = {hp: 15, atk: 15, def: 15, spa: 15, spd: 15, spe: 15};
 			for (const ivLine of ivLines) {
 				const [statValue, statName] = ivLine.trim().split(' ');
 				const statid = Dex.stats.getID(statName);
 				if (!statid) continue;
 				let value = parseInt(statValue);
-				if (isNaN(value)) value = 31;
+				if (isNaN(value)) value = 15;
 				set.ivs[statid] = value;
 			}
 		} else if (/^[A-Za-z]+ (N|n)ature/.test(line)) {
 			let natureIndex = line.indexOf(' Nature');
 			if (natureIndex === -1) natureIndex = line.indexOf(' nature');
+			if (natureIndex === -1) return;
+			line = line.substr(0, natureIndex);
+			if (line !== 'undefined') set.nature = line;
+		} else if (/^[A-Za-z]+ (E|e)mblem/.test(line)) {
+			let natureIndex = line.indexOf(' Emblem');
+			if (natureIndex === -1) natureIndex = line.indexOf(' emblem');
 			if (natureIndex === -1) return;
 			line = line.substr(0, natureIndex);
 			if (line !== 'undefined') set.nature = line;

@@ -2,9 +2,16 @@ export const Conditions: {[k: string]: ConditionData} = {
 	brn: {
 		name: 'brn',
 		effectType: 'Status',
+		statusSlots: 1,
+		stackCondition: 'brnheavy',
 		onStart(target, source, sourceEffect) {
+			if (target.hasType('Fire')) {
+				this.add('-immune', target);
+				target.clearStatus('brn');
+				return false;
+			}
 			if (sourceEffect && sourceEffect.id === 'flameorb') {
-				this.add('-status', target, 'brn', '[from] item: Flame Orb');
+				this.add('-status', target, 'brn', '[from] item: ' + sourceEffect.name);
 			} else if (sourceEffect && sourceEffect.effectType === 'Ability') {
 				this.add('-status', target, 'brn', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
 			} else {
@@ -14,13 +21,48 @@ export const Conditions: {[k: string]: ConditionData} = {
 		// Damage reduction is handled directly in the sim/battle.js damage function
 		onResidualOrder: 10,
 		onResidual(pokemon) {
-			this.damage(pokemon.baseMaxhp / 16);
+			this.damage(pokemon.baseMaxhp / 8);
+		},
+	},
+	brnheavy: {
+		name: 'brnheavy',
+		effectType: 'Status',
+		statusSlots: 2,
+		onStart(target, source, sourceEffect) {
+			if (target.hasType('Fire')) {
+				this.add('-immune', target);
+				target.clearStatus('brn');
+				return false;
+			}
+			this.effectState.stage = 0;
+			if (sourceEffect && sourceEffect.effectType === 'Ability') {
+				this.add('-status', target, 'brnheavy', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
+			} else {
+				this.add('-status', target, 'brnheavy');
+			}
+		},
+		onSwitchIn() {
+			this.effectState.stage = 0;
+		},
+		onResidualOrder: 10,
+		onResidual(pokemon) {
+			if (this.effectState.stage < 15) {
+				this.effectState.stage++;
+			}
+			this.damage(this.clampIntRange(pokemon.baseMaxhp / 8, 1) * this.effectState.stage);
 		},
 	},
 	par: {
 		name: 'par',
 		effectType: 'Status',
+		statusSlots: 1,
+		stackCondition: 'shk',
 		onStart(target, source, sourceEffect) {
+			if (target.hasType('Electric')) {
+				this.add('-immune', target);
+				target.clearStatus('par');
+				return false;
+			}
 			if (sourceEffect && sourceEffect.effectType === 'Ability') {
 				this.add('-status', target, 'par', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
 			} else {
@@ -30,49 +72,99 @@ export const Conditions: {[k: string]: ConditionData} = {
 		onModifySpe(spe, pokemon) {
 			// Paralysis occurs after all other Speed modifiers, so evaluate all modifiers up to this point first
 			spe = this.finalModify(spe);
-			if (!pokemon.hasAbility('quickfeet')) {
-				spe = Math.floor(spe * 50 / 100);
+			if (!pokemon.hasAbility(['quickfeet', 'gale'])) {
+				spe = Math.floor(spe * (1/4));
 			}
 			return spe;
 		},
-		onBeforeMovePriority: 1,
-		onBeforeMove(pokemon) {
-			if (this.randomChance(1, 4)) {
-				this.add('cant', pokemon, 'par');
+	},
+	shk: {
+		name: 'shk',
+		effectType: 'Status',
+		statusSlots: 2,
+		onStart(target, source, sourceEffect) {
+			if (target.hasType('Electric')) {
+				this.add('-immune', target);
+				target.clearStatus('shk');
 				return false;
 			}
+			if (sourceEffect && sourceEffect.effectType === 'Ability') {
+				this.add('-status', target, 'shk', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
+			} else {
+				this.add('-status', target, 'shk');
+			}
+		},
+		onModifySpe(spe, pokemon) {
+			// Paralysis occurs after all other Speed modifiers, so evaluate all modifiers up to this point first
+			spe = this.finalModify(spe);
+			if (!pokemon.hasAbility(['quickfeet', 'gale'])) {
+				spe = Math.floor(spe * (1/4));
+			}
+			return spe;
+		},
+		onAccuracy(accuracy, target, source, move) {
+			return true;
 		},
 	},
-	slp: {
-		name: 'slp',
+	dark: {
+		name: 'dark',
 		effectType: 'Status',
+		statusSlots: 1,
 		onStart(target, source, sourceEffect) {
 			if (sourceEffect && sourceEffect.effectType === 'Ability') {
-				this.add('-status', target, 'slp', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
-			} else if (sourceEffect && sourceEffect.effectType === 'Move') {
-				this.add('-status', target, 'slp', '[from] move: ' + sourceEffect.name);
+				this.add('-status', target, 'dark', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
 			} else {
-				this.add('-status', target, 'slp');
+				this.add('-status', target, 'dark');
+			}
+		},
+		onModifyAtk(atk, pokemon) {
+			if (!pokemon.hasAbility('mindseye') && pokemon.moveThisTurn !== 'blowfromcalamity')
+				return Math.floor(this.finalModify(atk) * (1/2));;
+		},
+	},
+	fear: {
+		name: 'fear',
+		effectType: 'Status',
+		statusSlots: 1,
+		onStart(target, source, sourceEffect) {
+			if (sourceEffect && sourceEffect.effectType === 'Ability') {
+				this.add('-status', target, 'fear', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
+			} else {
+				this.add('-status', target, 'fear');
+			}
+		},
+		onModifySpA(atk, pokemon) {
+			if (!pokemon.hasAbility('pride'))
+				return Math.floor(this.finalModify(atk) * (1/2));;
+		},
+	},
+	stp: {
+		name: 'stp',
+		effectType: 'Status',
+		statusSlots: 2,
+		onStart(target, source, sourceEffect) {
+			if (sourceEffect && sourceEffect.effectType === 'Ability') {
+				this.add('-status', target, 'stp', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
+			} else if (sourceEffect && sourceEffect.effectType === 'Move') {
+				this.add('-status', target, 'stp', '[from] move: ' + sourceEffect.name);
+			} else {
+				this.add('-status', target, 'stp');
 			}
 			// 1-3 turns
 			this.effectState.startTime = this.random(2, 5);
 			this.effectState.time = this.effectState.startTime;
-
-			if (target.removeVolatile('nightmare')) {
-				this.add('-end', target, 'Nightmare', '[silent]');
-			}
 		},
 		onBeforeMovePriority: 10,
 		onBeforeMove(pokemon, target, move) {
-			if (pokemon.hasAbility('earlybird')) {
-				pokemon.statusState.time--;
+			if (pokemon.hasAbility(['earlybird', 'vigorous'])) {
+				this.effectState.time--;
 			}
-			pokemon.statusState.time--;
-			if (pokemon.statusState.time <= 0) {
-				pokemon.cureStatus();
+			this.effectState.time--;
+			if (this.effectState.time <= 0) {
+				pokemon.cureStatus('stp');
 				return;
 			}
-			this.add('cant', pokemon, 'slp');
+			this.add('cant', pokemon, 'stp');
 			if (move.sleepUsable) {
 				return;
 			}
@@ -96,7 +188,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 		onBeforeMove(pokemon, target, move) {
 			if (move.flags['defrost']) return;
 			if (this.randomChance(1, 5)) {
-				pokemon.cureStatus();
+				pokemon.cureStatus('frz');
 				return;
 			}
 			this.add('cant', pokemon, 'frz');
@@ -110,19 +202,26 @@ export const Conditions: {[k: string]: ConditionData} = {
 		},
 		onAfterMoveSecondary(target, source, move) {
 			if (move.thawsTarget) {
-				target.cureStatus();
+				target.cureStatus('frz');
 			}
 		},
 		onDamagingHit(damage, target, source, move) {
 			if (move.type === 'Fire' && move.category !== 'Status') {
-				target.cureStatus();
+				target.cureStatus('frz');
 			}
 		},
 	},
 	psn: {
 		name: 'psn',
 		effectType: 'Status',
+		statusSlots: 1,
+		stackCondition: 'tox',
 		onStart(target, source, sourceEffect) {
+			if (target.hasType(['Poison', 'Steel'])) {
+				this.add('-immune', target);
+				target.clearStatus('psn');
+				return false;
+			}
 			if (sourceEffect && sourceEffect.effectType === 'Ability') {
 				this.add('-status', target, 'psn', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
 			} else {
@@ -137,10 +236,16 @@ export const Conditions: {[k: string]: ConditionData} = {
 	tox: {
 		name: 'tox',
 		effectType: 'Status',
+		statusSlots: 2,
 		onStart(target, source, sourceEffect) {
+			if (target.hasType(['Poison', 'Steel'])) {
+				this.add('-immune', target);
+				target.clearStatus('tox');
+				return false;
+			}
 			this.effectState.stage = 0;
 			if (sourceEffect && sourceEffect.id === 'toxicorb') {
-				this.add('-status', target, 'tox', '[from] item: Toxic Orb');
+				this.add('-status', target, 'tox', '[from] item: ' + sourceEffect.name);
 			} else if (sourceEffect && sourceEffect.effectType === 'Ability') {
 				this.add('-status', target, 'tox', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
 			} else {
@@ -155,7 +260,94 @@ export const Conditions: {[k: string]: ConditionData} = {
 			if (this.effectState.stage < 15) {
 				this.effectState.stage++;
 			}
-			this.damage(this.clampIntRange(pokemon.baseMaxhp / 16, 1) * this.effectState.stage);
+			this.damage(this.clampIntRange(pokemon.baseMaxhp / 8, 1) * this.effectState.stage);
+		},
+	},
+	weak: {
+		name: 'weak',
+		effectType: 'Status',
+		statusSlots: 1,
+		stackCondition: 'weakheavy',
+		onStart(target, source, sourceEffect) {
+			if (sourceEffect && sourceEffect.effectType === 'Ability') {
+				this.add('-status', target, 'weak', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
+			} else {
+				this.add('-status', target, 'weak');
+			}
+		},
+		onTryHealPriority: 10,
+		onSourceTryHeal(relayVar: number, target: Pokemon, source: Pokemon, effect: Effect) {
+			if (effect.id !== "breather")
+				return false;
+		}
+	},
+	weakheavy: {
+		name: 'weakheavy',
+		effectType: 'Status',
+		statusSlots: 2,
+		onStart(target, source, sourceEffect) {
+			if (sourceEffect && sourceEffect.effectType === 'Ability') {
+				this.add('-status', target, 'weakheavy', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
+			} else {
+				this.add('-status', target, 'weakheavy');
+			}
+		},
+		onTryHealPriority: 10,
+		onSourceTryHeal(relayVar: number, target: Pokemon, source: Pokemon, effect: Effect) {
+			if (effect.id !== "breather")
+				return false;
+		},
+		onDeductPP(target, source) {
+			if (!target.status['weakheavy']) return;
+			return 1;
+		},
+	},
+	stancebreak: {
+		name: 'stancebreak',
+		duration: 2,
+		onStart(target, source, sourceEffect) {
+			this.add('-start', target, 'stancebreak');
+		},
+		onAccuracy(accuracy, target, source, move) {
+			return true;
+		},
+		onEnd(target) {
+			this.add('-end', target, 'stancebreak');
+		},
+	},
+	ignoremodifiers: {
+		name: 'ignoremodifiers',
+		duration: 1,
+		onAnyModifyBoost(boosts, pokemon) {
+			const unawareUser = this.effectState.target;
+			if (unawareUser === pokemon) return;
+			if (unawareUser === this.activePokemon && pokemon === this.activeTarget) {
+				boosts['def'] = 0;
+				boosts['spd'] = 0;
+				boosts['evasion'] = 0;
+			}
+		},
+	},
+	counter: {
+		name: 'counter',
+		duration: 1,
+		noCopy: true,
+		onStart(target, source, move) {
+			this.effectState.slot = null;
+			this.effectState.damage = 0;
+			this.effectState.categories = ["Physical", "Special"];
+		},
+		onRedirectTargetPriority: -1,
+		onRedirectTarget(target, source, source2, move) {
+			if (move.flags['counter']) return;
+			if (source !== this.effectState.target || !this.effectState.slot) return;
+			return this.getAtSlot(this.effectState.slot);
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (!source.isAlly(target) && this.effectState.categories.includes(this.getCategory(move))) {
+				this.effectState.slot = source.getSlot();
+				this.effectState.damage = damage;
+			}
 		},
 	},
 	confusion: {
@@ -180,16 +372,17 @@ export const Conditions: {[k: string]: ConditionData} = {
 				pokemon.removeVolatile('confusion');
 				return;
 			}
-			this.add('-activate', pokemon, 'confusion');
-			if (!this.randomChance(33, 100)) {
-				return;
+			if (this.randomChance(1, 2)) {
+				this.add('-activate', pokemon, 'confusion');
+				return false;
 			}
+			/*
 			this.activeTarget = pokemon;
 			const damage = this.actions.getConfusionDamage(pokemon, 40);
 			if (typeof damage !== 'number') throw new Error("Confusion damage not dealt");
 			const activeMove = {id: this.toID('confused'), effectType: 'Move', type: '???'};
 			this.damage(damage, pokemon, pokemon, activeMove as ActiveMove);
-			return false;
+			return false;*/
 		},
 	},
 	flinch: {
@@ -225,7 +418,8 @@ export const Conditions: {[k: string]: ConditionData} = {
 		},
 		onStart(pokemon, source) {
 			this.add('-activate', pokemon, 'move: ' + this.effectState.sourceEffect, '[of] ' + source);
-			this.effectState.boundDivisor = source.hasItem('bindingband') ? 6 : 8;
+			//this.effectState.boundDivisor = source.hasItem('bindingband') ? 6 : 8;
+			this.effectState.boundDivisor = source.hasItem('sturdyrope') ? 8 : 16;
 		},
 		onResidualOrder: 13,
 		onResidual(pokemon) {
@@ -252,7 +446,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 		name: 'lockedmove',
 		duration: 2,
 		onResidual(target) {
-			if (target.status === 'slp') {
+			if (target.status['stp']) {
 				// don't lock, and bypass confusion for calming
 				delete target.volatiles['lockedmove'];
 			}
@@ -269,7 +463,8 @@ export const Conditions: {[k: string]: ConditionData} = {
 		},
 		onEnd(target) {
 			if (this.effectState.trueDuration > 1) return;
-			target.addVolatile('confusion');
+			if (!target.hasAbility('mindlessdance'))
+				target.addVolatile('confusion');
 		},
 		onLockMove(pokemon) {
 			if (pokemon.volatiles['dynamax']) return;
@@ -453,12 +648,303 @@ export const Conditions: {[k: string]: ConditionData} = {
 		onBasePowerPriority: 14,
 		onBasePower(basePower, user, target, move) {
 			this.debug('Gem Boost');
-			return this.chainModify([5325, 4096]);
+			//return this.chainModify([5325, 4096]);
+			return this.chainModify(1.4);
 		},
 	},
 
 	// weather is implemented here since it's so important to the game
 
+	//TOUHOU WEATHER
+	calm: {
+		name: "Calm",
+		effectType: "Weather",
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source?.hasItem(['almightygodstone', 'silentgodstone'])) {
+				return 8;
+			}
+			return 5;
+		},
+		onModifySecondaries(secondaries) {
+			return secondaries.filter(effect => !!effect.self);
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				this.add('-weather', 'Calm', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'Calm');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Calm', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	aurora: {
+		name: "Aurora",
+		effectType: "Weather",
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source?.hasItem(['almightygodstone', 'halogodstone'])) {
+				return 8;
+			}
+			return 5;
+		},
+		onModifyDamage(relayVar, source, target, move) {
+			if (move.type === "Light") {
+				this.chainModify(2);
+			} else if (move.type === "Dark") {
+				this.chainModify(0.5);
+			}
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				this.add('-weather', 'Aurora', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'Aurora');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Aurora', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	heavyfog: {
+		name: "Heavy Fog",
+		effectType: "Weather",
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source?.hasItem(['almightygodstone', 'twilightgodstone'])) {
+				return 8;
+			}
+			return 5;
+		},
+		onModifyDamage(relayVar, source, target, move) {
+			if (move.type === "Dark") {
+				this.chainModify(2);
+			} else if (move.type === "Light") {
+				this.chainModify(0.5);
+			}
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				this.add('-weather', 'Heavy Fog', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'Heavy Fog');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Heavy Fog', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	duststorm: {
+		name: 'Dust Storm',
+		effectType: 'Weather',
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source?.hasItem(['almightygodstone', 'sandgodstone'])) {
+				return 8;
+			}
+			return 5;
+		},
+		// This should be applied directly to the stat before any of the other modifiers are chained
+		// So we give it increased priority.
+		
+		//HELP -- TPDP wiki does not list this as being a feature of dust storm, however it does say it's identical to sandstorm
+		/*onModifySpDPriority: 10,
+		onModifySpD(spd, pokemon) {
+			if (pokemon.hasType('Rock') && this.field.isWeather('sandstorm')) {
+				return this.modify(spd, 1.5);
+			}
+		},*/
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'Dust Storm', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'Dust Storm');
+			}
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Dust Storm', '[upkeep]');
+			if (this.field.isWeather('Dust Storm')) this.eachEvent('Weather');
+		},
+		onWeather(target) {
+			if (!target.hasType(['Steel', 'Earth']))
+				this.damage(target.baseMaxhp / 16);
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	sunshower: {
+		name: 'Sunshower',
+		effectType: 'Weather',
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source?.hasItem(['almightygodstone', 'sereingodstone'])) {
+				return 8;
+			}
+			return 5;
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				if (this.gen <= 5) this.effectState.duration = 0;
+				this.add('-weather', 'Sunshower', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'Sunshower');
+			}
+		},
+		/*onModifySpDPriority: 100,
+		onModifySpD(relayVar, target, source, move) {
+			return source.getStat('def', true);
+		},
+		onModifyDefPriority: 100,
+		onModifyDef(relayVar, target, source, move) {
+			return source.getStat('spd', true);
+		},*/
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Sunshower', '[upkeep]');
+			if (this.field.isWeather('Sunshower')) this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+
+	//TOUHOU TERRAIN
+	seiryu: {
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source.hasAbility('timegazer')) return 8;
+			return 5;
+		},
+		onEffectiveness(typeMod, target, type, move) {
+			return 0;
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				this.add('-fieldstart', 'terrain: Seiryu', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-fieldstart', 'terrain: Seiryu');
+			}
+		},
+		onFieldResidualOrder: 27,
+		onFieldResidualSubOrder: 7,
+		onFieldEnd() {
+			this.add('-fieldend', 'terrain: Seiryu');
+		},
+	},
+	suzaku: {
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source.hasAbility('timegazer')) return 8;
+			return 5;
+		},
+		onTryHealPriority: 15,
+		onTryHeal(this:Battle, relayVar:number, target:Pokemon, source:Pokemon, effect:Effect) {
+			if (target.hasAbility('southernexpanse')) return;
+			target.damage(relayVar);
+			return false;
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				this.add('-fieldstart', 'terrain: Suzaku', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-fieldstart', 'terrain: Suzaku');
+			}
+		},
+		onFieldResidualOrder: 27,
+		onFieldResidualSubOrder: 7,
+		onFieldEnd() {
+			this.add('-fieldend', 'terrain: Suzaku');
+		},
+	},
+	byakko: {
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source.hasAbility('timegazer')) return 8;
+			return 5;
+		},
+		onModifyMove(move, pokemon, target) {
+			if (!move.ohko)
+				move.accuracy = true;
+			move.critRatio = 0;
+			move.breaksProtect = true;
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				this.add('-fieldstart', 'terrain: Byakko', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-fieldstart', 'terrain: Byakko');
+			}
+		},
+		onFieldResidualOrder: 27,
+		onFieldResidualSubOrder: 7,
+		onFieldEnd() {
+			this.add('-fieldend', 'terrain: Byakko');
+		},
+	},
+	genbu: {
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source.hasAbility('timegazer')) return 8;
+			return 5;
+		},
+		//Trick Room is implemented in pokemon.ts:Pokemon.getActionSpeed()
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				this.add('-fieldstart', 'terrain: Genbu', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-fieldstart', 'terrain: Genbu');
+			}
+		},
+		onFieldResidualOrder: 27,
+		onFieldResidualSubOrder: 7,
+		onFieldEnd() {
+			this.add('-fieldend', 'terrain: Genbu');
+		},
+	},
+	kohryu: {
+		duration: 5,
+		durationCallback(source, effect) {
+			if (source.hasAbility('timegazer')) return 8;
+			return 5;
+		},
+		onModifyMove(move, pokemon, target) {
+			move.ignoreAbility = true;
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				this.add('-fieldstart', 'terrain: Kohryu', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-fieldstart', 'terrain: Kohryu');
+			}
+		},
+		onFieldResidualOrder: 27,
+		onFieldResidualSubOrder: 7,
+		onFieldEnd() {
+			this.add('-fieldend', 'terrain: Kohryu');
+		},
+	},
+
+	//POKEMON WEATHER
 	raindance: {
 		name: 'RainDance',
 		effectType: 'Weather',

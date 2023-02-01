@@ -78,8 +78,7 @@ export class Pokemon {
 	species: Species;
 	speciesState: EffectState;
 
-	status: ID;
-	statusState: EffectState;
+	status: {[id: string]: EffectState};
 	volatiles: {[id: string]: EffectState};
 	showCure?: boolean;
 
@@ -325,7 +324,7 @@ export class Pokemon {
 				if (!set.hpType) set.hpType = move.type;
 				move = this.battle.dex.moves.get('hiddenpower');
 			}
-			let basepp = (move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5;
+			let basepp = move.pp; //(move.noPPBoosts || move.isZ) ? move.pp : move.pp * 8 / 5;
 			if (this.battle.gen < 3) basepp = Math.min(61, basepp);
 			this.baseMoveSlots.push({
 				move: move.name,
@@ -341,10 +340,9 @@ export class Pokemon {
 
 		this.position = 0;
 		this.details = this.species.name + (this.level === 100 ? '' : ', L' + this.level) +
-			(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '');
+			(this.gender === '' ? '' : ', ' + this.gender) + (this.set.costume ? ', C' + this.set.costume : '');
 
-		this.status = '';
-		this.statusState = {};
+		this.status = {};
 		this.volatiles = {};
 		this.showCure = undefined;
 
@@ -495,7 +493,7 @@ export class Pokemon {
 		let details = this.details;
 		if (this.illusion) {
 			const illusionDetails = this.illusion.species.name + (this.level === 100 ? '' : ', L' + this.level) +
-				(this.illusion.gender === '' ? '' : ', ' + this.illusion.gender) + (this.illusion.set.shiny ? ', shiny' : '');
+				(this.illusion.gender === '' ? '' : ', ' + this.illusion.gender) + (this.illusion.set.costume ? ', C' + this.illusion.set.costume : '');
 			details = illusionDetails;
 		}
 		if (this.terastallized) details += `, tera:${this.terastallized}`;
@@ -515,7 +513,8 @@ export class Pokemon {
 		let stat = this.storedStats[statName];
 
 		// Wonder Room swaps defenses before calculating anything else
-		if ('wonderroom' in this.battle.field.pseudoWeather) {
+		//if ('wonderroom' in this.battle.field.pseudoWeather) {
+		if (this.battle.field.isWeather('sunshower')) {
 			if (statName === 'def') {
 				stat = this.storedStats['spd'];
 			} else if (statName === 'spd') {
@@ -586,7 +585,7 @@ export class Pokemon {
 
 	getActionSpeed() {
 		let speed = this.getStat('spe', false, false);
-		if (this.battle.field.getPseudoWeather('trickroom')) {
+		if (this.battle.field.getPseudoWeather('trickroom') || this.battle.field.isTerrain('genbu')) {
 			speed = 10000 - speed;
 		}
 		return this.battle.trunc(speed, 13);
@@ -823,8 +822,8 @@ export class Pokemon {
 		return !!(
 			this.itemState.knockedOff || // Gen 3-4
 			(this.battle.gen >= 5 && !this.isActive) ||
-			(!this.getItem().ignoreKlutz && this.hasAbility('klutz')) ||
-			this.volatiles['embargo'] || this.battle.field.pseudoWeather['magicroom']
+			(!this.getItem().ignoreKlutz && this.hasAbility(['klutz', 'wasteful'])) || this.hasAbility('bruteforce') ||
+			this.volatiles['embargo'] || this.battle.field.pseudoWeather['magicroom'] || (this.battle.field.isTerrain('kohryu') && !this.hasAbility('centralexpanse'))
 		);
 	}
 
@@ -1176,25 +1175,27 @@ export class Pokemon {
 		}
 	}
 
-	transformInto(pokemon: Pokemon, effect?: Effect) {
-		const species = pokemon.species;
-		if (pokemon.fainted || this.illusion || pokemon.illusion || (pokemon.volatiles['substitute'] && this.battle.gen >= 5) ||
-			(pokemon.transformed && this.battle.gen >= 2) || (this.transformed && this.battle.gen >= 5) ||
-			species.name === 'Eternatus-Eternamax') {
-			return false;
+	transformInto(pokemon: Pokemon, effect?: Effect, changeSpecies:boolean = true) {
+		if (changeSpecies) {
+			const species = pokemon.species;
+			if (pokemon.fainted || this.illusion || pokemon.illusion || (pokemon.volatiles['substitute'] && this.battle.gen >= 5) ||
+				(pokemon.transformed && this.battle.gen >= 2) || (this.transformed && this.battle.gen >= 5) ||
+				species.name === 'Eternatus-Eternamax') {
+				return false;
+			}
+
+			if (this.battle.dex.currentMod === 'gen1stadium' && (
+				species.name === 'Ditto' ||
+				(this.species.name === 'Ditto' && pokemon.moves.includes('transform'))
+			)) {
+				return false;
+			}
+
+			if (!this.setSpecies(species, effect, true)) return false;
+
+			this.transformed = true;
+			this.weighthg = pokemon.weighthg;
 		}
-
-		if (this.battle.dex.currentMod === 'gen1stadium' && (
-			species.name === 'Ditto' ||
-			(this.species.name === 'Ditto' && pokemon.moves.includes('transform'))
-		)) {
-			return false;
-		}
-
-		if (!this.setSpecies(species, effect, true)) return false;
-
-		this.transformed = true;
-		this.weighthg = pokemon.weighthg;
 
 		const types = pokemon.getTypes(true, true);
 		this.setType(pokemon.volatiles['roost'] ? pokemon.volatiles['roost'].typeWas : types, true);
@@ -1254,23 +1255,25 @@ export class Pokemon {
 		}
 		if (this.battle.gen > 2) this.setAbility(pokemon.ability, this, true, true);
 
-		// Change formes based on held items (for Transform)
-		// Only ever relevant in Generation 4 since Generation 3 didn't have item-based forme changes
-		if (this.battle.gen === 4) {
-			if (this.species.num === 487) {
-				// Giratina formes
-				if (this.species.name === 'Giratina' && this.item === 'griseousorb') {
-					this.formeChange('Giratina-Origin');
-				} else if (this.species.name === 'Giratina-Origin' && this.item !== 'griseousorb') {
-					this.formeChange('Giratina');
+		if (changeSpecies) {
+			// Change formes based on held items (for Transform)
+			// Only ever relevant in Generation 4 since Generation 3 didn't have item-based forme changes
+			if (this.battle.gen === 4) {
+				if (this.species.num === 487) {
+					// Giratina formes
+					if (this.species.name === 'Giratina' && this.item === 'griseousorb') {
+						this.formeChange('Giratina-Origin');
+					} else if (this.species.name === 'Giratina-Origin' && this.item !== 'griseousorb') {
+						this.formeChange('Giratina');
+					}
 				}
-			}
-			if (this.species.num === 493) {
-				// Arceus formes
-				const item = this.getItem();
-				const targetForme = (item?.onPlate ? 'Arceus-' + item.onPlate : 'Arceus');
-				if (this.species.name !== targetForme) {
-					this.formeChange(targetForme);
+				if (this.species.num === 493) {
+					// Arceus formes
+					const item = this.getItem();
+					const targetForme = (item?.onPlate ? 'Arceus-' + item.onPlate : 'Arceus');
+					if (this.species.name !== targetForme) {
+						this.formeChange(targetForme);
+					}
 				}
 			}
 		}
@@ -1311,8 +1314,8 @@ export class Pokemon {
 		}
 		if (this.battle.gen <= 1) {
 			// Gen 1: Re-Apply burn and para drops.
-			if (this.status === 'par') this.modifyStat!('spe', 0.25);
-			if (this.status === 'brn') this.modifyStat!('atk', 0.5);
+			//if (this.status === 'par') this.modifyStat!('spe', 0.25);
+			//if (this.status === 'brn') this.modifyStat!('atk', 0.5);
 		}
 		this.speed = this.storedStats.spe;
 		return species;
@@ -1340,7 +1343,7 @@ export class Pokemon {
 		if (isPermanent) {
 			this.baseSpecies = rawSpecies;
 			this.details = species.name + (this.level === 100 ? '' : ', L' + this.level) +
-				(this.gender === '' ? '' : ', ' + this.gender) + (this.set.shiny ? ', shiny' : '');
+				(this.gender === '' ? '' : ', ' + this.gender) + (this.set.costume ? ', C' + this.set.costume : '');
 			let details = (this.illusion || this).details;
 			if (this.terastallized) details += `, tera:${this.terastallized}`;
 			this.battle.add('detailschange', this, details);
@@ -1547,42 +1550,84 @@ export class Pokemon {
 	}
 
 	trySetStatus(status: string | Condition, source: Pokemon | null = null, sourceEffect: Effect | null = null) {
-		return this.setStatus(this.status || status, source, sourceEffect);
+		return this.setStatus(status, source, sourceEffect);
+	}
+
+	getStatusSlots(): number {
+		let statusSlots = 0;
+		for (const st in this.status) {
+			const s = this.battle.dex.conditions.get(st);
+			if (s.statusSlots)
+				statusSlots += s.statusSlots;
+		}
+		return statusSlots;
 	}
 
 	/** Unlike clearStatus, gives cure message */
-	cureStatus(silent = false) {
-		if (!this.hp || !this.status) return false;
-		this.battle.add('-curestatus', this, this.status, silent ? '[silent]' : '[msg]');
-		if (this.status === 'slp' && this.removeVolatile('nightmare')) {
+	cureStatus(status: string | string[] | void, silent = false): boolean {
+		if (!status) {
+			let result: boolean = false;
+			for (const s in this.status) {
+				result = this.cureStatus(s, silent) || result;
+			}
+			return result;
+		} else if (Array.isArray(status)) {
+			let result: boolean = false;
+			for (const s in status) {
+				result = this.cureStatus(s, silent) || result;
+			}
+			return result;
+		}
+
+		if (!this.hp || !this.status[status]) return false;
+		this.battle.add('-curestatus', this, status, silent ? '[silent]' : '[msg]');
+		if (status === 'slp' && this.removeVolatile('nightmare')) {
 			this.battle.add('-end', this, 'Nightmare', '[silent]');
 		}
-		this.setStatus('');
+		this.clearStatus(status);
 		return true;
 	}
 
 	setStatus(
-		status: string | Condition,
+		status: string | string[] | Condition | Condition[],
 		source: Pokemon | null = null,
 		sourceEffect: Effect | null = null,
-		ignoreImmunities = false
+		ignoreImmunities = false,
+		force = false
 	) {
+		if (Array.isArray(status)) {
+			for (const s of status) {
+				this.setStatus(s);
+			}
+			return;
+		}
+
 		if (!this.hp) return false;
+		let statusSlots = this.getStatusSlots();
 		status = this.battle.dex.conditions.get(status);
+		if (status.statusSlots && statusSlots + status.statusSlots > 2) {
+			if ((sourceEffect as Move)?.status) {
+				this.battle.add('-fail', source);
+				this.battle.attrLastMove('[still]');
+			}
+			return false;
+		}
+
 		if (this.battle.event) {
 			if (!source) source = this.battle.event.source;
 			if (!sourceEffect) sourceEffect = this.battle.effect;
 		}
 		if (!source) source = this;
 
-		if (this.status === status.id) {
-			if ((sourceEffect as Move)?.status === this.status) {
-				this.battle.add('-fail', this, this.status);
+		if (this.status[status.id]) {
+			if (status.stackCondition) {
+				delete this.status[status.id];
+				status = this.battle.dex.conditions.get(status.stackCondition);
 			} else if ((sourceEffect as Move)?.status) {
 				this.battle.add('-fail', source);
 				this.battle.attrLastMove('[still]');
+				return false;
 			}
-			return false;
 		}
 
 		if (!ignoreImmunities && status.id &&
@@ -1597,7 +1642,6 @@ export class Pokemon {
 			}
 		}
 		const prevStatus = this.status;
-		const prevStatusState = this.statusState;
 		if (status.id) {
 			const result: boolean = this.battle.runEvent('SetStatus', this, source, sourceEffect, status);
 			if (!result) {
@@ -1606,19 +1650,17 @@ export class Pokemon {
 			}
 		}
 
-		this.status = status.id;
-		this.statusState = {id: status.id, target: this};
-		if (source) this.statusState.source = source;
-		if (status.duration) this.statusState.duration = status.duration;
+		this.status[status.id] = {id: status.id, target: this};
+		if (source) this.status[status.id].source = source;
+		if (status.duration) this.status[status.id].duration = status.duration;
 		if (status.durationCallback) {
-			this.statusState.duration = status.durationCallback.call(this.battle, this, source, sourceEffect);
+			this.status[status.id].duration = status.durationCallback.call(this.battle, this, source, sourceEffect);
 		}
 
-		if (status.id && !this.battle.singleEvent('Start', status, this.statusState, this, source, sourceEffect)) {
+		if (status.id && !this.battle.singleEvent('Start', status, this.status[status.id], this, source, sourceEffect)) {
 			this.battle.debug('status start [' + status.id + '] interrupted');
 			// cancel the setstatus
 			this.status = prevStatus;
-			this.statusState = prevStatusState;
 			return false;
 		}
 		if (status.id && !this.battle.runEvent('AfterSetStatus', this, source, sourceEffect, status)) {
@@ -1630,17 +1672,48 @@ export class Pokemon {
 	/**
 	 * Unlike cureStatus, does not give cure message
 	 */
-	clearStatus() {
+	clearStatus(status: string | void) {
 		if (!this.hp || !this.status) return false;
-		if (this.status === 'slp' && this.removeVolatile('nightmare')) {
+		if (this.status['stp'] && this.removeVolatile('nightmare')) {
 			this.battle.add('-end', this, 'Nightmare', '[silent]');
 		}
-		this.setStatus('');
+
+		if (!status) {
+			for (const st in this.status) {
+				delete this.status[st];
+			}
+			this.status = {};
+		}
+		else if (!this.status[status]) {
+			return false;
+		} else {
+			delete this.status[status];
+		}
+
 		return true;
 	}
 
-	getStatus() {
+	/*getStatus() {
 		return this.battle.dex.conditions.getByID(this.status);
+	}*/
+
+	hasStatus(status: string | string[] | void): boolean {
+		if (!status) {
+			for (const st in this.status) {
+				return true;
+			}
+			return false;
+		}
+
+		if (typeof status === 'string' && this.status[status])
+			return true;
+
+		for (const st in this.status) {
+			if (status.includes(st))
+				return true;
+		}
+		
+		return false;
 	}
 
 	eatItem(force?: boolean, source?: Pokemon, sourceEffect?: Effect) {
@@ -1942,10 +2015,24 @@ export class Pokemon {
 				shared += 'g'; // force green HP bar
 			}
 		}
-		if (this.status) {
-			secret += ` ${this.status}`;
-			shared += ` ${this.status}`;
+		let statuses = [];
+		for (let i in this.status)
+			statuses.push(i);
+
+		if (this.status && statuses.length > 0) {
+			secret += ' ';
+			shared += ' ';
+
+			for (let i = 0; i < statuses.length; i++) {
+				secret += statuses[i];
+				shared += statuses[i];
+				if (i < statuses.length - 1) {
+					secret += ',';
+					shared += ',';
+				}
+			}
 		}
+
 		return {side: this.side.id, secret, shared};
 	};
 
@@ -1992,6 +2079,7 @@ export class Pokemon {
 	}
 
 	isGrounded(negateImmunity = false) {
+		if ('perch' in this.volatiles) return true;
 		if ('gravity' in this.battle.field.pseudoWeather) return true;
 		if ('ingrain' in this.volatiles && this.battle.gen >= 4) return true;
 		if ('smackdown' in this.volatiles) return true;
@@ -2002,7 +2090,7 @@ export class Pokemon {
 		if (this.hasAbility('levitate') && !this.battle.suppressingAbility(this)) return null;
 		if ('magnetrise' in this.volatiles) return false;
 		if ('telekinesis' in this.volatiles) return false;
-		return item !== 'airballoon';
+		return item !== 'airballoon' && item !== 'floatingstone';
 	}
 
 	isSemiInvulnerable() {

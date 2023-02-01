@@ -858,7 +858,7 @@ export class BattleActions {
 		let hit: number;
 		for (hit = 1; hit <= targetHits; hit++) {
 			if (damage.includes(false)) break;
-			if (hit > 1 && pokemon.status === 'slp' && (!isSleepUsable || this.battle.gen === 4)) break;
+			if (hit > 1 && pokemon.status['slp'] && (!isSleepUsable || this.battle.gen === 4)) break;
 			if (targets.every(target => !target?.hp)) break;
 			move.hit = hit;
 			if (move.smartTarget && targets.length > 1) {
@@ -1705,6 +1705,11 @@ export class BattleActions {
 			const bondModifier = this.battle.gen > 6 ? 0.25 : 0.5;
 			this.battle.debug(`Parental Bond modifier: ${bondModifier}`);
 			baseDamage = this.battle.modify(baseDamage, bondModifier);
+		} else if (move.multihitType === 'twoofakind') {
+			// Two of a Kind modifier
+			const bondModifier = 0.6;
+			this.battle.debug(`Two of a Kind modifier: ${bondModifier}`);
+			baseDamage = this.battle.modify(baseDamage, bondModifier);
 		}
 
 		// weather modifier
@@ -1758,11 +1763,11 @@ export class BattleActions {
 
 		if (isCrit && !suppressMessages) this.battle.add('-crit', target);
 
-		if (pokemon.status === 'brn' && move.category === 'Physical' && !pokemon.hasAbility('guts')) {
+		/*if (pokemon.status['brn'] && move.category === 'Physical' && !pokemon.hasAbility('guts')) {
 			if (this.battle.gen < 6 || move.id !== 'facade') {
 				baseDamage = this.battle.modify(baseDamage, 0.5);
 			}
-		}
+		}*/
 
 		// Generation 5, but nothing later, sets damage to 1 before the final damage modifiers
 		if (this.battle.gen === 5 && !baseDamage) baseDamage = 1;
