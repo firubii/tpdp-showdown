@@ -1,3 +1,14 @@
+TPDP Showdown
+========================================================================
+A WIP fork of Pokémon Showdown that simulates Touhou Puppet Dance Performance instead of Pokémon.
+
+Due to the nature of the game, this does also require a [custom PS client](https://github.com/firubii/tpdp-showdown-client).
+
+**TODO:**
+* Test every interaction to ensure accuracy.
+
+(Original README.md:)
+
 Pokémon Showdown
 ========================================================================
 
