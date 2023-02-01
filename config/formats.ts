@@ -32,13 +32,6 @@ export const Formats: FormatList = [
 		section: "Base Game",
 	},
 	{
-		name: "[Gen 9] RU",
-
-		mod: 'gen9',
-		ruleset: ['[Gen 9] UU'],
-		banlist: ['UU', 'RUBL'],
-	},
-	{
 		name: "SoD",
 		mod: 'gen6sod',
 		ruleset: ['Standard'],
